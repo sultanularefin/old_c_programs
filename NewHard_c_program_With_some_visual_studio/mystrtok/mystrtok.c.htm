@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0086)http://www.opensource.apple.com/source/postfix/postfix-229/postfix/src/util/mystrtok.c -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>mystrtok.c</title>
+<style type="text/css">
+.enscript-comment { font-style: italic; color: rgb(178,34,34); }
+.enscript-function-name { font-weight: bold; color: rgb(0,0,255); }
+.enscript-variable-name { font-weight: bold; color: rgb(184,134,11); }
+.enscript-keyword { font-weight: bold; color: rgb(160,32,240); }
+.enscript-reference { font-weight: bold; color: rgb(95,158,160); }
+.enscript-string { font-weight: bold; color: rgb(188,143,143); }
+.enscript-builtin { font-weight: bold; color: rgb(218,112,214); }
+.enscript-type { font-weight: bold; color: rgb(34,139,34); }
+.enscript-highlight { text-decoration: underline; color: 0; }
+</style>
+</head>
+<body id="top">
+<h1 style="margin:8px;" id="f1">mystrtok.c&nbsp;&nbsp;&nbsp;<span style="font-weight: normal; font-size: 0.5em;">[<a href="http://www.opensource.apple.com/source/postfix/postfix-229/postfix/src/util/mystrtok.c?txt">plain text</a>]</span></h1>
+<hr>
+<div></div>
+<pre><span class="enscript-comment">/*++
+/* NAME
+/*	mystrtok 3
+/* SUMMARY
+/*	safe tokenizer
+/* SYNOPSIS
+/*	#include &lt;stringops.h&gt;
+/*
+/*	char	*mystrtok(bufp, delimiters)
+/*	char	**bufp;
+/*	const char *delimiters;
+/* DESCRIPTION
+/*	mystrtok() splits a buffer on the specified \fIdelimiters\fR.
+/*	Tokens are delimited by runs of delimiters, so this routine
+/*	cannot return zero-length tokens.
+/*
+/*	The \fIbufp\fR argument specifies the start of the search; it
+/*	is updated with each call. The input is destroyed.
+/*
+/*	The result value is the next token, or a null pointer when the
+/*	end of the buffer was reached.
+/* LICENSE
+/* .ad
+/* .fi
+/*	The Secure Mailer license must be distributed with this software.
+/* AUTHOR(S)
+/*	Wietse Venema
+/*	IBM T.J. Watson Research
+/*	P.O. Box 704
+/*	Yorktown Heights, NY 10598, USA
+/*--*/</span>
+
+<span class="enscript-comment">/* System library. */</span>
+
+#<span class="enscript-reference">include</span> <span class="enscript-string">"sys_defs.h"</span>
+#<span class="enscript-reference">include</span> <span class="enscript-string">&lt;string.h&gt;</span>
+
+<span class="enscript-comment">/* Utility library. */</span>
+
+#<span class="enscript-reference">include</span> <span class="enscript-string">"stringops.h"</span>
+
+<span class="enscript-comment">/* mystrtok - safe tokenizer */</span>
+
+<span class="enscript-type">char</span>   *<span class="enscript-function-name">mystrtok</span>(<span class="enscript-type">char</span> **src, <span class="enscript-type">const</span> <span class="enscript-type">char</span> *sep)
+{
+    <span class="enscript-type">char</span>   *start = *src;
+    <span class="enscript-type">char</span>   *end;
+
+    <span class="enscript-comment">/*
+     * Skip over leading delimiters.
+     */</span>
+    start += strspn(start, sep);
+    <span class="enscript-keyword">if</span> (*start == 0) {
+	*src = start;
+	<span class="enscript-keyword">return</span> (0);
+    }
+
+    <span class="enscript-comment">/*
+     * Separate off one token.
+     */</span>
+    end = start + strcspn(start, sep);
+    <span class="enscript-keyword">if</span> (*end != 0)
+	*end++ = 0;
+    *src = end;
+    <span class="enscript-keyword">return</span> (start);
+}
+
+#<span class="enscript-reference">ifdef</span> <span class="enscript-variable-name">TEST</span>
+
+ <span class="enscript-comment">/*
+  * Test program: read lines from stdin, split on whitespace.
+  */</span>
+#<span class="enscript-reference">include</span> <span class="enscript-string">"vstring.h"</span>
+#<span class="enscript-reference">include</span> <span class="enscript-string">"vstream.h"</span>
+#<span class="enscript-reference">include</span> <span class="enscript-string">"vstring_vstream.h"</span>
+
+<span class="enscript-type">int</span>     <span class="enscript-function-name">main</span>(<span class="enscript-type">void</span>)
+{
+    VSTRING *vp = vstring_alloc(100);
+    <span class="enscript-type">char</span>   *start;
+    <span class="enscript-type">char</span>   *str;
+
+    <span class="enscript-keyword">while</span> (vstring_fgets(vp, VSTREAM_IN)) {
+	start = vstring_str(vp);
+	<span class="enscript-keyword">while</span> ((str = mystrtok(&amp;start, <span class="enscript-string">" \t\r\n"</span>)) != 0)
+	    vstream_printf(<span class="enscript-string">"&gt;%s&lt;\n"</span>, str);
+	vstream_fflush(VSTREAM_OUT);
+    }
+    vstring_free(vp);
+    <span class="enscript-keyword">return</span> (0);
+}
+
+#<span class="enscript-reference">endif</span>
+</pre>
+<hr>
+<div id="YontooInstallID" style="display: none;">df589c7f-51dc-4cbb-b47e-61b9c08136f9</div><div id="Y2PluginIds" style="display: none;">Y2:df589c7f-51dc-4cbb-b47e-61b9c08136f9</div></body></html>

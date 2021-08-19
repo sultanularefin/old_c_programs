@@ -1,0 +1,57 @@
+/*
+ * A generic bubble sort
+ */
+
+
+#include<iostream>
+#include<stdio.h>
+#include<conio.h>
+using namespace std;
+
+template <class X> void bubble(X * items,int count)
+{
+
+        register int a,b;
+        X t;
+        for(a=1;a<count;a++)
+        for(b=count-1;b>=a;b--)
+
+            if(items[b-1]>items[b] ) {
+                    t=items[b-1];
+                    items[b-1]=items[b];
+                    items[b]=t;
+
+            }
+
+
+
+}
+int main(void) {
+
+    int iarray[7]={7,5,4,3,9,8,6};
+    double darray[5]={4.3,2.5,-0.9,100.2,3.0};
+    int i;
+    printf("Here is unsorted integer array: ");
+    for(i=0;i<7;i++) printf(" %d  ",iarray[i]);
+    printf("\n");
+
+    printf("Here is the unsorted double array: ");
+    for(i=0;i<5;i++) cout<< darray[i] <<"   ";
+    printf("\n");
+
+    bubble(iarray,7);
+    bubble(darray,5);
+
+    printf(" Here is the sorted integer array: ");
+    for( i=0;i<7;i++) printf(" %d  ",iarray[i]);
+    printf("\n");
+
+    printf(" Here is the sorted double array: ");
+    for( i=0;i<5;i++) cout<< darray[i] <<"   ";
+    printf("\n");
+
+    return 0;
+}
+
+
+

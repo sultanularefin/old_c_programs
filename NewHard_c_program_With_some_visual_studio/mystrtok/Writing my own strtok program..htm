@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" class=" js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./Writing my own strtok program._files/f20a4ec8707677abad5054043b4044c6-9afc3eb888440a6c2d0f8dd5d742cf96-RequestReducedStyle.css" rel="Stylesheet" type="text/css">
+
+    
+        <link rel="shortcut icon" href="http://i1.social.s-msft.com/Forums/GlobalResources/images/Msdn/favicon.ico" type="image/x-icon"> 
+    <meta name="CommunityInfo" content=" B=Msdn;A=Forums;L=en-US;">
+    <script src="./Writing my own strtok program._files/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>
+    <script src="./Writing my own strtok program._files/198faff60a83dd768cacdf60118b0b19-18d11f498d881982314e3766a71adaea-RequestReducedScript.js" type="text/javascript"></script>    
+    <title>
+    Writing my own strtok program.
+</title>
+	
+        <!--[if IE 6]>
+    <link type="text/css" rel="Stylesheet" href="http://i3.social.s-msft.com/Forums/resources/styles/IE6Core.css?cver=0%0d%0a" />
+    <![endif]-->
+        <script type="text/javascript">
+    //<![CDATA[
+        var fms_site_culture = 'en-US'; var fms_site_lcid = '1033';
+    //]]>
+     </script>
+    
+    
+    <script src="./Writing my own strtok program._files/resources.js" type="text/javascript" language="javascript"></script>
+    
+    
+<script src="./Writing my own strtok program._files/8d139c8066d803d2a63f2f7a1191a426-dba6992703344a9f283bc5da37387805-RequestReducedScript.js" type="text/javascript"></script><script type="text/javascript">
+    $(document).ready(function () {
+        prettyPrint();
+    });
+</script>
+    <link rel="alternate" type="application/rss+xml" title="Writing my own strtok program." href="http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150?Name=vclanguage&outputAs=rss">
+
+    <meta name="Search.MSForums.Iroot" content="vstudio">
+    <meta name="Search.MSForums.CategoryID" content="1b8316f5-41a3-4b88-b3f0-dcd6dba95852">
+    <meta name="Search.MSForums.CategoryName" content="vslanguages">
+    
+    
+
+<!--
+Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx.
+-->
+<script src="./Writing my own strtok program._files/SearchBox.jss" id="mscom.srch.searchBox"></script><script type="text/javascript" src="./Writing my own strtok program._files/jquery.tmpl.min.js"></script><link href="./Writing my own strtok program._files/usercard.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="./Writing my own strtok program._files/widgets.js"></script></head>
+<body class="Chrome en-us Forums " dir="ltr">
+    <div id="BodyBackground" class="ltr">
+        <div id="JelloSizer">    
+            <div id="JelloExpander">
+                <div id="JelloWrapper">
+                    <div class="Clear"> </div>
+                    
+                   
+
+<div data-chameleon-template="epxheader">
+
+
+
+<header class="ux-header" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="header-top-bar">
+    <a class="header-top-bar-brand-logo" href="http://msdn.microsoft.com/vstudio" title="Visual Studio Home"></a>
+
+    <ul class="header-top-bar-links" id="ux-nav-user">
+      <li class="header-top-bar-search-box">
+        
+
+<form name="HeaderSearchForm" id="HeaderSearchForm" method="get" action="http://social.msdn.microsoft.com/search/en-US/">
+  <input type="text" id="HeaderSearchTextBox" name="query" title="Search Visual Studio with Bing" class="TextBoxSearch" autocomplete="off" style="color: rgb(170, 170, 170); font-style: italic;">
+  <input type="hidden" id="RefinementId" name="refinement" title="195" value="195">
+  <input type="submit" id="HeaderSearchButton" title="Search Visual Studio with Bing" class="header-search-button" value="">
+  
+<div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(255, 255, 255); font-family: &#39;Segoe UI&#39;, Helvetica, Garuda, Arial, sans-serif; font-size: 13px;"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></form>
+      </li>
+
+          <li>
+            <a class="createProfileLink" href="" title="">
+              
+            </a>
+          </li>
+
+
+      <li class="last">
+        <a class="scarabLink" id="idPPScarab" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.msdn.microsoft.com&wreply=https%3a%2f%2fsocial.msdn.microsoft.com%2fForums%2fen-US%2fvclanguage%2fthread%2f4b42670c-bf51-44ca-b7ac-688ad4fcc150%2f%3fstoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft" title="Sign in">
+          <span id="idPPScarabSIT">Sign in</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="header-nav-container">
+  <nav class="header-nav">
+    <ul class="header-nav-pri">
+          <li><a href="http://msdn.microsoft.com/en-us/vstudio/aa718325.aspx" title="Home">Home</a></li>
+          <li><a href="http://code.msdn.microsoft.com/vstudio" title="Samples">Samples</a></li>
+          <li><a href="http://msdn.microsoft.com/en-us/vstudio/jj672990.aspx" title="Languages">Languages</a></li>
+          <li><a href="http://visualstudiogallery.msdn.microsoft.com/" title="Extensions">Extensions</a></li>
+          <li><a href="http://msdn.microsoft.com/en-us/library/vstudio" title="Documentation">Documentation</a></li>
+          <li class="header-nav-selected"><a href="http://msdn.microsoft.com/en-us/vstudio/dd314520.aspx" title="Community">Community</a></li>
+
+    </ul>
+  
+      <ul class="header-nav-sec">
+            <li class="header-nav-selected">
+                <a href="http://social.msdn.microsoft.com/Forums/en-US/category/visualstudio,vslanguages,vstfs,netdevelopment,vsarch" title="Forums">Forums</a>
+            </li>
+            <li>
+                <a href="http://www.codeplex.com/site/search?query=visual%20studio&amp;ac=1" title="CodePlex">CodePlex</a>
+            </li>
+            <li>
+                <a href="http://visualstudio.uservoice.com/" title="User Voice">User Voice</a>
+            </li>
+            <li>
+                <a href="http://connect.microsoft.com/VisualStudio" title="File a Bug">File a Bug</a>
+            </li>
+      </ul>
+  </nav>
+  
+    <div class="header-nav-trial">
+      <a href="http://go.microsoft.com/fwlink/p/?LinkId=240162" title="Get started for free" class="trialanchor">
+        <span class="trialtext">Get started for free</span>
+        <span class="trialimage"></span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+/*<![CDATA[*/
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "http://i.msdn.microsoft.com", 
+	"js": "http://i2.msdn.microsoft.com", 
+	"css": "http://i3.msdn.microsoft.com"
+});
+/**/
+/*]]>*/
+</script><script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+/*<![CDATA[*/
+//
+    var searchWidgetJsUri = 'http://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox&btnid=HeaderSearchButton&brand=MSDN&loc=en-US&Refinement=195&watermark=Visual%20Studio&focusOnInit=false&iroot=vstudio';
+  //
+/*]]>*/
+</script><script type="text/javascript" src="./Writing my own strtok program._files/search.2.js" xmlns="http://www.w3.org/1999/xhtml"></script></div>
+<div data-chameleon-template="header"></div>
+                    
+                    
+                    <div class="Clear"> </div>
+                          
+                    <div class="topleftcorner"></div>           
+                    <div class="toprightcorner"></div>                                
+                    <div class="alley"> <!-- Left Side -->
+                        <div class="wrapper"> <!-- Right Side -->
+                            <div class="inner">  
+                            
+                                                 
+                                <div class="Clear"></div>   
+
+
+                                
+                                
+                                
+                                
+                                <div id="MainContent" class="Msdn">
+                                    
+    
+    
+<div class="bread">    
+    <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="EyebrowElement">
+        <span><a href="http://msdn.microsoft.com/en-us/vstudio/aa718325.aspx">Visual Studio Developer Center</a></span><span> &gt; </span>
+    </div>
+  
+    
+           <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="EyebrowElement">
+               <a href="http://social.msdn.microsoft.com/Forums/en-US/category/vslanguages" itemprop="url">
+                   <span itemprop="title">Visual Studio Languages Forums</span> 
+                </a>&gt;&nbsp;
+           </div>
+        
+           <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="EyebrowElement">
+               <a href="http://social.msdn.microsoft.com/Forums/en-US/vclanguage/threads" itemprop="url">
+                   <span itemprop="title">C++ Standards, Extensions, and Interop</span> 
+                </a>&gt;&nbsp;
+           </div>
+        
+        <div itemscope="" class="EyebrowElement">
+            <span itemprop="title">Writing my own strtok program.</span>
+        </div>
+        
+</div>
+    <div id="contentWrapper" class="contentWrapperLeft">
+        <div id="content" class="contentLeft">
+            <div id="forumsMessage"></div>
+            
+    <input type="hidden" name="IsTrusted" id="trustedU" value="False">
+<input type="hidden" name="IsTrustedCheckEnabled" id="isTrustedCheckEnabled" value="True">
+<input type="hidden" name="isSpamCheckEnabled" id="isSpamCheckEnabled" value="True">
+    <form id="__AjaxAntiForgeryForm" action="http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/#" method="post"><input name="__RequestVerificationToken" type="hidden" value="SFhkdyCXzlnfA6I2rb5vF3TJXn5A_mw3v69P9mwIYggMGTqV9--fIY4JlgG99oTXqHxzDzvJGyGYEoNOlR9bHx0nBkkVQfhITJHkokBmw5emB_cBmGGZ7Wriu3i_HomD7OMKEQ2"></form>
+                  
+
+
+<h1>
+    <img class="icon answer" alt="Answered" title="Answered" src="./Writing my own strtok program._files/trans.gif">
+    <span name="subject">Writing my own strtok program.</span>
+        <a href="http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150?Name=vclanguage&outputAs=rss" rel="nofollow"><img src="./Writing my own strtok program._files/trans.gif" class="icon rss"></a>
+</h1>   
+
+
+    
+    
+
+<!-- Scope: forum-->
+<div class="box discover">
+    <div class="content">        
+        <div class="search">
+        <form action="http://social.msdn.microsoft.com/Forums/en-US/search" id="forumsSearch" method="post">
+            <input class="searchTerm watermark" type="text" value="" name="searchTerm" id="searchTerm"><input type="image" src="./Writing my own strtok program._files/trans.gif">
+            <a id="searchRefinements" name="searchRefinements" href="javascript:void(0);" class="popup" style="height: 18px;"><img src="./Writing my own strtok program._files/trans.gif" class="expcol"></a>
+            <ul name="searchRefinementsPopup" class="popup" popupalign="left">
+            
+	                    <li>
+		                    <a scopetype="Forum" scopedata="vclanguage" href="http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/#" title="Search C++ Standards, Extensions, and Interop Forum">
+                            Search C++ Standards, Extensions, and Interop Forum
+		                    </a>
+	                    </li>
+                    
+	                    <li>
+		                    <a scopetype="Category" scopedata="vslanguages" href="http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/#" title="Search All Visual Studio Languages Forums">
+		                    Search All Visual Studio Languages Forums
+		                    </a>
+	                    </li>
+                    
+	                <li>
+		                <a scopetype="Brand" scopedata="" href="http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/#" title="Search All MSDN Forums">
+		                Search All MSDN Forums
+		                </a>
+	                </li>
+            
+            </ul>
+            <input type="hidden" name="scopeType" value="Forum" id="scopeType">
+            <input type="hidden" name="scopeData" value="vclanguage" id="scopeData">
+            <input type="hidden" name="currentScopeType" value="Forum" id="currentScopeType">
+            <input type="hidden" name="currentScopeData" value="vclanguage" id="currentScopeData">
+        </form>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                $("#forumsSearch #searchTerm").watermark('Search C\x2b\x2b Standards, Extensions, and Interop Forum');
+                $("#btnSubmit").attr("disabled", "disabled");
+                $("a#searchRefinements").show();
+
+                $("#forumsSearch").submit(function()
+                {
+                    var strippedVal = $("#forumsSearch #searchTerm").watermarkVal().replace(/^\s+|\s+$/g, "");
+                    return (strippedVal.length > 0);
+                });
+
+                $("#forumsSearch ul.popup a").click(function()
+                {
+                    $("#forumsSearch #scopeType").val($(this).attr("scopeType"));
+                    $("#forumsSearch #scopeData").val($(this).attr("scopeData"));
+                    $("#forumsSearch").submit();
+                    return false;
+                });
+            });
+        </script>
+        </div>
+            <div id="askaquestion">
+        <a class="btn askQuestionLink" title="Ask a question" href="http://social.msdn.microsoft.com/Forums/en-US/newthread?category=vslanguages&forum=vclanguage" name="ask" rel="nofollow">
+            Ask a question
+        </a>
+    </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+    <ul class="message root">
+
+
+
+
+
+
+
+    <li id="4b42670c-bf51-44ca-b7ac-688ad4fcc150" class="message  root">
+
+        <div class="head">
+            <span class="date">Tuesday, September 18, 2012 6:14 PM</span>
+            <div class="profile-usercard-mini" data-profile-userid="8c63e16cf642436fb530b199a25c512a" data-profile-usercard-customlink="{&quot;href&quot;:&quot;http://social.msdn.microsoft.com/Forums/en-US/user/threads?user=Trdough&quot;, &quot;text&quot;:&quot;Trdough&#39;s threads&quot;}" data-profile-rendered="true"><div class="profile-mini">            <div class="profile-mini-header">            <div class="profile-mini-userimage">                            <img src="data:image/jpg;base64,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" alt="Avatar of Trdough">                        </div>            <div class="profile-mini-container">                <div title="Trdough" class="profile-mini-display-name"><div class="profile-usercard-hover" data-profile-userid="8c63e16cf642436fb530b199a25c512a" data-profile-rendered="true"><a href="http://social.msdn.microsoft.com/profile/trdough/?ws=usercard-mini" target="_blank">Trdough</a><div class="profile-usercard">            <div class="profile-header">                <span class="profile-userimage">                                            <img src="data:image/jpg;base64,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" alt="Avatar of Trdough">                                    </span>                <div>                    <p title="Trdough" class="profile-display-name">Trdough</p>                                    <p class="profile-affiliations"></p>                </div>            </div>            <div class="profile-points-bar">                <span class="profile-points">0<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>3</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>0</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>0</span></span>                        </div>            <div class="profile-achievements-header">                <span class="profile-achievements-title">Recent Achievements</span>            </div>            <div class="profile-achievements-recent">                <div class="profile-achievements-centering">                                                                <span class="profile-achievement profile-achievement-Bronze"><span>First Helpful Vote</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>First Marked Answer</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>First Forums Reply</span></span>                                                            </div>            </div>            <div class="profile-footer">                                    <a href="http://social.msdn.microsoft.com/Forums/en-US/user/threads?user=Trdough" title="Trdough&#39;s threads" class="profile-usercard-custom-link" target="_blank">Trdough's threads</a>                                <a href="http://social.msdn.microsoft.com/profile/trdough/?ws=usercard-hover" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></div></div>                            <div class="profile-mini-affiliations">                                </div>                <span class="profile-mini-points">0<span class="points-label"> Points</span></span>                </div>                <div class="profile-mini-content">
+                <div class="profile-mini-content">
+</div>
+                &nbsp;</div>            </div>        </div></div>
+            <div class="helpful">
+                &nbsp;                            </div>
+        </div>
+        <div class="votingouterbox">            <div class="voting">
+                        <a class="voteuphreflink" name="voteup" title="Vote As Helpful" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.msdn.microsoft.com&wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">
+                            <img class="icon voteup" alt="Sign In to Vote" title="Sign In to Vote" src="./Writing my own strtok program._files/trans.gif">
+                            <div class="votenumber" style="display: block;">0</div>
+                        </a>
+
+            </div>
+            <span class="votinglabel type">
+                        <a title="Sign In to Vote" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.msdn.microsoft.com&wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft"></a>
+</span>
+</div>
+        <div class="container">
+            <div class="body"><p>I am writing my own strtok program. However, I am getting an error that I have spent the last three days trying to fix but cannot. error: cannot convert 'char*(char*, const char*)' to 'char*' in assignment. I have posted the files that pertain to the Main.cpp.
+ Also, I have written &lt;&lt;&lt;&lt;ERROR&lt;&lt;&lt;&lt; next to where the error occurs. I cannot figure out how to make that error go away.</p>
+<p><strong><span style="text-decoration:underline">mystrtok.cpp</span></strong></p>
+<p>#include "mystrtok.h"<br>
+<br>
+int i, j;<br>
+char * save;<br>
+<br>
+char * mystrtok(char * str, const char * delim)<br>
+{<br>
+&nbsp;&nbsp;&nbsp; for(i=0; i&lt;sizeof(str) &amp;&amp; str[i]!='\0'; i++)<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for(j=0; j&lt;sizeof(delim) &amp;&amp; delim[j]; j++)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (str[i]==delim[j])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; str[i]='\0';<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; save=str;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return str;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; }<br>
+};</p>
+<p><strong><span style="text-decoration:underline">mystrtok.h</span></strong></p>
+<p>#ifndef MYSTRTOK_H<br>
+#define&nbsp;&nbsp; &nbsp;MYSTRTOK_H<br>
+<br>
+char * mystrtok(char * str, const char * delim);<br>
+<br>
+#define strtok mystrtok;<br>
+<br>
+<br>
+#endif&nbsp;&nbsp; &nbsp;/* MYSTRTOK_H */<br>
+</p>
+<p><strong><span style="text-decoration:underline">main.cpp</span></strong><br>
+<br>
+#include &lt;cstdlib&gt;<br>
+#include &lt;iostream&gt;<br>
+#include &lt;string.h&gt;<br>
+#include "mystrlen.h"<br>
+#include "mystrcat.h"<br>
+#include "mystrtok.h"<br>
+#define ARRAYSIZE 10<br>
+<br>
+using namespace std;<br>
+<br>
+int main()<br>
+{<br>
+&nbsp;&nbsp;&nbsp; int spaces=0;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part a<br>
+&nbsp;&nbsp;&nbsp; size_t size=0, len=0;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part b<br>
+&nbsp;&nbsp;&nbsp; char * strArray[ARRAYSIZE];<br>
+&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part c<br>
+&nbsp;&nbsp;&nbsp; char line[] ="ls -l -a | wc -c &gt;&gt;&nbsp;&nbsp; myfile";<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part d<br>
+&nbsp;&nbsp;&nbsp; char * result;<br>
+&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part e<br>
+&nbsp;&nbsp;&nbsp; len = strlen(line);<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; "The length of line is "&lt;&lt;len&lt;&lt;"."&lt;&lt; endl;<br>
+&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part f<br>
+&nbsp;&nbsp;&nbsp; strArray[0]=strtok(line, " ");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &lt;&lt;&lt;&lt;&lt;ERROR&lt;&lt;&lt;&lt;&lt;&lt;<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt;"strArray["&lt;&lt;0&lt;&lt;"]="&lt;&lt;strArray[0]&lt;&lt;endl;<br>
+&nbsp;&nbsp;&nbsp; for(int i=1; i&lt;ARRAYSIZE; i++)<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strArray[i]=strtok(NULL," ");&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &lt;&lt;&lt;&lt;&lt;ERROR&lt;&lt;&lt;&lt;&lt;&lt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(strArray[i]==NULL)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt;"strArray["&lt;&lt;i&lt;&lt;"]="&lt;&lt;strArray[i]&lt;&lt;endl;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part g<br>
+&nbsp;&nbsp;&nbsp; for(int i=0; i&lt;ARRAYSIZE &amp;&amp; strArray[i]!=NULL; i++)<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; size += strlen(strArray[i]);<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part h<br>
+&nbsp;&nbsp;&nbsp; spaces = len - size;<br>
+&nbsp;&nbsp;&nbsp; cout&lt;&lt;"The number of blanks is "&lt;&lt;spaces&lt;&lt;endl;&nbsp; &nbsp;<br>
+<br>
+&nbsp;&nbsp;&nbsp; //Part i<br>
+&nbsp;&nbsp;&nbsp; cout&lt;&lt;line&lt;&lt;endl;<br>
+&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part j<br>
+&nbsp;&nbsp;&nbsp; result = new char[size+1];<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp;&nbsp; //Part k<br>
+&nbsp;&nbsp;&nbsp; *result='\0';<br>
+&nbsp;&nbsp;&nbsp; for(int i=0; i&lt;ARRAYSIZE &amp;&amp; strArray[i] != NULL; i++)<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(result,strArray[i]);<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; cout&lt;&lt;"The concatenation of all strings in strArray is "&lt;&lt;result;<br>
+&nbsp;&nbsp;&nbsp; return 0;<br>
+}</p>
+<p></p>
+<p></p></div>
+
+            
+                <input type="hidden" id="4b42670c-bf51-44ca-b7ac-688ad4fcc150_attachments" value="">
+
+        </div>
+                <div class="abusive">
+        </div>
+
+        <div class="menu message">
+            <ul class="menu">                <li><a href="javascript:void();" title="Reply" name="reply" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.msdn.microsoft.com&amp;wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        <img class="icon reply" alt="Reply" title="Reply" src="./Writing my own strtok program._files/trans.gif"><nobr>Reply</nobr></a></li>
+                <li><a href="javascript:void();" title="" name="quote" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.msdn.microsoft.com&amp;wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        <img class="icon quote" alt="Quote" title="Quote" src="./Writing my own strtok program._files/trans.gif"><nobr>Quote</nobr></a></li>
+</ul>
+            <div class="clear">
+                &nbsp;</div>
+        </div>
+    </li> 
+
+    </ul>
+
+
+
+        <div class="replies">
+            <h3>
+                All Replies
+            </h3>
+
+
+
+
+
+    <ul class="message">
+
+
+
+
+
+
+
+    <li id="afd432a8-330f-4065-a0db-22f51166c668" class="message  answer">
+
+        <div class="head">
+            <span class="date">Tuesday, September 18, 2012 6:34 PM</span>
+            <div class="profile-usercard-mini" data-profile-userid="bb435166c67e42529e8691e03f21be22" data-profile-usercard-customlink="{&quot;href&quot;:&quot;http://social.msdn.microsoft.com/Forums/en-US/user/threads?user=Wyck&quot;, &quot;text&quot;:&quot;Wyck&#39;s threads&quot;}" data-profile-rendered="true"><div class="profile-mini">            <div class="profile-mini-header">            <div class="profile-mini-userimage">                            <img src="data:image/jpg;base64,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" alt="Avatar of Wyck">                        </div>            <div class="profile-mini-container">                <div title="Wyck" class="profile-mini-display-name"><div class="profile-usercard-hover" data-profile-userid="bb435166c67e42529e8691e03f21be22" data-profile-rendered="true"><a href="http://social.msdn.microsoft.com/profile/wyck/?ws=usercard-mini" target="_blank">Wyck</a><div class="profile-usercard">            <div class="profile-header">                <span class="profile-userimage">                                            <img src="data:image/jpg;base64,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" alt="Avatar of Wyck">                                    </span>                <div>                    <p title="Wyck" class="profile-display-name">Wyck</p>                                    <p class="profile-affiliations">MCC</p>                </div>            </div>            <div class="profile-points-bar">                <span class="profile-points">16,325<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>13</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>5</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>2</span></span>                        </div>            <div class="profile-achievements-header">                <span class="profile-achievements-title">Recent Achievements</span>            </div>            <div class="profile-achievements-recent">                <div class="profile-achievements-centering">                                                                <span class="profile-achievement profile-achievement-Bronze"><span>New Blog Rater</span></span>                                            <span class="profile-achievement profile-achievement-Silver"><span>Forums Curator II</span></span>                                            <span class="profile-achievement profile-achievement-Silver"><span>Forums Replies IV</span></span>                                                            </div>            </div>            <div class="profile-footer">                                    <a href="http://social.msdn.microsoft.com/Forums/en-US/user/threads?user=Wyck" title="Wyck&#39;s threads" class="profile-usercard-custom-link" target="_blank">Wyck's threads</a>                                <a href="http://social.msdn.microsoft.com/profile/wyck/?ws=usercard-hover" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></div></div>                            <div class="profile-mini-affiliations">                                    (MCC)                                </div>                <span class="profile-mini-points">16,325<span class="points-label"> Points</span></span>                </div>                <div class="profile-mini-content">
+                <div class="profile-mini-content">
+</div>
+                &nbsp;</div>            </div>        </div></div>
+            <div class="helpful">
+                &nbsp;<img class="icon answer" alt="Answered" title="Answered" src="./Writing my own strtok program._files/trans.gif">                                    <img class="icon hascode" alt="Has Code" title="Has Code" src="./Writing my own strtok program._files/trans.gif">
+            </div>
+        </div>
+        <div class="votingouterbox">            <div class="voting">
+                        <a class="voteuphreflink" name="voteup" title="Vote As Helpful" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.msdn.microsoft.com&wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">
+                            <img class="icon voteup" alt="Sign In to Vote" title="Sign In to Vote" src="./Writing my own strtok program._files/trans.gif">
+                            <div class="votenumber" style="display: block;">1</div>
+                        </a>
+
+            </div>
+            <span class="votinglabel type">
+                        <a title="Sign In to Vote" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.msdn.microsoft.com&wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft"></a>
+</span>
+</div>
+        <div class="container">
+            <div class="body"><pre class="prettyprint prettyprinted" style=""><span class="com">#define</span><span class="pln"> strtok mystrtok</span><span class="pun">;</span></pre>
+<p>Remove the semicolon from the end of this line so that is looks like this:</p>
+<pre class="prettyprint prettyprinted" style=""><span class="com">#define</span><span class="pln"> strtok mystrtok</span></pre>
+<br>
+<p>The error is due to the fact that after the preprocessor runs, your code has expanded to essentially this:<br>
+</p>
+<pre class="prettyprint prettyprinted" style=""><span class="pln">strArray</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> mystrtok</span><span class="pun">;(</span><span class="pln">line</span><span class="pun">,</span><span class="pln"> </span><span class="str">" "</span><span class="pun">);</span></pre>
+the type of "mystrtok" by itself is a pointer to the function. &nbsp;Hence the error.<br>
+<p></p>
+<br></div>
+
+                    <ul class="history">
+            <li><span class="type">Edited by</span>
+                    <a class="author" href="http://social.msdn.microsoft.com/profile/wyck/?type=forum&referrer=http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/" rel="nofollow" title="About Wyck"><span>Wyck</span><abbr class="affil">Microsoft Community Contributor</abbr></a>
+                <span class="date">Tuesday, September 18, 2012 6:34 PM</span>
+            </li>
+            <li><span class="type">Marked As Answer by</span>
+                    <a class="author" href="http://social.msdn.microsoft.com/profile/elegentin%20xie/?type=forum&referrer=http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/" rel="nofollow" title="About Elegentin Xie"><span>Elegentin Xie</span><abbr class="affil">Microsoft Contingent Staff, Moderator</abbr></a>
+                <span class="date">Thursday, September 27, 2012 8:05 AM</span>
+            </li>
+        <li>&nbsp;</li>
+        </ul>
+
+                <input type="hidden" id="afd432a8-330f-4065-a0db-22f51166c668_attachments" value="">
+
+        </div>
+                <div class="abusive">
+        </div>
+
+        <div class="menu message">
+            <ul class="menu">                <li><a href="javascript:void();" title="Reply" name="reply" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.msdn.microsoft.com&amp;wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        <img class="icon reply" alt="Reply" title="Reply" src="./Writing my own strtok program._files/trans.gif"><nobr>Reply</nobr></a></li>
+                <li><a href="javascript:void();" title="" name="quote" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.msdn.microsoft.com&amp;wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        <img class="icon quote" alt="Quote" title="Quote" src="./Writing my own strtok program._files/trans.gif"><nobr>Quote</nobr></a></li>
+</ul>
+            <div class="clear">
+                &nbsp;</div>
+        </div>
+    </li> 
+
+
+
+
+
+
+
+    <li id="d1b07a14-7035-4a67-9a84-81206921be23" class="message  answer">
+
+        <div class="head">
+            <span class="date">Tuesday, September 18, 2012 6:38 PM</span>
+            <div class="profile-usercard-mini" data-profile-userid="be2f89e293544d1a8adc340991d647d0" data-profile-usercard-customlink="{&quot;href&quot;:&quot;http://social.msdn.microsoft.com/Forums/en-US/user/threads?user=Igor%20Tandetnik&quot;, &quot;text&quot;:&quot;Igor Tandetnik&#39;s threads&quot;}" data-profile-rendered="true"><div class="profile-mini">            <div class="profile-mini-header">            <div class="profile-mini-userimage">                            <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAsACwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2S1eyUASI5kI6sMgVWkt5ovvxsoHfHH50Rxu0gAU8cn2HrU91eyXTbEysZOAo6n6185eMqfvaNbWW/qBVRWd1RRlmOBWhcWsawExlWY/dx3A4P45qvHFcRBmWGXzDwDsPA7n/AD70yYsEiiYMpRTkEY5JJ/wojaEHzLV/1/n+AEaxuzBQpyTgVdudPbziYApQjpuHFL9v36c0TE+b93PqP/1Vn05eyhG3xX17W8uoF+3u4xD5L5XjA3AMnr061WuAVfDRxqTyGToR7dqiAJIAGSeBSkum6M5GDyp9aiVaU4KMugG/Zz/aLZXJ+YcN9aqatEpVJuhB2n3FVLG6+yyHcDsYc/0qKe4eebfIM46KegrtqYuE8Pyy+L+tQE8hyheP51HUr1H1H+RUVXrOeFZNxhVCvJcSMMD6c5qOWSKSQuCpz/z0Ug/+O8VxypQ5VJS1/ruA+K28gR3cjqYgQcKeTRcNDeTgw7lkbgh+h9PxqEyMbJYyflDkj8qjiUNKinoWANVKoklTitHb7wLj2/lKkrjCxxjhh1Y84/WqS4aQb2IBPJ61LPcSTKu49TuOPXp/SoKms481orRAaFwtubILa/MQwLYHOADyfas+rmnMUlmcdViJGfwqCW4kmkLs3J9KqtacFU26WW2gH//Z" alt="Avatar of Igor Tandetnik">                        </div>            <div class="profile-mini-container">                <div title="Igor Tandetnik" class="profile-mini-display-name"><div class="profile-usercard-hover" data-profile-userid="be2f89e293544d1a8adc340991d647d0" data-profile-rendered="true"><a href="http://social.msdn.microsoft.com/profile/igor%20tandetnik/?ws=usercard-mini" target="_blank">Igor Tandetnik</a><div class="profile-usercard">            <div class="profile-header">                <span class="profile-userimage">                                            <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAAsACwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2S1eyUASI5kI6sMgVWkt5ovvxsoHfHH50Rxu0gAU8cn2HrU91eyXTbEysZOAo6n6185eMqfvaNbWW/qBVRWd1RRlmOBWhcWsawExlWY/dx3A4P45qvHFcRBmWGXzDwDsPA7n/AD70yYsEiiYMpRTkEY5JJ/wojaEHzLV/1/n+AEaxuzBQpyTgVdudPbziYApQjpuHFL9v36c0TE+b93PqP/1Vn05eyhG3xX17W8uoF+3u4xD5L5XjA3AMnr061WuAVfDRxqTyGToR7dqiAJIAGSeBSkum6M5GDyp9aiVaU4KMugG/Zz/aLZXJ+YcN9aqatEpVJuhB2n3FVLG6+yyHcDsYc/0qKe4eebfIM46KegrtqYuE8Pyy+L+tQE8hyheP51HUr1H1H+RUVXrOeFZNxhVCvJcSMMD6c5qOWSKSQuCpz/z0Ug/+O8VxypQ5VJS1/ruA+K28gR3cjqYgQcKeTRcNDeTgw7lkbgh+h9PxqEyMbJYyflDkj8qjiUNKinoWANVKoklTitHb7wLj2/lKkrjCxxjhh1Y84/WqS4aQb2IBPJ61LPcSTKu49TuOPXp/SoKms481orRAaFwtubILa/MQwLYHOADyfas+rmnMUlmcdViJGfwqCW4kmkLs3J9KqtacFU26WW2gH//Z" alt="Avatar of Igor Tandetnik">                                    </span>                <div>                    <p title="Igor Tandetnik" class="profile-display-name">Igor Tandetnik</p>                                    <p class="profile-affiliations">MCC, MVP</p>                </div>            </div>            <div class="profile-points-bar">                <span class="profile-points">61,655<span class="points-label"> Points</span></span>                <span class="profile-count profile-bronze-points"><span class="profile-bronze-img" title="Achievements Earned"></span><span>8</span></span>                <span class="profile-count profile-silver-points"><span class="profile-silver-img" title="Achievements Earned"></span><span>3</span></span>                <span class="profile-count profile-gold-points"><span class="profile-gold-img" title="Achievements Earned"></span><span>2</span></span>                        </div>            <div class="profile-achievements-header">                <span class="profile-achievements-title">Recent Achievements</span>            </div>            <div class="profile-achievements-recent">                <div class="profile-achievements-centering">                                                                <span class="profile-achievement profile-achievement-Bronze"><span>Code Answerer I</span></span>                                            <span class="profile-achievement profile-achievement-Gold"><span>Forums Replies V</span></span>                                            <span class="profile-achievement profile-achievement-Bronze"><span>Proposed Answerer I</span></span>                                                            </div>            </div>            <div class="profile-footer">                                    <a href="http://social.msdn.microsoft.com/Forums/en-US/user/threads?user=Igor%20Tandetnik" title="Igor Tandetnik&#39;s threads" class="profile-usercard-custom-link" target="_blank">Igor Tandetnik's threads</a>                                <a href="http://social.msdn.microsoft.com/profile/igor%20tandetnik/?ws=usercard-hover" class="profile-usercard-profileLink" target="_blank">View Profile</a>            </div>        </div></div></div>                            <div class="profile-mini-affiliations">                                    (MCC, MVP)                                </div>                <span class="profile-mini-points">61,655<span class="points-label"> Points</span></span>                </div>                <div class="profile-mini-content">
+                <div class="profile-mini-content">
+</div>
+                &nbsp;</div>            </div>        </div></div>
+            <div class="helpful">
+                &nbsp;<img class="icon answer" alt="Answered" title="Answered" src="./Writing my own strtok program._files/trans.gif">                            </div>
+        </div>
+        <div class="votingouterbox">            <div class="voting">
+                        <a class="voteuphreflink" name="voteup" title="Vote As Helpful" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.msdn.microsoft.com&wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft">
+                            <img class="icon voteup" alt="Sign In to Vote" title="Sign In to Vote" src="./Writing my own strtok program._files/trans.gif">
+                            <div class="votenumber" style="display: block;">0</div>
+                        </a>
+
+            </div>
+            <span class="votinglabel type">
+                        <a title="Sign In to Vote" href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.msdn.microsoft.com&wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft"></a>
+</span>
+</div>
+        <div class="container">
+            <div class="body"><p>On 9/18/2012 2:14 PM, Trdough wrote:</p>
+<blockquote>
+<p>char * mystrtok(char * str, const char * delim)<br>
+{<br>
+&nbsp; &nbsp;&nbsp; for(i=0; i&lt;sizeof(str) &amp;&amp; str[i]!='\0'; i++)</p>
+</blockquote>
+<p>sizeof(str) == 4, the size in bytes of the pointer. It's completely unrelated to the length of the string pointed to.</p>
+<blockquote>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; for(j=0; j&lt;sizeof(delim) &amp;&amp; delim[j]; j++)</p>
+</blockquote>
+<p>Same here - sizeof(delim) is not the length of the string that delim points to.</p>
+<blockquote>
+<p>#define strtok mystrtok;</p>
+</blockquote>
+<p>The trailing semicolon here is the immediate source of the error, as Wyck points out.</p>
+<hr>
+<p>Igor Tandetnik</p>
+<a name="x_4d39c5e9-889d-46e5-ab57-12517a6c2528_CommunityBridge" title="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20120907 Thunderbird/15.0.1 via Community Forums NNTP Server 1.1.45.0"></a></div>
+
+                    <ul class="history">
+            <li><span class="type">Marked As Answer by</span>
+                    <a class="author" href="http://social.msdn.microsoft.com/profile/elegentin%20xie/?type=forum&referrer=http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/" rel="nofollow" title="About Elegentin Xie"><span>Elegentin Xie</span><abbr class="affil">Microsoft Contingent Staff, Moderator</abbr></a>
+                <span class="date">Thursday, September 27, 2012 8:05 AM</span>
+            </li>
+        <li>&nbsp;</li>
+        </ul>
+
+                <input type="hidden" id="d1b07a14-7035-4a67-9a84-81206921be23_attachments" value="">
+
+        </div>
+                <div class="abusive">
+        </div>
+
+        <div class="menu message">
+            <ul class="menu">                <li><a href="javascript:void();" title="Reply" name="reply" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.msdn.microsoft.com&amp;wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        <img class="icon reply" alt="Reply" title="Reply" src="./Writing my own strtok program._files/trans.gif"><nobr>Reply</nobr></a></li>
+                <li><a href="javascript:void();" title="" name="quote" rel="nofollow" url="https://login.live.com/login.srf?wa=wsignin1.0&amp;wtrealm=social.msdn.microsoft.com&amp;wreply=https%3a%2f%2fwww.google.com.bd%2f%3fprof%3drequired%26stoAI%3d10&amp;wp=MBI_FED_SSL&amp;wlcxt=microsoft%24microsoft%24microsoft">
+                        <img class="icon quote" alt="Quote" title="Quote" src="./Writing my own strtok program._files/trans.gif"><nobr>Quote</nobr></a></li>
+</ul>
+            <div class="clear">
+                &nbsp;</div>
+        </div>
+    </li> 
+    </ul>
+
+        </div>
+
+
+            <div class="clear"></div>
+        </div>
+    </div>  
+    <div id="nrSurvey">
+        
+<script type="text/javascript">
+    if (!$.Microsoft) $.Microsoft = {};
+    if (!$.Microsoft.Mtps) $.Microsoft.Mtps = {};
+    if (!$.Microsoft.Mtps.NetReflectorInit)
+        $.Microsoft.Mtps.NetReflectorInit = {
+            surveyUrl: 'http://support.microsoft.com/common/survey.aspx?scid=sw;en;1890&showpage=1&sd=msdn&altstyle=narrow&renderoption=overridedefault&url=http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/&P0=5ac7f30f-4625-4162-bdbb-2416a72b7047',
+            throttleRate: "10.00",
+            privacyStatementText: "Privacy Statement",
+            trackerWindowText: "<p>Please do not close this window.</p><p>Thank you! The survey will appear here when you've completed your visit, so <b>please do not close this window</b>.</p>",
+            logoUrl: 'http://js.microsoft.com/library/svy/sto/msdn-logo-stripe.gif',
+            closeButtonUrl: 'http://js.microsoft.com/library/svy/sto/msdn-close.gif',
+            topBarUrl: 'http://js.microsoft.com/library/svy/sto/top-stripe.gif',
+            bottomBarUrl: 'http://js.microsoft.com/library/svy/sto/bottom-stripe.gif',
+            blankPage: 'http://social.msdn.microsoft.com/forums/blank.htm',
+            showSurveyToComscoreUser: 'no'
+        };
+</script>
+<link href="./Writing my own strtok program._files/NetReflector.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+
+    setTimeout("Forums.loadScript('http://i2.social.s-msft.com/Forums/resources/NetReflector/NetReflector.js?cver=0%0d%0a')", 1000);
+</script>
+<div id="divNRMain" style="position: absolute; display: None; background-color: White;
+    z-index: 1001;">
+    <table width="360" cellpadding="3" cellspacing="0" border="0" bgcolor="#FFFFFF">
+        <tbody><tr>
+            <td style="padding: 3px;">
+                <table width="100%" cellpadding="1" cellspacing="0" border="0" bgcolor="#999999">
+                    <tbody><tr>
+                        <td style="padding: 1px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+                                <tbody><tr valign="top">
+                                    <td>
+                                        <img src="./Writing my own strtok program._files/msdn-logo-stripe.gif"><img id="imgNRClose" border="0" src="./Writing my own strtok program._files/msdn-close.gif"><br>
+                                        <img src="./Writing my own strtok program._files/top-stripe.gif">
+                                        <table width="100%" cellpadding="5" cellspacing="0">
+                                            <tbody><tr>
+                                                <td style="padding: 2px">
+                                                    <div>
+                                                        <p>Microsoft is conducting an online survey to understand your opinion of the Msdn Web site. If you choose to participate, the online survey will be presented to you when you leave the Msdn Web site.</p><p>Would you like to participate?</p>
+                                                    </div>
+                                                    <div align="center">
+                                                        <input id="btnNRYes" type="button" value="  Yes  ">&nbsp;&nbsp;
+                                                        <input id="btnNRNo" type="button" value=" No ">
+                                                    </div>
+                                                    <div>
+                                                        <a href="http://privacy.microsoft.com/en-us/default.mspx" target="_blank">
+                                                            Privacy Statement</a></div>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                        <img src="./Writing my own strtok program._files/bottom-stripe.gif">
+                                        <input type="hidden" id="hdnSurveyUrl" value="http://support.microsoft.com/common/survey.aspx?scid=sw;en;1890&amp;showpage=1&amp;sd=msdn&amp;altstyle=narrow&amp;renderoption=overridedefault&amp;url=http://social.msdn.microsoft.com/Forums/en-US/vclanguage/thread/4b42670c-bf51-44ca-b7ac-688ad4fcc150/&amp;P0=5ac7f30f-4625-4162-bdbb-2416a72b7047">
+                                        <input type="hidden" id="hdnLogoUrl" value="http://js.microsoft.com/library/svy/sto/msdn-logo-stripe.gif">
+                                        <input type="hidden" id="hdnTopStripUrl" value="http://js.microsoft.com/library/svy/sto/top-stripe.gif">
+                                        <input type="hidden" id="hdnBtmStripUrl" value="http://js.microsoft.com/library/svy/sto/bottom-stripe.gif">
+                                        <input type="hidden" id="hdnTrackerText" value="&lt;p&gt;Please do not close this window.&lt;/p&gt;&lt;p&gt;Thank you! The survey will appear here when you&#39;ve completed your visit, so &lt;b&gt;please do not close this window&lt;/b&gt;.&lt;/p&gt;">
+                                        <input type="hidden" id="hdnPrivacyText" value="Privacy Statement">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+</div>
+
+    </div>  
+    
+        <div id="rail" class="railRight">
+            
+        <div>
+<div class="rightRailAnnouncement">
+
+</div>
+</div><div>
+    <div class="box">
+        <h4>My Forum Links</h4>
+        <ul class="content">
+            
+                <li><a href="https://login.live.com/login.srf?wa=wsignin1.0&wtrealm=social.msdn.microsoft.com&wreply=https%3a%2f%2fsocial.msdn.microsoft.com%2fForums%2fen-US%2fvclanguage%2fthread%2f4b42670c-bf51-44ca-b7ac-688ad4fcc150%2f%3fprof%3drequired%26stoAI%3d10&wp=MBI_FED_SSL&wlcxt=microsoft%24microsoft%24microsoft" title="Sign In To Forums">Sign In To Forums</a></li>
+            
+            <li><a href="http://social.msdn.microsoft.com/Forums/en-US/categories">Forums Home</a></li>
+            <li><a href="http://social.msdn.microsoft.com/Forums/en-US/browseusers" title="Browse Forums Users">Browse Forums Users</a></li>
+        </ul>
+    </div>
+</div><a href="http://social.msdn.microsoft.com/Forums/en-US/help" class="help" rel="Help">Frequently asked questions - Forums help</a></div>
+    
+                                    <div class="Clear"></div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="Clearbottom"></div>          
+                    <div class="bottomleftcorner"></div>            
+                    <div class="bottomrightcorner"></div> 
+                    
+                     
+
+<div data-chameleon-template="epxfooter">
+<footer class="ux-footer" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="nav">
+    <div class="footerLinksContainer"> 
+          <ul class="footerLinks">
+            <li class="footerLinksTitle">
+              <a href="http://msdn.microsoft.com/en-us/vstudio/aa718325.aspx" title="Home">Home</a>
+            </li>
+
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/aa718325.aspx" title="Welcome">Welcome</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/cc136611.aspx" title="Visual Studio">Visual Studio</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/ff637362.aspx" title="Team Foundation Server">Team Foundation Server</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/aa496123.aspx" title=".NET Framework">.NET Framework</a>
+                </li>
+          </ul>
+          <ul class="footerLinks">
+            <li class="footerLinksTitle">
+              <a href="http://code.msdn.microsoft.com/vstudio" title="Samples">Samples</a>
+            </li>
+
+          </ul>
+          <ul class="footerLinks">
+            <li class="footerLinksTitle">
+              <a href="http://msdn.microsoft.com/en-us/vstudio/jj672990.aspx" title="Languages">Languages</a>
+            </li>
+
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/jj672990.aspx" title="Overview">Overview</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/hh386302.aspx" title="Visual C++">Visual C++</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/hh341490.aspx" title="Visual C#">Visual C#</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/hh388573.aspx" title="Visual Basic">Visual Basic</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/jj673959.aspx" title="JavaScript">JavaScript</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/vstudio/hh388569.aspx" title="Visual F#">Visual F#</a>
+                </li>
+          </ul>
+          <ul class="footerLinks">
+            <li class="footerLinksTitle">
+              <a href="http://visualstudiogallery.msdn.microsoft.com/" title="Extensions">Extensions</a>
+            </li>
+
+          </ul>
+          <ul class="footerLinks">
+            <li class="footerLinksTitle">
+              <a href="http://msdn.microsoft.com/en-us/library/vstudio" title="Documentation">Documentation</a>
+            </li>
+
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/library/vstudio/dd831853.aspx" title="Visual Studio">Visual Studio</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/library/vstudio/fda2bad5.aspx" title="Team Foundation Server/ALM">Team Foundation Server/ALM</a>
+                </li>
+                <li>
+                  <a href="http://msdn.microsoft.com/en-us/library/vstudio/w0x726c2.aspx" title=".NET Framework">.NET Framework</a>
+                </li>
+          </ul>
+          <ul class="footerLinks">
+            <li class="footerLinksTitle">
+              <a href="http://msdn.microsoft.com/en-us/vstudio/dd314520.aspx" title="Community">Community</a>
+            </li>
+
+                <li>
+                  <a href="http://social.msdn.microsoft.com/Forums/en-US/category/visualstudio,vslanguages,vstfs,netdevelopment,vsarch" title="Forums">Forums</a>
+                </li>
+                <li>
+                  <a href="http://www.codeplex.com/site/search?query=visual%20studio&amp;ac=1" title="CodePlex">CodePlex</a>
+                </li>
+                <li>
+                  <a href="http://visualstudio.uservoice.com/" title="User Voice">User Voice</a>
+                </li>
+                <li>
+                  <a href="http://connect.microsoft.com/VisualStudio" title="File a Bug">File a Bug</a>
+                </li>
+          </ul>
+    </div>
+    </div>
+  <div class="footerSubLinksContainer">
+    <span class="localePickerLink"><a href="http://msdn.microsoft.com/en-US/vstudio/SelectLocale?fromPage=http%3a%2f%2fsocial.msdn.microsoft.com%2fForums%2fen-US%2fvclanguage%2fthread%2f4b42670c-bf51-44ca-b7ac-688ad4fcc150%2f" title=" United States (English)"> United States (English)</a></span>
+    <ul class="footerSubLinks">
+      <li class="subFooterLink">© 2013 Microsoft</li>
+          <li class="subFooterLink">
+            <a href="http://msdn.microsoft.com/cc300389.aspx" title="Terms of Use">Terms of Use</a>
+          </li>
+          <li class="subFooterLink">
+            <a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx" title="Trademarks">Trademarks</a>
+          </li>
+          <li class="subFooterLink">
+            <a href="http://go.microsoft.com/fwlink/?LinkId=248681" title="Privacy Statement">Privacy Statement</a>
+          </li>
+          <li class="subFooterLink">
+            <a href="https://lab.msdn.microsoft.com/mailform/contactus.aspx?refurl=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2fvstudio%2faa718325.aspx&amp;loc=en-us" title="Site Feedback">Site Feedback</a>
+          </li>
+      <li>
+        <a class="microsoftlogo" href="http://www.microsoft.com/" title="Microsoft"></a>
+      </li>
+    </ul>
+  </div>
+</footer><script type="text/javascript" xmlns="http://www.w3.org/1999/xhtml">
+/*<![CDATA[*/
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "http://i.msdn.microsoft.com", 
+	"js": "http://i2.msdn.microsoft.com", 
+	"css": "http://i3.msdn.microsoft.com"
+});
+/**/
+/*]]>*/
+</script></div>
+<div data-chameleon-template="footer"></div>
+                    
+
+                           
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div data-chameleon-template="megablade"></div>
+    
+    
+    
+
+    <script src="./Writing my own strtok program._files/0a81d338785f34ccf1faf1e60d9546ab-6047566ece95234da338877b75402583-RequestReducedScript.js" type="text/javascript"></script>       
+    
+<script type="text/javascript" language="javascript">
+var railItems = ["/Forums/en-US/rightrailannouncement/Msdn/1b8316f5-41a3-4b88-b3f0-dcd6dba95852?forumName=vclanguage","/Forums/en-US/user/mylinks?forumId=5ac7f30f-4625-4162-bdbb-2416a72b7047\u0026forumName=vclanguage"];
+
+</script>
+
+    <script type="text/javascript" language="javascript">
+        var pageData = {"validUser":false,"autoSubscribe":false};
+    </script>
+     <script type="text/javascript" language="javascript">
+            var userEmailConfigured = false;
+     </script>  
+    <script src="./Writing my own strtok program._files/f88ffb7c2150f1a349aa26a707e68862-079a89b8f1ad21a8c9f9f044af02ae3f-RequestReducedScript.js" type="text/javascript"></script>
+    
+        <noscript>
+        &lt;img alt="" border="0" id="DCSIMG" width="1" height="1" src="http://m.webtrends.com/dcsour5e80000008ybade4ttg_1i1l/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No"&gt;
+    </noscript>
+    
+    <script type="text/javascript" src="./Writing my own strtok program._files/broker.js"></script>    
+    
+        <script src="./Writing my own strtok program._files/loader.js" type="text/javascript" language="javascript"></script>
+        
+    
+    <script src="./Writing my own strtok program._files/1137f6ae0c6c7e7ceac4da6ce50ab853-e4188f37bc2ebaa76f8e8683ae22dcca-RequestReducedScript.js" type="text/javascript"></script>        
+                        <noscript>&lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+        &lt;img src="http://msstonojssocial.112.2O7.net/b/ss/msstonojssocial/1/H.20.2--NS/0" height="1" width="1" alt="" /&gt;
+        &lt;/a&gt;</noscript>
+    
+
+
+<script src="./Writing my own strtok program._files/broker-config.js"></script><script src="./Writing my own strtok program._files/builder.js"></script><script src="./Writing my own strtok program._files/inv_c_SC-MSDN-p77596864-p77737117-Tier4.js"></script></body></html>

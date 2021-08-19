@@ -1,0 +1,1 @@
+(function(n){n.bi.dataRetrievers.attr={getLoadData:function(){var t;return t=n("area").filter(function(){return n(this).parent("map").siblings("img").is(":visible")}),t=t.add(n("a:visible")),n.bi.getAttrData(t)},getLinkData:function(t){return n.bi.getAttrData(t)}}})(jQuery);

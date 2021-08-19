@@ -1,0 +1,1795 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0037)http://support.microsoft.com/kb/51327 -->
+<html dir="ltr" lang="en-US" xmlns:bi="urn:schemas-microsoft-com:mscom:bi"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	INFO: strtok(): C Function -- Documentation Supplement
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta id="ctl00_ctl00_WtCampaignId" name="DCSext.wt_linkid"><meta id="ctl00_ctl00_WtTarget" name="DCSext.wt_target"><meta id="ctl00_ctl00_WtSp" name="WT.sp"><meta name="DCSdir.gTrackExceptions" content="no-track"><link rel="shortcut icon" href="http://www.microsoft.com/favicon.ico?v2">
+    <link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomMaster.css">
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomMaster.js"></script>
+    
+    <link title="Microsoft Support Search" type="application/opensearchdescription+xml" rel="search" href="http://support.microsoft.com/common/opensearchdescriptor.aspx?ln=en-us"><meta name="ms.gsfxversion" content="8.2.0.0"><meta name="ms.sup_cid" content="51327"><meta name="ms.sup_cln" content="en-us"><meta name="ms.sup_ct" content="kb"><meta name="ms.sup_ln" content="en-us"><meta name="ms.sup_sd" content="gn"><meta name="DCSext.sup_cid" content="51327"><meta name="DCSext.sup_cln" content="en-us"><meta name="DCSext.sup_ct" content="kb"><meta name="DCSext.sup_ln" content="en-us"><meta name="DCSext.sup_sd" content="gn"><script type="text/javascript">var gCookieDomain='support.microsoft.com';</script><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/jquery-1.7.2.min.js"></script><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/default.js"></script><script type="text/javascript">setcookieval("gssSITE","gn",'',true);</script><script type="text/javascript">setcookieval("gssTHEME","gn",'',true);</script><script type="text/javascript">setcookieval("gssTOOLBAR","gn",'',true);</script><script type="text/javascript">var g_currentContent='kb\x3ben-us\x3b51327';</script><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/survey.js"></script><meta name="robots" content=""><meta name="Search.lcid" content="1033"><meta name="Search.KeyWords" content="kbcode kbcrt kbinfo KB51327"><meta name="Search.DateModified" content="2005-07-05T22:25:13"><meta name="Search.Description" content="In Microsoft C, the strtok() function takes two strings as arguments. The first is a series of zero or more tokens separated by delimiters defined by the second string. The first call to strtok() returns a pointer to the first token in the first..."><meta name="Search.KBParents" content=""><meta name="Search.Assets" content="1"><meta name="Search.Retire" content="1"><meta name="Search.Products" content=""><meta name="Search.QueryWords" content=""><meta name="Search.ContentID" content="51327"><meta name="Search.Audiences" content=""><meta name="Search.Title" content="INFO: strtok(): C Function -- Documentation Supplement"><meta name="KBParents" content=""><meta name="Search.ContentType" content="kb"><meta name="Search.scid" content="kb;en-us;51327"><meta name="Search.MT" content="0"><meta name="Search.KB3" content="0"><meta name="Keywords" content="kbcode kbcrt kbinfo KB51327"><meta name="Description" content="In Microsoft C, the strtok() function takes two strings as arguments. The first is a series of zero or more tokens separated by delimiters defined by the second string. The first call to strtok() returns a pointer to the first token in the first..."><meta name="MS.LOCALE" content="en"><meta http-equiv="content-language" content="en-US"><script type="text/javascript">var url_exactMatch='/select/Default.aspx?target=assistance';</script><link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/default.css"><link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/XmlContent.css"><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/kb.js"></script><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/stickypanel.js"></script><link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/branding.css">
+<!-- RESG: 4/2/2013 4:39:25 AM - RESX: 1/1/0001 12:00:00 AM -->
+<!-- (c) 2013 Microsoft Corporation. All Rights Reserved -->
+<style type="text/css">html body, html select, html input, html form, html textarea{font-family : Segoe UI, Arial, Verdana, Tahoma, sans-serif;}</style><script type="text/javascript">var PersonalizationInfo='a2I1MTMyNwhlbi11cwhJTkZPOiBzdHJ0b2soKTogQyBGdW5jdGlvbg__';</script><link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/surveytrigger.css"><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/surveycookieutil.js"></script><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/surveytrigger.js"></script><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/search.js"></script><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/ac.js"></script>    
+    <style type="text/css">
+        #gsfx_brnd_PageWrapper
+        {
+            float: left;
+        }        
+        div.stage, div.mstHdr
+        {
+            width: 1024px;
+        }
+        div.search-navigation
+        {
+            margin-bottom: 0px;    
+        }
+        #contentArea
+        {
+            border-bottom: 0px;       
+        }        
+    </style>
+<style type="text/css">
+
+   body 
+    {
+        color: #000;
+        background-color: #ececec;
+       
+    }
+
+    body, input 
+    {
+        font-size: 100%;
+    }
+
+    body, select 
+    {
+        font-family: Segoe UI,Arial,Verdana,Tahoma,sans-serif;
+    }
+
+    .png-img span 
+    {
+        left: -9999px;
+    }
+
+    
+
+    div.form-bottom-inner 
+    {
+     background-color: #ececec;
+        left: 0;
+    }
+    
+    div.stage-bg-top 
+    {
+        background-color: #fff;
+        left: 0;
+    }
+
+    div.stage-bg-mid 
+    {
+        background-color: #fff;
+        left: 0;
+    }
+
+    div.stage-bg-bot 
+    {
+        background-color: #fff;
+        left: 0;
+    }
+    
+    div.main-brand div
+    {
+        float: left;
+    }
+    div.main-brand div.brandLogoText a
+    {
+        color: #4f4f4f;
+        font-size: 188%;
+    }
+
+    div.main-brand div.brandTagLineText a
+    {
+        color: #4f4f4f;
+        font-size: 80%;
+    }
+    
+         div.stage {  padding: 0px 40px; width: 984px; }  div.stage-content {  padding: 0px; }  body   { background-color: #FFFFFF; }  div.form-bottom-inner   { background-color: #FFFFFF; }  div.stage-bg-top   { background-color: #FFFFFF; _padding: 0 40px;   }  div.stage-bg-mid   { background-color: #FFFFFF; _padding: 0 40px;   }  div.stage-bg-bot   { background-color: #FFFFFF; _padding: 0 40px;   } 
+        
+     <!--[if !IE 7]>
+    .png-img div 
+    {
+        left: 0;
+    }
+      <![endif]-->
+    
+</style><meta name="ms.eventseqno" content="1"><meta name="ms.SsVersion" content="GSS8.0"><meta name="ms.EventCollectionId" content="1"><meta name="ms.OptionCollectionId" content="0"><meta name="ms.ContentProperties" content="6=9|7=3.1|"><meta name="ms.ContentLcid" content="1033"><meta name="ms.BrandId" content="1"></head>
+<body bi:type="oneMscomMaster" style="">
+    
+
+<div id="oneMscomJsCssLoader">
+
+    <link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/onemscomcomponents.css">
+    <link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomListLayout.css">
+
+    
+    <link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomBlade.css">
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomBlade.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomFooter.css">
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomFooter.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomNav.css">
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomNav.js"></script>
+    
+  
+         <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/oneMscomJsCssLoader.js"></script>
+
+    <div id="ctl00_ctl00_JsCssLoaderCtl_oneMscomLoadedComponent" style="display: none;">oneMscomBlade,oneMsomNav,oneMscomFooter,</div>
+    <div id="ctl00_ctl00_JsCssLoaderCtl_oneMscomComponentDynamicStyle">
+        <style type="text/css">
+            
+        .mstHdrV3 { font-family:Segoe UI,Arial,Verdana,Tahoma,sans-serif; width: 984px;}.mstHdrV3 .mstHdr_StaticSecLeftAlign {float:left;}.mstHdrV3 .mstHdr_StaticSecRightAlign {float:right;}.mstHdrV3 .mstHdr_MenuItemSiteIdentity a,.mstHdrV3 .mstHdr_MenuItemSiteIdentity a:link,.mstHdrV3 .mstHdr_MenuItemSiteIdentity a:visited,.mstHdrV3 .mstHdr_MenuItemSiteIdentity a:active {color:#333333;font-size:30px;}.mstHdrV3 .mstHdr_MenuItemAccount a,.mstHdrV3 .mstHdr_MenuItemAccount a:link,.mstHdrV3 .mstHdr_MenuItemAccount a:visited,.mstHdrV3 .mstHdr_MenuItemAccount a:active {font-size:13px;color:#0072C6;}.mstHdrV3 .mstHdr_SignInOut #idPPScarab{font-size:13px;color:#0072C6;}.mstHdrV3 .mstHdr_MenuItemsAccount .selected .mstHdr_MenuItemAccountText{border-color:#999;}.mstHdrV3 .mstHdr_Flyout{border: 1px solid #999;}.mstHdrV3 .mstHdr_MenuItemAccountFlyoutLinkText{margin-right:8px;}.mstHdrV3 .mstHdr_MenuItemSignIn{margin-left:10px;}.mstHdrV3 .mstHdr_BrandLine{background-color:#EEEEEE;} .mstHdrV3 .mstHdr_SignInOut .mstHdr_UserProfileTileImage { margin-left: 12px; }.oneMscomNavV3 .mstNavNavItem {float:left;padding-right:2px;}.oneMscomNavV3 .mstNavNavItemMiddle{padding-left: 2px;}.oneMscomNavV3 .mstNavNavItem .mstNavNavItemTabText, .oneMscomNavV3 .mstNavNavItem .mstNavNavItemTabTextLink  {padding-right:18px;}.oneMscomNavV3 .mstNavNavItemMiddle .mstNavNavItemTabText, .oneMscomNavV3 .mstNavNavItemMiddle .mstNavNavItemTabTextLink  {padding-left: 18px;}.oneMscomNavV3 .mstNavNavItemFlyout {left: 0px;}.oneMscomNavV3 .mstNav4ColMiddle {padding-left: 20px;}.oneMscomNavV3 .mstNav4ColFlyoutList {float:left;}.oneMscomNavV3 .mstNavMenuLinks {float:left;}.oneMscomNavV3 .mstNavMenuImgs {float:left;}.oneMscomNavV3 .mstNavMenuListItem  a, .oneMscomNavV3 .mstNavMenuListItem2 a{font-size:13px;color:#1570a6;}.oneMscomNavV3 .mstNavMenuListTitle {font-size:16px;color:#000000;}.oneMscomNavV3 .mstNavNavItemTabTextLink, .oneMscomNavV3 .mstNavNavItemTabText {font-size:13px;font-weight:500;color:#000000;}.oneMscomNavV3 .mstNavNavItemTabText .selected{font-size:13px;font-weight:500;color:#1570a6;}.oneMscomNavV3 .mstNavListImg {float:left;padding-left: 20px;}.oneMscomNavV3 .mstNavMenuListImgNoPadding {padding-left: 0px;}.oneMscomNavV3 .mstNavNavItemFlyout, .oneMscomNavV3 .selected, .oneMscomNavV3 .mstNavNavFirstItem {background-color:#EEEEEE;}.mstFooterDestLinkListOdd, .mstFooterDestLinkListEven {float:left;margin-left: 20px;}.mstFooterMsLinkItemText {margin-left: 10px;}.mstFooterMsLink, .mstFooterMsLinkItemLink, .mstFooterMsLinkItemText, .mstFooterDestLink, .mstFooterPopRes {float:left;}.mstFooterPopRes {margin-left: 20px;}.msFooterCorpLinkLi {margin-left:20px;}.mstFooterLocale {float: left;}.mstFooterLogo, .mstFooterCorpLink{float:right;}.mstFooterCopyRight {float:right;margin-left: 20px;}.mstFooterMoreCorpLink {float:right;}.oneMscomFooterV3, .mstFooterV3Backround {background-color:#EEEEEE;}.mstFooterMsLinkListTitle {color:#000000;font-size:13px;}.mstFooterMsLinkItemText {font-size:13px;}.mstFooterMsLinkItemText a {color:#000000;}.mstFooterDestLinkListTitle {color:#000000;font-size:13px;}.mstFooterDestLinkListItem {font-size:11px;}.mstFooterDestLinkListItem a {color:#0060a6;}.mstFooterPopResListTitle {color:#000000;font-size:13px;}.mstFooterPopResListItem {font-size:11px;}.mstFooterPopResListItem a {color:#0060a6;}.mstFooterCorpLinkCopyright {font-size:11px;}.mstFooterCorpLinkCopyright a {color:#000000;}.mstFooterCopyRight {color:#000000;font-size:11px;}.mstLcpMenuText {margin-left: 10px;float:left;font-size:13px;font-weight:600;color:#000000;}.mstLcpMenuImg {float:left;}.mstLcpFlyout {background-color:#EEEEEE;}.mstLcpLangSiteText {font-size:20px;color:#000000;}.mstLcpClose1 {right:20px;}.mstLcpClose2 {float:right;margin-right:20px;}.mstLcpList {float:left;}.mstLcpAllSitesText {font-size:20px;color:#000000;}.mstLcpSearch {right:20px;}.mstLcpAllSitesList {float:left;}.mstLcpSiteSites li a {font-size:13px;color:#0060a6;}.mstLcpAllSitesLinks li a {font-size:13px;color:#0060a6;}.mstLcpListNotLast {margin-right:20px;}.mstLcpSearchImg {background-image: url('//www.microsoft.com/global/onemscomsettings/publishingimages/searchimages/searchv3.ltr.png');}.mstLcpSearchBorder {border: 1px solid #EEEEEE;}.mstLcpSearchText {font-size:13px;}</style>
+    </div>
+    <div id="ctl00_ctl00_JsCssLoaderCtl_oneMscomGlobalSettings" style="display: none;"></div>
+     <div id="ctl00_ctl00_JsCssLoaderCtl_oneMscomThemeSettings" style="display: none;"></div>
+    <div id="ctl00_ctl00_JsCssLoaderCtl_oneMscomLocaleSettings" style="display: none;"></div>
+    <div id="ctl00_ctl00_JsCssLoaderCtl_oneMscomSiteSettings" style="display: none;"></div>
+
+   <div id="ctl00_ctl00_JsCssLoaderCtl_oneMscomComponentDynamicScript">
+         <script type="text/javascript">
+            
+        </script>
+   </div>
+</div>
+
+    <div class="stage">
+        <div class="utility-bar">
+            
+    
+<div class="oneMscomComp mstHdrV3 mstHdrV3-ltr" dir="ltr" bi:type="oneMscomBlade">
+    <div id="ctl00_ctl00_Header_oneMscomBlade_mstHdrV3" class="mstHdrV3">
+        <div class="mstHdr_PriRow">
+            <div class="mstHdr_StaticSec11 mstHdr_StaticSecLeftAlign">
+                
+<div id="MenuLink" class="mstHdr_MenuLinkMsLogo" bi:type="oneMscomMsLogo">
+    <a href="http://www.microsoft.com/en-us/default.aspx" id="ctl00_ctl00_Header_oneMscomBlade_ctl00_MenuLinkAnchor" class="mstHdr_MenuLinkAnchor" title="Microsoft Home Page">
+        <img src="./INFO  strtok()  C Function -- Documentation Supplement_files/microsoftlogov3.png" id="ctl00_ctl00_Header_oneMscomBlade_ctl00_MenuImage" alt="Microsoft Home Page" class="mstHdr_MsLogoImageSmall">
+    </a>
+</div>
+<div id="ctl00_ctl00_Header_oneMscomBlade_ctl01_divSiteIdentity" class="mstHdr_MenuItemSiteIdentity" bi:type="oneMscomSiteIdentity"><a href="http://support.microsoft.com/?ln=en-us"><span>Support</span></a></div>
+
+            </div>
+            <div class="mstHdr_StaticSec12 mstHdr_StaticSecRightAlign">
+                <div class="mstHdr_StaticSec121 mstHdr_StaticSecRightAlign">
+                    <div id="ctl00_ctl00_Header_oneMscomBlade_ctl02_divAccount" class="mstHdr_MenuItemsAccount mstHdr_StaticSecLeftAlign" style="display:none;" bi:type="oneMscomAccount">
+   <div id="ctl00_ctl00_Header_oneMscomBlade_ctl02_divAcoountItem" class="mstHdr_MenuItemAccount mstHdr_StaticSecLeftAlign">
+        <div class="mstHdr_MenuItemAccountText">
+            <a id="ctl00_ctl00_Header_oneMscomBlade_ctl02_divAccountFlyoutLink" class="mstHdr_MenuItemAccountFlyoutLink">
+                <div id="ctl00_ctl00_Header_oneMscomBlade_ctl02_divAccountFlyoutLinkText" class="mstHdr_MenuItemAccountFlyoutLinkText mstHdr_StaticSecLeftAlign">Account</div>
+                <div id="divAccountFlyoutLinkImage" class="mstHdr_MenuItemAccountFlyoutLinkArrow mstHdr_StaticSecLeftAlign">
+                   <img src="./INFO  strtok()  C Function -- Documentation Supplement_files/downarrow.png" id="ctl00_ctl00_Header_oneMscomBlade_ctl02_AccountDownArrowImage">
+                </div>
+                <div class="cssClear">
+                </div>
+            </a>
+        </div>
+        <div class="mstHdr_FlyoutPos">
+            <div id="ctl00_ctl00_Header_oneMscomBlade_ctl02_divAccountFlyout" class="mstHdr_Flyout">
+                <div id="ctl00_ctl00_Header_oneMscomBlade_ctl02_divAccountItems" class="mstHdr_AccountItems">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    if (typeof $ != "undefined") {
+        $(function () {
+            if (Mst && Mst.AccountFlyout) {
+                var AccountClick;
+                var AccountClose;
+                if ($.bi && $.bi.dataRetrievers.structure) { }
+
+                var accountFlyout = new Mst.AccountFlyout('ctl00_ctl00_Header_oneMscomBlade_ctl02_divAccount', AccountClick, AccountClose);
+            }
+        });
+    }
+</script>
+
+<div class="mstHdr_MenuItemSignIn mstHdr_StaticSecLeftAlign" id="mthdr33" bi:type="oneMscomSignInOut">
+    <div id="ctl00_ctl00_Header_oneMscomBlade_ctl03_mstHdrSignInOut" class="mstHdr_SignInOut">
+        <div class="mstHdr_StaticSecLeftAlign">
+            
+          
+            <span id="idSIT"><a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1364902765&rver=6.2.6289.0&wp=LBI&wreply=http://support.microsoft.com/MSAccount/SignIn/SignIn.aspx?RedirectionTo=%252fkb%252f51327&lc=1033&id=0" id="idPPScarab" style="display:inline">Sign in</a></span>
+        </div>
+        
+
+        <div class="mstHdr_StaticSecLeftAlign">
+            <a href="javascript:void(0);" id="ctl00_ctl00_Header_oneMscomBlade_ctl03_mstUserProfileTileLink" class="mstHdr_UserProfileTileLink">
+                <img id="ctl00_ctl00_Header_oneMscomBlade_ctl03_mstUserProfileTileImage" class="mstHdr_UserProfileTileImage">
+            </a>
+        </div>
+        </div>
+</div>
+                </div>
+                <div class="cssClear">
+                </div>
+                <div class="mstHdr_StaticSec122 mstHdr_StaticSecRightAlign">
+                    
+<style type="text/css">
+    div.gsfx_bsrch_container {
+        background-image: none;
+        float: none;
+        height: 24px;
+        margin: 0px;
+        width: auto;
+    }
+
+    #gsfx_bsrch_divQuery {
+        background-color: #FFFFFF;
+        border: 1px solid #999999;
+        display: block;
+        height: 22px;
+        margin: 0px;
+    }
+
+    #gsfx_bsrch_divQuery #gsfx_bsrch_query {
+        background-color: transparent;
+        font-size: 75%;
+        height: 16px;
+        margin: 2px 2px 0px 2px;
+        margin-top: 0px;
+        padding: 2px 2px 0px 2px;
+        vertical-align: top;
+    }
+
+    #gsfx_bsrch_divQuery #gsfx_bsrch_btnimg {
+        margin-left: 0px;
+        margin-top: 3px;
+        vertical-align: top;
+    }
+
+    #gsfx_cat_sel {
+        margin-right: 0px;
+        margin-top: 0px;
+        width: 13px;
+    }
+
+    #gsfx_bsrch_logo {
+        cursor: auto;
+        margin-top: 1px;
+        vertical-align: top;
+    }
+
+    #gsfx_bsrch_logo_div {
+        margin-right: 5px;
+        margin-top: 0px;
+    }
+
+    div.search-navigation .search { width: 385px; }
+
+    #acListWrappergsfx_bsrch_query {
+        top: 1px;
+        *top: -3px;
+    }
+</style>
+<form id="frmsrch" action="http://search.microsoft.com/en-us/supportresults.aspx?form=mssupport&q=" method="get" onsubmit=" return SaveSimpleSearch(); " data-featureid="900100">
+    <script type="text/javascript">setACStartChars('4:');</script>
+    
+    <div id="gsfx_bsrch_bg" class="gsfx_bsrch_container">
+        <div id="gsfx_bsrch_divQuery" style="width: 381px">
+            <input type="hidden" id="idTxtFld"><input type="text" id="gsfx_bsrch_query" style="width: 352px" name="q" maxlength="200" value="" autocomplete="off"><input type="image" title="" alt="" class="gsfx_img_png" style="width: 15px;height: 16px;" src="./INFO  strtok()  C Function -- Documentation Supplement_files/search_mag_glass.png" onclick="return SaveSimpleSearch();" id="gsfx_bsrch_btnimg"><!--[if lte IE 6]><input type="image" src="/library/images/support/cn/onepix.gif" alt="" class="gsfx_div_png" style="width:15px;height:16px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/library/images/support/CN/search_mag_glass.png', sizingMethod='scale');" onclick="return SaveSimpleSearch();" id="gsfx_bsrch_btnimg" /><![endif]-->
+        <div id="acListWrappergsfx_bsrch_query" style="position: relative; width: 150px; height: 0px; margin-left: -1px;"><div id="acListDivgsfx_bsrch_query" style="padding: 10px 1px 10px 10px; margin: 0px; visibility: hidden; z-index: 99; position: absolute; line-height: 18px; width: 137px; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-color: rgb(153, 153, 153); overflow: hidden; background-color: rgb(255, 255, 255); font-size: 0.7em; font-family: &#39;Segoe UI&#39;, Arial, Verdana, Tahoma, sans-serif; background-position: initial initial; background-repeat: initial initial;"></div><div id="gsfx_bsrch_options"><div id="gsfx_bsrch_options_subcntr" style="width: 381px;"><div class="TopSearchOptionsSelected"><div id="gsfx_srchsitename_div0" class="gsfx_srchsitename_cotnr">Search Support</div></div><div class="TopSearchOptionsDefault"><div id="gsfx_srchsitename_div1" class="gsfx_srchsitename_cotnr">Search Microsoft.com</div></div><div class="TopSearchOptionsDefault"><div id="gsfx_srchsitename_div2" class="gsfx_srchsitename_cotnr">Search the web</div></div></div></div></div></div>
+        <div id="gsfx_cat_sel" style="display: none">
+            <a id="gsfx_cat_sel_btn" href="javascript:void(0)">
+                <img src="./INFO  strtok()  C Function -- Documentation Supplement_files/ss_dd_select1.png" hover-src="/library/images/support/cn/ss_dd_select2.png" alt="Select"></a>
+            <!-- The below Element is used if the Search is not a MSCOM Search -->
+            
+            <!-- The above Element is used if the Search is not a MSCOM Search -->
+            
+        </div>
+    </div>
+    <script type="text/javascript">try{MS.Support.AC.MakeAutoComplete({id:'gsfx_bsrch_query', lcid:'1033', acURL:'http://autocomplete.support.microsoft.com', statsObj:StatsDotNet, startChar:'4', bubbleside:'left'});}catch(e){}</script><script type="text/javascript">supportedSites.push(new Site('Search Support', 'http\x3a\x2f\x2fsearch.microsoft.com\x2fen-us\x2fsupportresults.aspx\x3fform\x3dmssupport\x26q\x3d', true, ClickAction.Redirect));supportedSites.push(new Site('Search Microsoft.com', 'http\x3a\x2f\x2fsearch.microsoft.com\x2fresults.aspx\x3fmkt\x3den-us\x26q\x3d', false, ClickAction.Redirect));supportedSites.push(new Site('Search the web', 'http\x3a\x2f\x2fwww.bing.com\x2fsearch\x3fform\x3dMSSSUP\x26mkt\x3den-us\x26q\x3d', false, ClickAction.Redirect));</script>
+    <div class="hiddenformels">
+        <!-- The below Element is used if the Search is not a MSCOM Search -->
+        
+         <!-- The above Element is used if the Search is not a MSCOM Search -->
+    
+        <!-- The below Element is used if the Search is a MSCOM Search -->
+        
+
+
+                <input type="hidden" name="form" value="mssupport">
+            
+        <!-- The below Element is used if the Search is a MSCOM Search -->
+    </div>
+    <noscript>
+        &lt;style type="text/css"&gt;
+            #gsfx_bsrch_catsel a { display: none; }
+
+            #gsfx_bsrch_websrch { display: none; }
+
+            #gsfx_bsrch_query {
+                color: Black;
+                font-style: normal;
+            }
+        &lt;/style&gt;
+    </noscript>
+<span><input type="hidden" id="catalog" name="catalog"></span></form>
+                </div>
+            </div>
+        </div>
+        <div class="cssClear">
+        </div>
+        <div class="mstHdr_SecRow">
+            <div class="mstHdr_StaticSec21">
+                
+
+<div class="oneMscomNavV3" bi:type="oneMscomNav">
+    <div id="ctl00_ctl00_Header_oneMscomBlade_ctl05_ctl00_mstNavMenu" class="mstNavMenu">
+        <ul id="ctl00_ctl00_Header_oneMscomBlade_ctl05_ctl00_mstNav1stLvl" class="mstNav1stLvl">
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    if (typeof $ != "undefined") {
+        $(function () {
+            if (Mst && Mst.FlyoutNavigationMenuV3) {
+                var NavigationMenuV3 = new Mst.FlyoutNavigationMenuV3('ctl00_ctl00_Header_oneMscomBlade_ctl05_ctl00', '984', '');
+            }
+
+        });
+    }
+
+</script>
+
+            </div>
+        </div>
+        <div class="mstHdr_BrandLine" style="left: -40px; right: 0px; width: 984px; padding-left: 40px; padding-right: 40px;">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    if (typeof $ != "undefined") {
+        $(function () {
+            if (Mst && Mst.HeaderV3) {
+
+                var blade3V = new Mst.HeaderV3('ctl00_ctl00_Header_oneMscomBlade_mstHdrV3', '984', '');
+            }
+        });
+    }
+</script>
+
+
+        </div>
+        <div class="stage-content">
+             
+
+            <div class="main-content">
+                
+    <div id="gsfx_brnd_PageWrapper">
+        <div id="gsfx_brnd_PageContainer" class="gsfx_brnd_PageContainer">
+            <div id="gsfx_brnd_ContentContainer" class="gsfx_brnd_TransBG">
+                <div id="contentArea">
+                    <div id="topRow">
+
+<link type="text/css" rel="Stylesheet" href="./INFO  strtok()  C Function -- Documentation Supplement_files/wayfinder.css">
+
+<script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/wayfinder.js"></script>
+<div id="wayfinder" class="wayfinder" data-featureid="900020">
+    <div class="modalities">
+        <ul data-gps-lts-log="{&quot;a&quot;:&quot;Modality&quot;}">
+            
+            <li class="modality selected" data-type="SelfHelp" data-root-path="/find-solutions" data-products-head-title="Select the product you need help with">
+                <a href="http://support.microsoft.com/find-solutions/">
+                    <span>
+                        <span>
+                        Find it myself
+                        </span>
+                        <img alt="Selected" class="arrow" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-modality-carrot.png">
+                    </span>
+                </a>
+            </li>
+            
+            <li class="modality " data-type="Community" data-root-path="/ask-community" data-products-head-title="Select a Community Forum">
+                <a href="http://support.microsoft.com/ask-community/">
+                    <span>
+                        <span>
+                        Ask the community
+                        </span>
+                        <img alt="Selected" class="arrow" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-modality-carrot.png">
+                    </span>
+                </a>
+            </li>
+            
+            <li class="modality " data-type="Support" data-root-path="/get-support" data-products-head-title="Select the product you need help with">
+                <a href="http://support.microsoft.com/get-support/">
+                    <span>
+                        <span>
+                        Get live help
+                        </span>
+                        <img alt="Selected" class="arrow" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-modality-carrot.png">
+                    </span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="products">
+        <h3 class="head-title">
+            Select the product you need help with
+        </h3>
+        <ul data-gps-lts-log="{&quot;li.product-item&quot;:&quot;GPSProgram&quot;}">
+            
+            <li class="product-tile product-item" data-id="0" data-key="windows" data-product-id="509" data-seam-id="100100625">
+                <a href="http://support.microsoft.com/find-solutions/windows/">
+                    <span class="icon">
+                        
+                        <img alt="Windows" class="show-when-selected" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-windows-selected.png">
+                        
+                        <img alt="Windows" class="normal" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-windows.png">
+                    </span>
+                    
+                    <span class="title">Windows</span> </a>
+                
+                <ul style="">
+                    
+                          <li class="product-item" data-id="0" data-key="windows-8" data-product-id="16796" data-seam-id="100100626" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/windows/windows-8/">Windows 8</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="windows-rt" data-product-id="16855" data-seam-id="100100917" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/windows/windows-rt/">Windows RT</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="windows-7" data-product-id="14019" data-seam-id="100100749" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/windows/windows-7/">Windows 7</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="windows-vista" data-product-id="11732" data-seam-id="100100805" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/windows/windows-vista/">Windows Vista</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="windows-xp" data-product-id="1173" data-seam-id="100100861" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/windows/windows-xp/">Windows XP</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="more" data-product-id="" data-seam-id="" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/windows/more/">more...</a>
+                          </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="product-tile product-item" data-id="0" data-key="internet-explorer" data-product-id="807" data-seam-id="100100179">
+                <a href="http://support.microsoft.com/find-solutions/internet-explorer/">
+                    <span class="icon">
+                        
+                        <img alt="Internet Explorer" class="show-when-selected" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-ie-selected.png">
+                        
+                        <img alt="Internet Explorer" class="normal" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-ie.png">
+                    </span>
+                    
+                    <span class="title">Internet Explorer</span> </a>
+                
+                <ul style="">
+                    
+                          <li class="product-item" data-id="0" data-key="internet-explorer-10" data-product-id="16759" data-seam-id="100100180" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/internet-explorer/internet-explorer-10/">Internet Explorer 10</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="internet-explorer-pre-ie-10" data-product-id="807" data-seam-id="100100236" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/internet-explorer/internet-explorer-pre-ie-10/">Internet Explorer (pre IE 10)</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="more" data-product-id="" data-seam-id="" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/internet-explorer/more/">more...</a>
+                          </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="product-tile product-item" data-id="0" data-key="office" data-product-id="505" data-seam-id="100100283">
+                <a href="http://support.microsoft.com/find-solutions/office/">
+                    <span class="icon">
+                        
+                        <img alt="Office" class="show-when-selected" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-office-selected.png">
+                        
+                        <img alt="Office" class="normal" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-office.png">
+                    </span>
+                    
+                    <span class="title">Office</span> </a>
+                
+                <ul style="">
+                    
+                          <li class="product-item" data-id="0" data-key="office-2013" data-product-id="16674" data-seam-id="100101113" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/office-2013/">Office 2013</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="office-365-home-premium" data-product-id="17032" data-seam-id="100101140" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/office-365-home-premium/">Office 365 Home Premium &amp; Office 365 University</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="office-2010" data-product-id="13615" data-seam-id="100101043" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/office-2010/">Office 2010 suites</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="office-for-mac-2011" data-product-id="15627" data-seam-id="100101178" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/office-for-mac-2011/">Office for Mac 2011</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="excel-2013" data-product-id="16628" data-seam-id="100101054" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/excel-2013/">Excel 2013</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="onenote-2013" data-product-id="16636" data-seam-id="100101205" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/onenote-2013/">OneNote 2013</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="outlook-2013" data-product-id="16648" data-seam-id="100101251" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/outlook-2013/">Outlook 2013</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="powerpoint-2013" data-product-id="16634" data-seam-id="100101314" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/powerpoint-2013/">PowerPoint 2013</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="word-2013" data-product-id="16641" data-seam-id="100101367" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/word-2013/">Word 2013</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="more" data-product-id="" data-seam-id="" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/office/more/">more...</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="word" data-product-id="939" data-seam-id="100100516" style="display:none">
+                              <a href="http://support.microsoft.com/find-solutions/office/word/">Word</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="excel" data-product-id="918" data-seam-id="100100284" style="display:none">
+                              <a href="http://support.microsoft.com/find-solutions/office/excel/">Excel</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="outlook" data-product-id="928" data-seam-id="100100420" style="display:none">
+                              <a href="http://support.microsoft.com/find-solutions/office/outlook/">Outlook</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="powerpoint" data-product-id="929" data-seam-id="100100468" style="display:none">
+                              <a href="http://support.microsoft.com/find-solutions/office/powerpoint/">PowerPoint</a>
+                          </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="product-tile product-item" data-id="0" data-key="surface" data-product-id="99999" data-seam-id="">
+                <a href="http://support.microsoft.com/find-solutions/surface/">
+                    <span class="icon">
+                        
+                        <img alt="Surface" class="show-when-selected" src="./INFO  strtok()  C Function -- Documentation Supplement_files/Way-Surface-selected.png">
+                        
+                        <img alt="Surface" class="normal" src="./INFO  strtok()  C Function -- Documentation Supplement_files/Way-Surface.png">
+                    </span>
+                    
+                    <span class="title">Surface</span> </a>
+                
+            </li>
+            
+            <li class="product-tile product-item" data-id="0" data-key="xbox" data-product-id="510" data-seam-id="">
+                <a href="http://support.microsoft.com/find-solutions/xbox/">
+                    <span class="icon">
+                        
+                        <img alt="Xbox" class="show-when-selected" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-xbox-selected.png">
+                        
+                        <img alt="Xbox" class="normal" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-xbox.png">
+                    </span>
+                    
+                    <span class="title">Xbox</span> </a>
+                
+            </li>
+            
+            <li class="product-tile product-item" data-id="0" data-key="skype" data-product-id="16432" data-seam-id="">
+                <a href="http://support.microsoft.com/find-solutions/skype/">
+                    <span class="icon">
+                        
+                        <img alt="Skype" class="show-when-selected" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-skype-selected.png">
+                        
+                        <img alt="Skype" class="normal" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-skype.png">
+                    </span>
+                    
+                    <span class="title">Skype</span> </a>
+                
+            </li>
+            
+            <li class="product-tile product-item" data-id="0" data-key="phone" data-product-id="11921" data-seam-id="">
+                <a href="http://support.microsoft.com/find-solutions/phone/">
+                    <span class="icon">
+                        
+                        <img alt="Windows Phone" class="show-when-selected" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-phone-selected.png">
+                        
+                        <img alt="Windows Phone" class="normal" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-phone.png">
+                    </span>
+                    
+                    <span class="title">Windows Phone</span> </a>
+                
+                <ul style="">
+                    
+                          <li class="product-item" data-id="0" data-key="windows-phone-8" data-product-id="16718" data-seam-id="" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/phone/windows-phone-8/">Windows Phone 8</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="windows-phone" data-product-id="15222" data-seam-id="" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/phone/windows-phone/">Windows Phone 7</a>
+                          </li>
+                    
+                          <li class="product-item" data-id="0" data-key="more" data-product-id="" data-seam-id="" style="display:block">
+                              <a href="http://support.microsoft.com/find-solutions/phone/more/">more...</a>
+                          </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="product-tile product-item last" data-id="0" data-key="more" data-product-id="" data-seam-id="">
+                <a href="http://support.microsoft.com/find-solutions/more/">
+                    <span class="icon">
+                        
+                        <img alt="More products" class="normal" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-more.png">
+                    </span>
+                    
+                    <span class="selected-indicator show-when-selected">
+                        <img alt="Selected" src="./INFO  strtok()  C Function -- Documentation Supplement_files/way-product-carrot.png"></span>
+                    
+                    <span class="title">More products</span> </a>
+                
+            </li>
+            
+        </ul>
+    </div>
+</div>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+    (function() {
+        var suggestionFormat = "Search {0} in Microsoft Support";
+        var wayfinder = new Microsoft.Support.GSS.WayFinder("#wayfinder", {
+            enable: false,      // we need disabled wayfinder first till document is ready.
+            language: 'en-us',
+            path: '',
+            isFullTopicPath: false,
+            topicKeys: ['', ''],
+            isRTL: false
+        });
+        var hasTopSearch = $("#gsfx_bsrch_query").length > 0;
+        if(hasTopSearch) {
+            $(wayfinder).bind("modalityselect", function(evt, modalityData, srcEvt) {
+                srcEvt.preventDefault();
+                if (modalityData.type !== "SelfHelp") {
+                    removeGpsSearchFromSearchOptions("?");
+                } else {
+                    var productNode = wayfinder.getCurrentProduct();
+                    var productName = productNode ? productNode.get("name") : "";
+                    if (productName !== "" && productNode.get("props").productId) {
+                        var siteName = suggestionFormat.replace(new RegExp('\\{0\\}', 'gm'), productName);
+                        AddGpsSearchToSearchOptions(siteName, '?');
+                    } else {
+                        removeGpsSearchFromSearchOptions("?");
+                    }
+                }
+            }).bind("productselect", function(evt, productNode, srcEvt) {
+                var productName = productNode.get("name");
+                var siteName = suggestionFormat.replace(new RegExp('\\{0\\}', 'gm'), productName);
+                if (this.getCurrentModality().type === "SelfHelp" && productNode.get("props").productId) {
+                    AddGpsSearchToSearchOptions(siteName, '?');
+                } else {
+                    removeGpsSearchFromSearchOptions("?");
+                }
+            });
+        }
+        window._wayfinder = wayfinder;
+        $(function() {
+            wayfinder.enable();
+        });
+    })();
+</script>
+</div><div id="mainRow"><div class="primaryTable"><table cellpadding="0" cellspacing="0" class="primaryTable"><tbody><tr><td class="primaryMainColumn"><div id="mainColumn"><div id="kb" class="kb"><div id="kb_default" class="kb_default ltr"><!-- - -KB 3 start- - --><a id="top"></a><h1 class="title" id="mt_title">INFO: strtok(): C Function -- Documentation Supplement</h1><div class="articleProperty" id="mt_article_properties" translate="false">Article ID: 51327 - <a href="http://support.microsoft.com/kb/51327#appliesto" onclick="return ScrollToSection(&#39;.articleProperties&#39;);">View products that this article applies to.</a></div><div class="rtDisclaimerLink" id="rtDisclaimerDiv" translate="false"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/Archived-KB_16.png" alt="Retired KB Article"><a href="http://support.microsoft.com/kb/51327#rtDisclaimer" id="rtDisclaimer_link" onclick="return ScrollToSection(&#39;.articleProperties&#39;);">Retired KB Content Disclaimer</a></div><script type="text/javascript">if (!loadTOCNode) {var loadTOCNode = function(){}}</script><div class="notice">This article was previously published under Q51327</div><div class="notice">
+MS-DOS:5.1,6.0,6.00a,6.00ax,7.0; OS/2:5.1,6.0,6.00a; WINDOWS:1.0,1.5;
+WINDOWS NT:1.0,2.0,4.0,5.0
+</div><div id="kb_section" class="section"><div id="kb_expandcollapseall" class="expandcollapseall_open" translate="false"><a href="javascript:void(0);" class="expandalltext" id="expandAll">Expand all</a> | <a href="javascript:void(0);" class="collapsealltext" id="collapseAll">Collapse all</a><script type="text/javascript">
+          if (kb_page_object)
+          {
+          kb_page_object.kb_imageExpandHoverText = 'Click to expand this image';
+          }
+        </script></div><h2 class="subTitle tocTitle kb_tabs_toggle_closed" id="tocHeadRef" translate="false"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/20x20_grey_plus.png" class="kb_tabs_toggle kb_tabs_toggle_open"><span><a href="javascript:void(0);" id="mt_toc_title">On This Page</a></span></h2><div class="sbody kb_tabs_toggle_closed" id="tocDiv" style="margin-left: 40px;"><ul><li><a href="http://support.microsoft.com/kb/51327#" onclick="return tocScrollTo(this);"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/downarrow.gif" alt=""><span class="tocTxt">SUMMARY</span></a><ul class="tocLine"></ul></li><li><a href="http://support.microsoft.com/kb/51327#" onclick="return tocScrollTo(this);"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/downarrow.gif" alt=""><span class="tocTxt">MORE INFORMATION</span></a><ul class="tocLine"><li><a href="http://support.microsoft.com/kb/51327#" onclick="return tocScrollTo(this);"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/downarrow.gif" alt=""><span class="tocTxt">Sample Code</span></a><ul class="tocLine"></ul></li></ul></li><li><a href="http://support.microsoft.com/kb/51327#" onclick="return tocScrollTo(this);"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/downarrow.gif" alt=""><span class="tocTxt">Properties</span></a><ul class="tocLine"></ul></li><li><a href="http://support.microsoft.com/kb/51327#" onclick="return tocScrollTo(this);"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/downarrow.gif" alt=""><span class="tocTxt">Give Feedback</span></a><ul class="tocLine"></ul></li></ul></div><script type="text/javascript">
+      var tocObject = {};
+      var tocArrow = "/library/images/support/kbgraphics/public/en-us/downarrow.gif";
+      var depthLimit = 10;
+      var depth3Limit = 10;
+      var depth4Limit = 5;
+      var depth5Limit = 3;
+      var tocEntryMinimum = 1;
+    </script><noscript>&lt;style&gt;.tocTitle, #tocDiv{display: none;}&lt;/style&gt;</noscript><h2 class="subTitle" id="tocHeadRef" translate="false"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/20x20_grey_minus.png" class="kb_tabs_toggle kb_tabs_toggle_open"><span><a href="javascript:void(0);">SUMMARY</a></span></h2><script type="text/javascript">
+              loadTOCNode(1, 'summary');
+            </script><div class="sbody" id="MT0" style="margin-left: 40px;">
+In Microsoft C, the strtok() function takes two strings as
+arguments. The first is a series of zero or more tokens separated by
+delimiters defined by the second string. The first call to strtok()
+returns a pointer to the first token in the first argument. To get the
+next token in the original string, a call to strtok() must be made
+with NULL as the first argument, which tells strtok() to search for
+the next token in the previous token string.
+<br><br>
+Keep the following information in mind when using strtok():
+<br><br><ul><li>strtok() will replace a delimiter in the original string with a
+   NULL each time the function is called using the same string, so the
+   original string is modified by the use of strtok().
+</li><li>The second argument to strtok() can be changed at any time to a
+   different delimiter.
+</li><li>Only single characters are considered to be delimiters.</li></ul><div class="topOfPage" translate="false"><a href="http://support.microsoft.com/kb/51327#top"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/uparrow.gif" alt=""><span>Back to the top</span></a><font class=""> | </font><a href="http://support.microsoft.com/kb/51327#survey" class="" onclick="return ScrollToSection(&#39;.kbfeedback&#39;);">Give Feedback</a></div></div><h2 class="subTitle" id="tocHeadRef" translate="false"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/20x20_grey_minus.png" class="kb_tabs_toggle kb_tabs_toggle_open"><span><a href="javascript:void(0);">MORE INFORMATION</a></span></h2><script type="text/javascript">
+              loadTOCNode(1, 'moreinformation');
+            </script><div class="sbody" id="MT1" style="margin-left: 40px;">
+On the first call to strtok(), the function searches the string
+argument given as the first parameter for any token delimiter defined
+in the second string argument. Any further call to strtok() with NULL
+as the first argument will return a pointer to the next token in the
+original string. The following sample program from page 603 of the
+"Microsoft C Optimizing Compiler: Run-Time Library Reference" manual
+for version 5.1 shows how strtok() searches a token string:
+
+<h3 id="tocHeadRef">Sample Code</h3><script type="text/javascript">
+        loadTOCNode(2, 'moreinformation');
+      </script><div class="kb_codebody"><div class="kb_codecontent"><code><pre class="code">/* Compile options needed: none
+*/ 
+
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+
+char string[] = "a string,of ,,tokens";
+char *token;
+
+void main(void)
+{
+        token = strtok(string," ,"); /*There are two delimiters here*/ 
+        while (token != NULL){
+                printf("The token is:  %s\n", token);
+                token = strtok(NULL," ,");
+        }
+}
+				</pre></code></div></div>
+
+
+The output of this program is as follows:
+<ul><li>The token is: a</li><li>The token is: string</li><li>The token is: of</li><li>The token is: tokens
+</li></ul>
+The following is a sample representation of the area in memory around
+the token pointer during execution of the above program. Note the
+replacement of the delimiter with a NULL character each time a token
+is found:
+
+<div class="kb_intextwrapper"><div class="kb_intextbody"><pre class="in_text">
+   -------------------------------------------------------------
+   |a |  |s |t |r |i |n |g |, |o |f |  |, |, |t |o |k |e |n |s |
+   -------------------------------------------------------------
+   This is the original string before the first call to strtok().
+
+
+   -------------------------------------------------------------
+   |a |\0|s |t |r |i |n |g |, |o |f |  |, |, |t |o |k |e |n |s |
+   -------------------------------------------------------------
+    ^----- Token will point here on the first call.
+
+   -------------------------------------------------------------
+   |a |\0|s |t |r |i |n |g |\0|o |f |  |, |, |t |o |k |e |n |s |
+   -------------------------------------------------------------
+          ^------ Token will point here on the second call.
+
+   -------------------------------------------------------------
+   |a |\0|s |t |r |i |n |g |\0|o |f |\0|, |, |t |o |k |e |n |s |
+   -------------------------------------------------------------
+                               ^----- Token will point here on
+                                      the third call.
+
+                                (and so on)
+				</pre></div></div><div class="topOfPage" translate="false"><a href="http://support.microsoft.com/kb/51327#top"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/uparrow.gif" alt=""><span>Back to the top</span></a><font class=""> | </font><a href="http://support.microsoft.com/kb/51327#survey" class="" onclick="return ScrollToSection(&#39;.kbfeedback&#39;);">Give Feedback</a></div></div><h2 class="subTitle articleProperties" id="tocHeadRef" translate="false"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/20x20_grey_minus.png" class="kb_tabs_toggle kb_tabs_toggle_open"><span><a href="javascript:void(0);" id="mt_propertyHead">Properties</a></span></h2><script type="text/javascript">
+      loadTOCNode(1, 'Properties');
+    </script><div class="sbody" translate="false" style="margin-left: 40px;"><div class="articlePropertyBottom">Article ID: 51327 - Last Review: July 5, 2005 - Revision: 3.1</div><div class="appliesTo"><a id="appliesto"></a><h5>APPLIES TO</h5><ul><li>The C Run-Time (CRT), when used with:</li><ul class="kb_subList"><li>Microsoft C Professional Development System 6.0a</li><li>Microsoft C Professional Development System 6.0a</li><li>Microsoft Visual C++ 1.0 Professional Edition</li><li>Microsoft Visual C++ 1.5 Professional Edition</li><li>Microsoft Visual C++ 1.0 Professional Edition</li><li>Microsoft Visual C++ 2.0 Professional Edition</li><li>Microsoft Visual C++ 4.0 Standard Edition</li><li>Microsoft Visual C++ 5.0 Standard Edition</li><li>Microsoft Visual C++ 6.0 Service Pack 5</li></ul></ul></div><div class="keywords"><table><tbody><tr><td class="header"><h5>Keywords:&nbsp;
+              </h5></td><td class="text">kbcode kbcrt kbinfo KB51327</td></tr></tbody></table></div></div><div class="sbody norollup" translate="false" style="margin-left: 40px;"><div class="disclaimer retiredkb" translate="false"><a id="rtDisclaimer"></a><span class="label" id="mt_retired_head">Retired KB Content Disclaimer</span><div class="text" id="mt_retired_body">This article was written about products for which Microsoft no longer offers support. Therefore, this article is offered "as is" and will no longer be updated.</div></div><div class="topOfPage" translate="false"><a href="http://support.microsoft.com/kb/51327#top"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/uparrow.gif" alt=""><span>Back to the top</span></a><font class=""> | </font><a href="http://support.microsoft.com/kb/51327#survey" class="" onclick="return ScrollToSection(&#39;.kbfeedback&#39;);">Give Feedback</a></div></div></div><script type="text/javascript">addMtSpan();</script><!-- - -KB 3 end- - --></div></div><div class="kbSurvey"><h2 class="subTitle kbfeedback" id="tocHeadRef"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/20x20_grey_minus.png" class="kb_tabs_toggle kb_tabs_toggle_open"><span><a href="javascript:void(0);">Give Feedback</a></span></h2><script type="text/javascript">
+        loadTOCNode(1, 'Give Feedback');
+      </script><div class="sbody"><span class="bookmark"><a id="survey" name="survey">&nbsp;</a></span><div class="wp" id="fmsSurvey" style="display: block;"><div class="fms"><noscript>&lt;div class="SURVEYNOSCRIPT"&gt;&lt;/div&gt;</noscript><input type="hidden" id="surveyname" name="surveyname" value=""><input type="hidden" id="showpage" name="showpage" value="1"><div id="SURVEYSECTIONCONTAINER"><div id="SURVEYSECTION_132" class="SURVEYSECTION" style="display: block;" xmlns:sw="urn:schemas-microsoft-com/PSS/PSS_Survey01"><input type="hidden" name="id" value="132"><div name="CompoundingBranchRules" style="display:none;"></div><input type="hidden" name="NextSectionByTopicRef" value="0"><div id="SURVEYQUESTION_12616" class="QUESTIONCONTAINER" style="display: block;"><input type="hidden" name="id" value="12616"><input type="hidden" name="type" value="CHOICE"><input type="hidden" name="required" value="0"><div class="QUESTIONTEXT">Was this information helpful?</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div><input type="hidden" name="randomization" value=""><table cellspacing="0" cellpadding="0" border="0"><tbody><tr style="display: table-row;"><td valign="top" style="display: table-cell;"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_1261612616" id="125" value="0"></td><td class="ANSWERTEXT">Yes</td></tr></tbody></table></td></tr><tr style="display: table-row;"><td valign="top" style="display: table-cell;"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_1261612616" id="126" value="1"></td><td class="ANSWERTEXT">No</td></tr></tbody></table></td></tr><tr style="display: table-row;"><td valign="top" style="display: table-cell;"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_1261612616" id="18874" value="2"></td><td class="ANSWERTEXT">Somewhat</td></tr></tbody></table></td></tr></tbody></table></div><div id="SURVEYQUESTION_10576" class="QUESTIONCONTAINER" style="display: block;"><input type="hidden" name="id" value="10576"><input type="hidden" name="type" value="CHOICE"><input type="hidden" name="required" value="0"><div class="QUESTIONTEXT">How much effort did you personally put forth to use this article?</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div><input type="hidden" name="randomization" value=""><table cellspacing="0" cellpadding="0" border="0"><tbody><tr style="display: table-row;"><td valign="top" style="display: table-cell;"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_1057610576" id="16305" value="1"></td><td class="ANSWERTEXT">Very low</td></tr></tbody></table></td></tr><tr style="display: table-row;"><td valign="top" style="display: table-cell;"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_1057610576" id="16306" value="2"></td><td class="ANSWERTEXT">Low</td></tr></tbody></table></td></tr><tr style="display: table-row;"><td valign="top" style="display: table-cell;"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_1057610576" id="16307" value="3"></td><td class="ANSWERTEXT">Moderate</td></tr></tbody></table></td></tr><tr style="display: table-row;"><td valign="top" style="display: table-cell;"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_1057610576" id="16308" value="4"></td><td class="ANSWERTEXT">High</td></tr></tbody></table></td></tr><tr style="display: table-row;"><td valign="top" style="display: table-cell;"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td valign="top" class="CHOICEROW"><input type="radio" name="QUESTION_132_1057610576" id="16309" value="5"></td><td class="ANSWERTEXT">Very high</td></tr></tbody></table></td></tr></tbody></table></div><div id="SURVEYQUESTION_12617" class="QUESTIONCONTAINER" style="display: block;"><input type="hidden" name="id" value="12617"><input type="hidden" name="type" value="TEXT-BLOCK"><input type="hidden" name="required" value="0"><div class="QUESTIONTEXT">Tell us why and what can we do to improve this information</div><div class="QUESTIONINSTRUCTION"></div><div class="QUESTIONREQUIRED"></div><textarea class="ANSWERBOX" name="TEXTBLOCK_12617" rows="12" cols="80" onpaste="enforceMaxLength(this,1024,event)" onkeyup="enforceMaxLength(this,1024,event)"></textarea></div><div class="NAVIGATION"><table class="NAVBUTTONCONTAINER"><tbody><tr><td class="PADDINGCELL"></td><td class="NAVBUTTONCELL" id="PreviousButton"></td><td class="NAVBUTTONCELL"><input class="NAVBUTTON" type="button" name="next" data-nav="true" data-name="btnNext" value="Submit" id="
+                      SURVEYSECTION_132_next
+                    " onclick="kbSurvey.next();this.blur();"></td><td class="ENDPADDINGCELL"></td></tr></tbody></table></div></div><div id="DIV_CLOSE" style="display:none" xmlns:sw="urn:schemas-microsoft-com/PSS/PSS_Survey01"><div class="SURVEYTHANKYOUCONTAINER"><div class="SURVEYINTROTEXT">Thank you! Your feedback is used to help us improve our support content. For more assistance options, please visit the <a href="http://support.microsoft.com/">Help and Support Home Page</a>.</div></div><div class="NAVIGATION"><table class="NAVBUTTONCONTAINER" nowrap="yes"><tbody><tr><td class="PADDINGCELL"></td><td class="NAVBUTTONCELL"></td><td class="ENDPADDINGCELL"></td></tr></tbody></table></div></div></div></div></div><script type="text/javascript">
+      var kbSurvey = new MS.Support.Fms.Survey("fmsSurvey");
+      kbSurvey.isKBEmbedded = true;
+      kbSurvey.addSubmitField('REGIONID', 'en-us');
+      kbSurvey.addSubmitField('SITE', 'gn');
+      kbSurvey.addSubmitField('SURVEYSCID', 'sw;en;1809');
+      kbSurvey.addSubmitField('SURVEYID', '1809');
+      kbSurvey.addSubmitField('SURVEYNAME', '');
+      kbSurvey.addSubmitField('BROWSERLANGCODE', 'en-US,en\x3bq\x3d0.8');
+      kbSurvey.addSubmitField('SURVEYLANGCODE', 'en');
+      kbSurvey.addSubmitField('FMSURL', '%252fdefault.aspx%252fkb%252f51327');
+      kbSurvey.parameters = ['kb','en-us','51327','','','','','','',''];
+      kbSurvey.maxKBsInCookie = '10';
+      kbSurvey.kbvisited = '';
+    </script><div class="topOfPage">
+      <a href="http://support.microsoft.com/kb/51327#top">
+        <img src="./INFO  strtok()  C Function -- Documentation Supplement_files/uparrow(1).gif" alt="Back to the top">Back to the top
+      </a>
+    </div></div></div></div></td><td class="primaryThinColumn"><div id="thinColumn" style="float: none;"><div class="wp articleTrans"><h3><span class="linkCon">Article Translations</span><span class="linkConTop"></span></h3></div><div id="ArticleTranslations"><div onclick="DisplayATList()" class="ATtext"><span><a href="http://support.microsoft.com/kb/51327/ar" onclick="ATClick(&#39;29803&#39;,this)" title="(الشرق الاوسط (العربية">(الشرق الاوسط (العربية</a></span><a style="background-image:url(/library/images/support/CN/kb_dropdown_icon.png);" href="javascript:void(0)"></a></div><div id="ATList" name="scid" style="display: none; position: absolute;"><ul><li><a href="http://support.microsoft.com/kb/51327/pt-br" onclick="ATClick(&#39;29803&#39;,this)" title="Brasil (Português)">Brasil (Português)</a></li><li><a href="http://support.microsoft.com/kb/51327/cs" onclick="ATClick(&#39;29803&#39;,this)" title="Česká republika (Čeština)">Česká republika (Čeština)</a></li><li><a href="http://support.microsoft.com/kb/51327/de" onclick="ATClick(&#39;29803&#39;,this)" title="Deutschland (Deutsch)">Deutschland (Deutsch)</a></li><li><a href="http://support.microsoft.com/kb/51327/es" onclick="ATClick(&#39;29803&#39;,this)" title="España, Latinoamérica (Español)">España, Latinoamérica (Español)</a></li><li><a href="http://support.microsoft.com/kb/51327/fr" onclick="ATClick(&#39;29803&#39;,this)" title="France (Français)">France (Français)</a></li><li><a href="http://support.microsoft.com/kb/51327/it" onclick="ATClick(&#39;29803&#39;,this)" title="Italia (Italiano)">Italia (Italiano)</a></li><li><a href="http://support.microsoft.com/kb/51327/pt" onclick="ATClick(&#39;29803&#39;,this)" title="Portugal (Português)">Portugal (Português)</a></li><li><a href="http://support.microsoft.com/kb/51327/tr" onclick="ATClick(&#39;29803&#39;,this)" title="Türkiye (Türkçe)">Türkiye (Türkçe)</a></li><li><a href="http://support.microsoft.com/kb/51327/ko" onclick="ATClick(&#39;29803&#39;,this)" title="대한민국 (한국어)">대한민국 (한국어)</a></li><li><a href="http://support.microsoft.com/kb/51327/zh-cn" onclick="ATClick(&#39;29803&#39;,this)" title="中国 (简体中文)">中国 (简体中文)</a></li><li><a href="http://support.microsoft.com/kb/51327/zh-tw" onclick="ATClick(&#39;29803&#39;,this)" title="台灣 (繁體中文)">台灣 (繁體中文)</a></li><li><a href="http://support.microsoft.com/kb/51327/ja" onclick="ATClick(&#39;29803&#39;,this)" title="日本 (日本語)">日本 (日本語)</a></li></ul></div></div><script type="text/javascript">GSS.Utility.DisplaySsbAd();</script><div id="divSsbAdContent"><a href="http://smallbusiness.support.microsoft.com/en-us"><center><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/180x150-SMB-ENUS1-Alicia.jpg"></center></a></div></div></td></tr></tbody></table></div></div><noscript>&lt;img id="StatsDotNetImgNoScript" alt="" src="http://support.microsoft.com/LTS/default.aspx?SSID=1&amp;amp;SiteLCID=1033&amp;amp;SsVersion=GSS8.0&amp;amp;SiteCulture=en-us&amp;amp;ContentCulture=en-us&amp;amp;In404Url=&amp;amp;EventCollectionID=1&amp;amp;URL=%2fdefault.aspx&amp;amp;ContentType=kb&amp;amp;ContentLCID=1033&amp;amp;ContentID=51327&amp;amp;Platform=windows%20nt%206.1&amp;amp;BrandID=1&amp;amp;flexValue2=32&amp;amp;flexValue8=0&amp;amp;ContentProperties=6%3d9%7c7%3d3.1%7c" /&gt;</noscript><img id="StatsDotNetImg" name="StatsDotNetImg" alt="" src="./INFO  strtok()  C Function -- Documentation Supplement_files/default.aspx"><script type="text/javascript">StatsDotNet.disabled=false;StatsDotNet.enableCollTierParams=true;StatsDotNet.host='http\x3a\x2f\x2fsupport.microsoft.com\x2fLTS\x2fdefault.aspx';StatsDotNet.ssId='1';StatsDotNet.siteLcId='1033';StatsDotNet.SiteCulture='en-us';StatsDotNet.SsVersion='GSS8.0';StatsDotNet.url='\x2fdefault.aspx';StatsDotNet.ContentCulture ='en-us';StatsDotNet.contentType='kb';StatsDotNet.contentLn='1033';StatsDotNet.contentId='51327';StatsDotNet.platform='windows nt 6.1';StatsDotNet.eventCollectionId=1;StatsDotNet.siteBrandId='1';StatsDotNet.onUnloadTimeout=300;StatsDotNet.ltsIdleTimeout=5000;StatsDotNet.userAgentString='mozilla\x2f5.0 \x28windows nt 6.1\x29 applewebkit\x2f537.22 \x28khtml, like gecko\x29 chrome\x2f25.0.1364.172 safari\x2f537.22';StatsDotNet.PassportStatus=0;StatsDotNet.ContentProperties='6\x3d9\x7c7\x3d3.1\x7c';StatsDotNet.flexValue2='32';StatsDotNet.flexValue8='0';</script><script type="text/javascript"> var varWedcsEnable = true; this.generateWedcsData(); </script><script type="text/javascript">var enableSiteSurvey = true;function isDomainTracking(){var entry = MS.Support.Fms.CookieUtil.getCookie('fmshb');if (entry){try{return entry.split(',')[0] == '1' ? true : false;}catch (e){return false;}}return false;};window.setInterval(function(){MS.Support.Fms.CookieUtil.setSessionCookie('fmshb', (isDomainTracking() ? '1' : '0') + ',' + (new Date()).getTime());}, 1000);function fmsLastExp(){var visits = MS.Support.Fms.CookieUtil.getCookie('ST_GN_EN-US');var parts =  visits ? visits.split('_') : [];if (null == visits || parts.length != 3 || isNaN(parts[0])){return 0;}return parseInt(parts[2]);};function fmsSurveyExpired(days){var MiliDay = 86400000;var visits = MS.Support.Fms.CookieUtil.getCookie('ST_GN_EN-US');var parts = visits ? visits.split('_') : [];if (null == visits || parts.length != 3 || isNaN(parts[0])){return true;};var origDate = parseInt(parts[1]);var curDate = new Date();return (curDate.getTime()/MiliDay - days) >= origDate;};function activateSiteSurvey (){if(window.top == window && !isDomainTracking() && typeof(enableSiteSurvey) != "undefined" && enableSiteSurvey && fmsSurveyExpired(fmsLastExp())){document.write('<script language="javascript" src="https://www.microsoft.com/library/svy/support/broker.js"></scr'+'ipt>');}};var triggerEntity = {CookieDef:'ST_GN_EN-US',Site:'gn',Region:'en-us',IsRTL:false,Scid:"sw;en;1848",Xsl:"",Path:"/common/survey.aspx",IdValue: '',EmbedSurveyPrompt: 'nothing',Expiration:90,Delay:0,Frequency:112,SurveyStyle:"popup",DisplayIntroPage:1,EmailStyle:0,EmailSurveyID:"",ReferringURL:'http\x3a\x2f\x2fsupport.microsoft.com\x2fdefault.aspx\x2fkb\x2f51327',Event:"OnUnload",TriggerId:"13703",IntervalType:"session",Redirect:"",OptOut:0,AltStyle: '',RenderOption: '',InvitationWidth: 0,PageWidth: 0,PageHeight: 0,AnimationDuration:0.5,Parameters:['kb','en-us','51327','','','','','','',''],Theme:"gn",Toolbar:"",Contains:"sub-domain",Pages:[],TrackingText:'Thank you for agreeing to participate in the Microsoft online survey.\u00a0 Please look at the support.microsoft.com Web site the way you normally would and then come back and answer the survey questions that will appear in this window.\u00a0 The questions will appear after you leave the web pages for which Microsoft is seeking your feedback.'};new MS.Support.Fms.SurveyTrigger(triggerEntity, typeof config != "undefined" ? config : null);</script><script language="javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/broker.js"></script><script type="text/javascript">function thisLoad(){KBFeedBackDisplay();StatsDotNet.LogPageOnLoad();CreateSearchOptions('acListWrappergsfx_bsrch_query', 383);InitCatLangSel();InitSrch();InitAC('gsfx_bsrch_query');$(document).ready(function() {gsfx_bsrch_InitCatSelection('gsfx_bsrch_query', '4:');});}function thisUnload(){}</script><script type="text/javascript">$(window).load(thisLoad);$(window).unload(thisUnload);</script><script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/store_link_modifier.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            </div>
+            <div class="footer">
+                
+    <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterV3Ctl" class="oneMscomFooterV3" bi:type="oneMscomFooter">
+        <div id="mstFooterV3Backround" class="mstFooterV3Backround" style="left: -40px; right: 0px; width: 984px; height: 468px; padding-left: 40px; padding-right: 40px;"></div>
+        <div class="mstFooterTop">
+            <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink" class="mstFooterMsLink" bi:type="oneMscomFooterMsLink">
+                <ul class="mstFooterMsLinkList">
+                    <li>
+                        <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLinkListTitle" class="mstFooterMsLinkListTitle">Other Microsoft sites</div>
+                    </li>
+                    
+                            <li class="mstFooterMsLinkItemLi">
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl00_mstFooterMsLinkItem" class="mstFooterMsLinkItem">
+                                    <a href="http://windows.microsoft.com/en-us/" id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl00_mstFooterMsLinkItemLink" class="mstFooterMsLinkItemLink"><div title="Windows"><img alt="Windows" src="./INFO  strtok()  C Function -- Documentation Supplement_files/windowslogo.png" width="100%" height="100%"></div></a>
+                                    <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl00_mstFooterMsLinkItemText" class="mstFooterMsLinkItemText"><a href="http://windows.microsoft.com/en-us/"><span>Windows</span></a></div>
+                                </div>
+                            </li>
+                        
+                            <li class="mstFooterMsLinkItemLi">
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl01_mstFooterMsLinkItem" class="mstFooterMsLinkItem">
+                                    <a href="http://office.microsoft.com/en-us/" id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl01_mstFooterMsLinkItemLink" class="mstFooterMsLinkItemLink"><div title="Office"><img alt="Office" src="./INFO  strtok()  C Function -- Documentation Supplement_files/officelogo.png" width="100%" height="100%"></div></a>
+                                    <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl01_mstFooterMsLinkItemText" class="mstFooterMsLinkItemText"><a href="http://office.microsoft.com/en-us/"><span>Office</span></a></div>
+                                </div>
+                            </li>
+                        
+                            <li class="mstFooterMsLinkItemLi">
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl02_mstFooterMsLinkItem" class="mstFooterMsLinkItem">
+                                    <a href="http://www.windowsphone.com/en-us" id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl02_mstFooterMsLinkItemLink" class="mstFooterMsLinkItemLink"><div title="Windows Phone"><img alt="Windows Phone" src="./INFO  strtok()  C Function -- Documentation Supplement_files/phonelogo.png" width="100%" height="100%"></div></a>
+                                    <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl02_mstFooterMsLinkItemText" class="mstFooterMsLinkItemText"><a href="http://www.windowsphone.com/en-us"><span>Windows Phone</span></a></div>
+                                </div>
+                            </li>
+                        
+                            <li class="mstFooterMsLinkItemLi">
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl03_mstFooterMsLinkItem" class="mstFooterMsLinkItem">
+                                    <a href="http://www.xbox.com/en-us/" id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl03_mstFooterMsLinkItemLink" class="mstFooterMsLinkItemLink"><div title="Xbox"><img alt="Xbox" src="./INFO  strtok()  C Function -- Documentation Supplement_files/xboxlogo.png" width="100%" height="100%"></div></a>
+                                    <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl03_mstFooterMsLinkItemText" class="mstFooterMsLinkItemText"><a href="http://www.xbox.com/en-us/"><span>Xbox</span></a></div>
+                                </div>
+                            </li>
+                        
+                            <li class="mstFooterMsLinkItemLi">
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl04_mstFooterMsLinkItem" class="mstFooterMsLinkItem">
+                                    <a href="http://www.skype.com/intl/en-us/home" id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl04_mstFooterMsLinkItemLink" class="mstFooterMsLinkItemLink"><div title="Skype"><img alt="Skype" src="./INFO  strtok()  C Function -- Documentation Supplement_files/skypelogo.png" width="100%" height="100%"></div></a>
+                                    <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl04_mstFooterMsLinkItemText" class="mstFooterMsLinkItemText"><a href="http://www.skype.com/intl/en-us/home"><span>Skype</span></a></div>
+                                </div>
+                            </li>
+                        
+                            <li class="mstFooterMsLinkItemLi">
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl05_mstFooterMsLinkItem" class="mstFooterMsLinkItem">
+                                    <a href="http://www.bing.com/" id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl05_mstFooterMsLinkItemLink" class="mstFooterMsLinkItemLink"><div title="Bing"><img alt="Bing" src="./INFO  strtok()  C Function -- Documentation Supplement_files/binglogo.png" width="100%" height="100%"></div></a>
+                                    <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl05_mstFooterMsLinkItemText" class="mstFooterMsLinkItemText"><a href="http://www.bing.com/"><span>Bing</span></a></div>
+                                </div>
+                            </li>
+                        
+                            <li class="mstFooterMsLinkItemLi">
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl06_mstFooterMsLinkItem" class="mstFooterMsLinkItem">
+                                    <a href="http://www.microsoftstore.com/store/msstore/en_US/home?WT.mc_id=SMCMSCOM_ENUS_NAV_BUYALL" id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl06_mstFooterMsLinkItemLink" class="mstFooterMsLinkItemLink"><div title="Microsoft Store"><img alt="Microsoft Store" src="./INFO  strtok()  C Function -- Documentation Supplement_files/storelogo.png" width="100%" height="100%"></div></a>
+                                    <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMsLink_Repeater_ctl06_mstFooterMsLinkItemText" class="mstFooterMsLinkItemText"><a href="http://www.microsoftstore.com/store/msstore/en_US/home?WT.mc_id=SMCMSCOM_ENUS_NAV_BUYALL"><span>Microsoft Store</span></a></div>
+                                </div>
+                            </li>
+                        
+                </ul>
+            </div>
+            <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterDestLink" class="mstFooterDestLink" bi:type="oneMscomFooterDestLink">
+                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterDestLinkTemplate"><ul class="mstFooterDestLinkListOdd"><li><ul class="mstFooterDestLinkCatList"><li class="mstFooterDestLinkListTitle"><div>Downloads</div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/en-us/download/default.aspx"><span>Download center</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/en-us/download/windows.aspx?q=windows"><span>Windows downloads</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/en-us/download/office.aspx?q=office"><span>Office downloads</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/en-us/download/search.aspx?q=" service="" pack"&p="0&amp;r=10&amp;t=&amp;s=availabledate~Descending&quot;"><span>Service Pack downloads</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://support.microsoft.com/kb/179113/"><span>Direct X download</span></a></div></li></ul></li><li><ul class="mstFooterDestLinkCatList"><li class="mstFooterDestLinkListTitle"><div>Security</div></li><li class="mstFooterDestLinkListItem"><div><a href="http://support.microsoft.com/gp/cu_sc_virsec_master/"><span>Virus and Security solution center</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/security/default.aspx"><span>Security home page</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://update.microsoft.com/microsoftupdate"><span>Microsoft Update</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://windows.microsoft.com/en-US/windows/products/security-essentials/?WT.mc_id=SMCPSC_ENUS_TEXT_DNLD"><span>Download Security Essentials</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/security/pc-security/malware-removal.aspx"><span>Malware Removal tool</span></a></div></li></ul></li></ul><ul class="mstFooterDestLinkListEven"><li><ul class="mstFooterDestLinkCatList"><li class="mstFooterDestLinkListTitle"><div>Support</div></li><li class="mstFooterDestLinkListItem"><div><a href="http://support.microsoft.com/search/?adv=1"><span>Knowledge Base search</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://support.microsoft.com/find-solutions/more/?ln=en-us"><span>Supported Products list</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://support.microsoft.com/gp/support-options-for-home-users/en-us"><span>Support offerings</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://support.microsoft.com/gp/lifecycle"><span>Product support lifecycle</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://smallbusiness.support.microsoft.com/"><span>Small and medium business support</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://technet.microsoft.com/en-us/ms772425?WT.mc_id=SMCfoot_ENUS_TEXT"><span>IT Pro support</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://msdn.microsoft.com/en-us/hh361695?WT.mc_id=SMCfoot_ENUS_TEXT"><span>Developer support</span></a></div></li></ul></li><li><ul class="mstFooterDestLinkCatList"><li class="mstFooterDestLinkListTitle"><div>About Microsoft</div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/about/en/us/default.aspx"><span>Microsoft</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/careers"><span>Careers</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/en-us/news/"><span>Company news</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/investor"><span>Investor relations</span></a></div></li><li class="mstFooterDestLinkListItem"><div><a href="http://www.microsoft.com/en/us/sitemap.aspx"><span>Site map</span></a></div></li></ul></li></ul></div>
+            </div>
+            <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes" class="mstFooterPopRes" bi:type="oneMscomFooterPopResLink">
+                <ul class="mstFooterPopResList">
+                    <li>
+                        <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopResListTitle" class="mstFooterPopResListTitle">Popular resources</div>
+                    </li>
+                    
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl00_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://windows.microsoft.com/en-US/windows/download-outlook-express"><span>Microsoft Outlook Express</span></a></div>
+                            </li>
+                        
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl01_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://support.microsoft.com/fixit"><span>Microsoft Fix It downloads</span></a></div>
+                            </li>
+                        
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl02_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://windows.microsoft.com/en-us/windows7/Keyboard-shortcuts"><span>Windows keyboard shortcuts</span></a></div>
+                            </li>
+                        
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl03_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://social.technet.microsoft.com/Forums/en/itprovistaapps/thread/b5d10db8-2980-4fe6-81e0-f232eab4037a"><span>Microsoft Visual C library runtime error</span></a></div>
+                            </li>
+                        
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl04_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://support.microsoft.com/kb/324516/"><span>Windows Installer error: service could not be accessed</span></a></div>
+                            </li>
+                        
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl05_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://support.microsoft.com/kb/290301/"><span>Windows Installer cleanup utility download</span></a></div>
+                            </li>
+                        
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl06_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://support.microsoft.com/kb/306084/"><span>How to: Windows XP system restore</span></a></div>
+                            </li>
+                        
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl07_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://support.microsoft.com/mats/windows_update/"><span>Windows update error message</span></a></div>
+                            </li>
+                        
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl08_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://support.microsoft.com/kb/971606/"><span>Microsoft Security Essentials manual update download</span></a></div>
+                            </li>
+                        
+                            <li>
+                                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterPopRes_Repeater_ctl09_mstFooterPopResListItem" class="mstFooterPopResListItem"><a href="http://support.microsoft.com/kb/272227/"><span>Inbox Scanpst.exe</span></a></div>
+                            </li>
+                        
+                </ul>
+            </div>
+        </div>    
+        <div class="mstFooterBottom">
+            <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterLocaleLogo" class="mstFooterLocaleLogo" bi:type="oneMscomFooterLocaleLogo">
+                <div class="mstFooterLocale">
+                    <div id="ctl00_ctl00_Footer_oneMscomFooter_ctl00_oneMscomLocalePicker" class="oneMscomLocalePicker">
+    <div id="ctl00_ctl00_Footer_oneMscomFooter_ctl00_mstLcpMenu" class="mstLcpMenu"><a href="http://support.microsoft.com/default.aspx/kb/51327?mstLocPickShow=True" id="mstLocPickerCtl" bi:track="false"><div class="mstLcpMenuImg"><img src="./INFO  strtok()  C Function -- Documentation Supplement_files/footer_globe.png"></div><span class="mstLcpMenuText">United States </span></a></div>
+    
+    <div id="ctl00_ctl00_Footer_oneMscomFooter_ctl00_mstLcpFlyout" class="mstLcpFlyout" style="left: -40px; right: 0px; width: 984px; padding-left: 40px; padding-right: 40px;">
+        
+
+        <div>
+            <!--site in other languages-->
+            <div class="mstLcpLangSites">
+                
+                        <div class="mstLcpClose2">
+                            <a href="http://support.microsoft.com/default.aspx/kb/51327?mstLocPickShow=False" bi:track="false">
+                                <img src="./INFO  strtok()  C Function -- Documentation Supplement_files/flyoutclosebtnround.png">
+                            </a>
+                        </div>
+                
+                <div class="cssClear"></div>
+            </div>
+            <!--all sites text-->
+            <div class="mstLcpAllSites">
+                <div class="mstLcpAllSitesText">
+                    <!--set text based on locale present, if none then set site not available in other languages-->
+                    This site in other countries/regions: 
+	                        
+                </div>
+                <div id="ctl00_ctl00_Footer_oneMscomFooter_ctl00_mstLcpSearch" class="mstLcpSearch">
+
+                
+
+                        <span class="mstLcpSearchContainter">
+                            <span class="mstLcpSearchBorder">
+                                <input name="ctl00$ctl00$Footer$oneMscomFooter$ctl00$mstLcpSearchText" type="text" id="ctl00_ctl00_Footer_oneMscomFooter_ctl00_mstLcpSearchText" class="mstLcpSearchText" title="Search for a language or locale">
+                                <span class="mstLcpSearchImg"></span>
+                            </span>
+                        </span>
+
+                    </div>
+            </div>
+            <div class="mstLcpAllSitesLinks">
+            
+                
+                    <ul class="mstLcpAllSitesList mstLcpListNotLast">
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=fr-al">
+                                    <span dir="ltr">
+                                        Algeria - Français
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-ar">
+                                    <span dir="ltr">
+                                        Argentina - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-au">
+                                    <span dir="ltr">
+                                        Australia - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=nl-be">
+                                    <span dir="ltr">
+                                        België - Nederlands
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=fr-be">
+                                    <span dir="ltr">
+                                        Belgique - Français
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-bo">
+                                    <span dir="ltr">
+                                        Bolivia - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=hr-ba">
+                                    <span dir="ltr">
+                                        Bosna i Hercegovina  - Hrvatski
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=pt-br">
+                                    <span dir="ltr">
+                                        Brasil - Português
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-ca">
+                                    <span dir="ltr">
+                                        Canada - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=fr-ca">
+                                    <span dir="ltr">
+                                        Canada - Français
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=cs">
+                                    <span dir="ltr">
+                                        Česká Republika - Čeština
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-cl">
+                                    <span dir="ltr">
+                                        Chile - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-co">
+                                    <span dir="ltr">
+                                        Colombia - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-cr">
+                                    <span dir="ltr">
+                                        Costa Rica - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=sr-me">
+                                    <span dir="ltr">
+                                        Crna Gora - Srpski
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=da">
+                                    <span dir="ltr">
+                                        Danmark - Dansk
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=de">
+                                    <span dir="ltr">
+                                        Deutschland – Deutsch
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-do">
+                                    <span dir="ltr">
+                                        Dominican Republic - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-ec">
+                                    <span dir="ltr">
+                                        Ecuador - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=et">
+                                    <span dir="ltr">
+                                        Eesti - Eesti
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-sv">
+                                    <span dir="ltr">
+                                        El Salvador - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-es">
+                                    <span dir="ltr">
+                                        España - Español
+                                    </span>
+                                </a>
+                            </li>
+                                            
+                    
+                    </ul>
+                
+                    <ul class="mstLcpAllSitesList mstLcpListNotLast">
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=fr">
+                                    <span dir="ltr">
+                                        France - Français
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-gt">
+                                    <span dir="ltr">
+                                        Guatemala - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-hk">
+                                    <span dir="ltr">
+                                        Hong Kong SAR - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=hr">
+                                    <span dir="ltr">
+                                        Hrvatska - Hrvatski
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-in">
+                                    <span dir="ltr">
+                                        India - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=id-id">
+                                    <span dir="ltr">
+                                        Indonesia (Bahasa) - Bahasa
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-id">
+                                    <span dir="ltr">
+                                        Indonesia (English) - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-ie">
+                                    <span dir="ltr">
+                                        Ireland - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=is-is">
+                                    <span dir="ltr">
+                                        Ísland - Íslenska
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=it">
+                                    <span dir="ltr">
+                                        Italia - Italiano
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-la">
+                                    <span dir="ltr">
+                                        Latinoamérica - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=lv">
+                                    <span dir="ltr">
+                                        Latvija - Latviešu
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=lt">
+                                    <span dir="ltr">
+                                        Lietuva - Lietuvių
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=fr-lu">
+                                    <span dir="ltr">
+                                        Luxembourg - Français 
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=hu">
+                                    <span dir="ltr">
+                                        Magyarország - Magyar
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-my">
+                                    <span dir="ltr">
+                                        Malaysia - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-mx">
+                                    <span dir="ltr">
+                                        México - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-me">
+                                    <span dir="ltr">
+                                        Middle East - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=fr-mo">
+                                    <span dir="ltr">
+                                        Morrocco - Français
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=nl">
+                                    <span dir="ltr">
+                                        Nederland - Nederlands
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-nz">
+                                    <span dir="ltr">
+                                        New Zealand - English
+                                    </span>
+                                </a>
+                            </li>
+                                            
+                    
+                    </ul>
+                
+                    <ul class="mstLcpAllSitesList mstLcpListNotLast">
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=no">
+                                    <span dir="ltr">
+                                        Norge - Bokmål
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=de-at">
+                                    <span dir="ltr">
+                                        Österreich - Deutsch
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-pa">
+                                    <span dir="ltr">
+                                        Panamá - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-py">
+                                    <span dir="ltr">
+                                        Paraguay - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-pe">
+                                    <span dir="ltr">
+                                        Perú - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-ph">
+                                    <span dir="ltr">
+                                        Philippines - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=pl">
+                                    <span dir="ltr">
+                                        Polska - Polski
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=pt">
+                                    <span dir="ltr">
+                                        Portugal - Português
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-pr">
+                                    <span dir="ltr">
+                                        Puerto Rico - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=ro">
+                                    <span dir="ltr">
+                                        România - Română
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=de-ch">
+                                    <span dir="ltr">
+                                        Schweiz - Deutsch
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-sg">
+                                    <span dir="ltr">
+                                        Singapore - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=sl">
+                                    <span dir="ltr">
+                                        Slovenija - Slovenščina
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=sk">
+                                    <span dir="ltr">
+                                        Slovensko - Slovenčina
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-za">
+                                    <span dir="ltr">
+                                        South Africa - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=sr">
+                                    <span dir="ltr">
+                                        Srbija - Srpski
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=fr-ch">
+                                    <span dir="ltr">
+                                        Suisse - Français
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=fi">
+                                    <span dir="ltr">
+                                        Suomi - Suomi
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=sv">
+                                    <span dir="ltr">
+                                        Sverige - Svenska
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=fr-tu">
+                                    <span dir="ltr">
+                                        Tunisia - Français
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=tr">
+                                    <span dir="ltr">
+                                        Türkiye - Türkçe
+                                    </span>
+                                </a>
+                            </li>
+                                            
+                    
+                    </ul>
+                
+                    <ul class="mstLcpAllSitesList">
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=en-gb">
+                                    <span dir="ltr">
+                                        United Kingdom - English
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-uy">
+                                    <span dir="ltr">
+                                        Uruguay - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=es-ve">
+                                    <span dir="ltr">
+                                        Venezuela - Español
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=vi-vn">
+                                    <span dir="ltr">
+                                        Việt Nam - Tiếng việt
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=el">
+                                    <span dir="ltr">
+                                        Ελλάδα - Ελληνικά
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=bg">
+                                    <span dir="ltr">
+                                        България - Български
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=kk-kz">
+                                    <span dir="ltr">
+                                        Казахстан - Русский
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=ru">
+                                    <span dir="ltr">
+                                        Россия - Русский
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=uk-ua">
+                                    <span dir="ltr">
+                                        Україна - Українська
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=he">
+                                    <span dir="rtl">
+                                        ישראל - עברית
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=ar-ae">
+                                    <span dir="rtl">
+                                        الإمارات العربية المتحدة - العربية 
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=ar">
+                                    <span dir="rtl">
+                                        الشرق الاوسط  - العربية - العربية
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=ar-sa">
+                                    <span dir="ltr">
+                                        المملكة العربية السعودية - العربية
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=ar-eg">
+                                    <span dir="rtl">
+                                        مصر - العربية
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=hi-in">
+                                    <span dir="ltr">
+                                        भारत - हिंदी
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=th">
+                                    <span dir="ltr">
+                                        ไทย - ไทย
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=ko">
+                                    <span dir="ltr">
+                                        대한민국 - 한국어
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=zh-cn">
+                                    <span dir="ltr">
+                                        中国  - 简体中文
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=zh-tw">
+                                    <span dir="ltr">
+                                        台灣 - 繁體中文
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=ja">
+                                    <span dir="ltr">
+                                        日本 - 日本語
+                                    </span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://support.microsoft.com/?ln=zh-hk">
+                                    <span dir="ltr">
+                                        香港特別行政區 - 繁體中文
+                                    </span>
+                                </a>
+                            </li>
+                                            
+                    
+                    </ul>
+                
+                <div class="cssClear"></div>            
+            </div>
+
+        </div>        
+
+    </div>
+</div>
+                </div>
+                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterLogo" class="mstFooterLogo"></div>
+            </div>
+            <div class="mstFooterCorpLinkCopyright">
+                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterCopyRight" class="mstFooterCopyRight"><div>©2013 Microsoft</div></div>
+                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterCorpLink" class="mstFooterCorpLink" bi:type="oneMscomFooterCorpLink"><ul><li class="msFooterCorpLinkLi"><a href="http://support.microsoft.com/gp/csa/"><span>Services Agreement</span></a></li><li class="msFooterCorpLinkLi"><a href="http://support.microsoft.com/contactus/?ws=support"><span>Contact Us</span></a></li><li class="msFooterCorpLinkLi"><a href="http://www.microsoft.com/about/legal/en/us/intellectualproperty/copyright/default.aspx"><span>Terms of Use</span></a></li><li class="msFooterCorpLinkLi"><a href="http://www.microsoft.com/about/legal/en/us/intellectualproperty/trademarks/en-us.aspx"><span>Trademarks</span></a></li><li class="msFooterCorpLinkLi"><a href="http://go.microsoft.com/fwlink/p/?LinkId=248685"><span>Privacy &amp; Cookies</span></a></li></ul></div>
+                <div id="ctl00_ctl00_Footer_oneMscomFooter_mstFooterMoreCorpLink" class="mstFooterMoreCorpLink" bi:type="oneMscomFooterCorpLink"><ul><li class="msFooterCorpLinkLi"></li></ul></div>
+            </div>            
+        </div>
+    </div>
+    
+
+    <script type="text/javascript">
+
+        if (typeof $ != "undefined") {
+            $(function () {
+                if (Mst && Mst.FooterV3) {
+                    var footerV3 = new Mst.FooterV3('ctl00_ctl00_Footer_oneMscomFooter', '984', '');
+                }
+            });
+        }
+
+    
+    </script>
+
+       
+ 
+
+            </div>
+            <div class="cssClear">
+            </div>
+        </div>
+        <div class="stage-bg-top">
+        </div>
+        <div class="stage-bg-mid">
+        </div>
+        <div class="stage-bg-bot">
+        </div>
+    </div>
+    <div class="form-bottom">
+        <div class="form-bottom-inner">
+        </div>
+    </div>
+    
+
+ 
+    <!--ADD BIPROXY and BISupporting SCRIPT-->
+    
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/jquery.bi.js"></script>
+    
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/jquery.bi.dataretrievers.attr.js"></script>
+    
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/jquery.bi.dataretrievers.exp.js"></script>
+    
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/jquery.bi.dataretrievers.structure.js"></script>
+    
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/jquery.bi.queue.js"></script>
+
+    
+    <!--ADD WEBTRENDS SCRIPT-->
+    
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/jquery.bi.dataconsumers.webtrends.js"></script>
+
+    
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/webtrends.js"></script>
+    
+
+    <!--ADD WEDCS SCRIPT-->
+    <script type="text/javascript">
+        var varSegmentation = 1;
+        var varClickTracking = 1; // SMC must enable ClickTracking. The default value from mscom template is "0"
+        var varCustomerTracking = 1;
+        var varLoadTracking = 0;
+        var Route = 12400;
+        var Ctrl = "SS100";
+    </script>
+
+    <!--ADD WEDCS SCRIPT-->
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/ms.js"></script><iframe id="_msnFrame" src="./INFO  strtok()  C Function -- Documentation Supplement_files/c.gif" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe>
+    
+    <script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/jquery.bi.dataconsumers.wedcs.js"></script>    
+    <noscript>
+        &lt;img alt="" width="1" height="1" src="http://c.microsoft.com/trans_pixel.aspx" /&gt;
+    </noscript>
+<script type="text/javascript"> var $biSettings={"webtrends":{"interactionTypeMap":{ },"parameterMap":{"DCS.dcssip":[{"bi":"uridomain"}],"DCS.dcsuri":[{"bi":"uripath"}],"DCS.dcsqry":[{"bi":"uriquery"}],"WT.dl":[{"bi":"interactiontype"}],"WT.TriggerType":[{"bi":"triggertype"}],"WT.z_Initial":[{"bi":"initial"}],"WT.ti":[{"bi":"title"}],"WT.ParentTitleStructure":[{"bi":"parenttitlestructure"}],"WT.Type":[{"bi":"type"}],"WT.ParentTypeStructure":[{"bi":"parenttypestructure"}],"WT.Index":[{"bi":"index"}],"WT.ParentIndexStructure":[{"bi":"parentindexstructure"}],"WT.GridStructure":[{"bi":"gridstructure"}],"WT.SearchType":[{"bi":"searchtype"}],"WT.SearchQuery":[{"bi":"searchquery"}],"DCSext.wt_linkId":[{"bi":"linkid"}],"WT.z_locale":[{"bi":"locale"}],"WT.pa":[{"bi":"primaryaudience"}],"WT.z_ea_name":[{"bi":"endactionname"}],"WT.z_ea_actionoffer":[{"bi":"endactionoffer"}],"WT.z_ea_targetcampaign":[{"bi":"campaignguid"}],"DCSext.vp_evt":[{"bi":"vpevent"}],"DCSext.vp_uuid":[{"bi":"vpuuid"}],"WT.SurveyId":[{"bi":"surveyid"}],"WT.SurveyVersion":[{"bi":"surveyversion"}],"WT.SurveyQuestions":[{"bi":"surveyquestions"}],"WT.SurveyComments":[{"bi":"surveycomments"}]}},"wedcs":{"interactionTypeMap":{ },"parameterMap":{"ms.UriDomain":[{"bi":"uridomain"}],"ms.UriPath":[{"bi":"uripath"}],"ms.UriQuery":[{"bi":"uriquery"}],"ms.InteractionType":[{"bi":"interactiontype"}],"ms.TriggerType":[{"bi":"triggertype"}],"ms.Initial":[{"bi":"initial"}],"ms.Title":[{"bi":"title"}],"ms.ParentTitleStructure":[{"bi":"parenttitlestructure"}],"ms.Type":[{"bi":"type"}],"ms.ParentTypeStructure":[{"bi":"parenttypestructure"}],"ms.Index":[{"bi":"index"}],"ms.ParentIndexStructure":[{"bi":"parentindexstructure"}],"ms.GridStructure":[{"bi":"gridstructure"}],"ms.SearchType":[{"bi":"searchtype"}],"ms.SearchQuery":[{"bi":"searchquery"}],"cot":[{"bi":"cot"}],"ms.linkid":[{"bi":"linkid"}],"ms.cpgnguid":[{"bi":"campaignguid"}],"ms.rioctc":[{"bi":"rioctc"}],"ms.z_locale":[{"bi":"locale"}],"ms.pa":[{"bi":"primaryaudience"}],"ms.serp.link_type":[{"bi":"serplinktype"}],"ms.serp.link_position":[{"bi":"serplinkposition"}],"ms.ea_offer":[{"bi":"endactionoffer"}],"ms.ea_action":[{"bi":"endaction"}],"ms.ea_name":[{"bi":"endactionname"}],"ms.vp_site":[{"bi":"vpsite"}],"ms.vp_evt":[{"bi":"vpevent"}],"ms.vp_duration":[{"bi":"vpduration"}],"ms.vp_channel":[{"bi":"vpchannel"}],"ms.vp_uuid":[{"bi":"vpuuid"}],"ms.vp_origin":[{"bi":"vporigin"}],"ms.vp_pos":[{"bi":"vpposition"}],"ms.Order_ID":[{"bi":"orderid"}],"ms.Order_Revenue":[{"bi":"orderrevenue"}],"ms.Currency":[{"bi":"currency"}],"ms.MS_Sales_Part_Number":[{"bi":"msssalespartnumber"}],"ms.MS_Sales_Part_Quantity":[{"bi":"mssalespartquantity"}],"ms.dwntype":[{"bi":"downloadtype"}],"ms.ActiveDwellTime":[{"bi":"activedwelltime"}],"ms.SurveyId":[{"bi":"surveyid"}],"ms.SurveyVersion":[{"bi":"surveyversion"}],"ms.SurveyQuestions":[{"bi":"surveyquestions"}],"ms.SurveyComments":[{"bi":"surveycomments"}]}}};</script>
+<script type="text/javascript">
+if ($ && $.bi)
+{
+$('html').attr('xmlns:bi', 'urn:schemas-microsoft-com:mscom:bi');
+$.bi.init(window.$biSettings);
+$.bi.dataConsumers.webtrends.WebTrends.dcsid = "dcsxia05c00000s926v0z4tru_3w4l";
+$.bi.dataConsumers.webtrends.WebTrends.dcsGetId();
+}
+</script>
+
+
+
+<script type="text/javascript" src="./INFO  strtok()  C Function -- Documentation Supplement_files/gsfxsurvey.js"></script><script src="./INFO  strtok()  C Function -- Documentation Supplement_files/broker-config.js"></script></body></html>

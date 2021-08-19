@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx -->
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="canonical" href="./strspn, wcsspn, _mbsspn (CRT)_files/strspn, wcsspn, _mbsspn (CRT).htm">
+        <title>strspn, wcsspn, _mbsspn (CRT)</title>
+
+
+
+
+<meta name="DCS.dcsuri" content="/en-us/library/kthzzay9(d=default,l=en-us,v=vs.71).aspx">
+
+<meta name="NormalizedUrl" content="http://msdn.microsoft.com/en-us/library/kthzzay9(d=default,l=en-us,v=vs.71).aspx">
+
+<meta name="VotingContextUrl" content="http://msdn.microsoft.com/en-us/library/kthzzay9(d=default,l=en-us,v=vs.71).aspx">
+
+<meta name="MN" content="EE4293C3-7:42:33 PM">
+
+<meta name="Search.ShortId" content="kthzzay9">
+
+<meta name="Ms.Locale" content="en-us">
+
+
+
+
+
+
+
+
+        
+    <link rel="stylesheet" type="text/css" href="./strspn, wcsspn, _mbsspn (CRT)_files/Combined.css"><script type="text/javascript" async="" src="./strspn, wcsspn, _mbsspn (CRT)_files/ms2.js"></script><script class="mtps-injected">try {
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "http://i.msdn.microsoft.com", 
+	"js": "http://i2.msdn.microsoft.com", 
+	"css": "http://i3.msdn.microsoft.com"
+});
+/**/
+} finally { MTPS._injectNextScript_0 && MTPS._injectNextScript_0(); }</script><script class="mtps-injected" src="./strspn, wcsspn, _mbsspn (CRT)_files/jquery-1.8.2.min.js"></script><script class="mtps-injected">try {
+//
+  var literalNormalizedUrl = '/en-us/library/kthzzay9(d=default,l=en-us,v=vs.71).aspx';
+  var wt_nvr_ru = 'WT_NVR_RU';
+  var wt_fpcdom = '.microsoft.com';
+  var wt_domlist = 'msdn.microsoft.com';
+  var wt_pathlist = '';
+  var wt_paramlist = 'DCSext.mtps_devcenter';
+  var wt_siteid = 'MSDN';
+  var gDomain = 'm.webtrends.com';
+  var gDcsId = 'dcsmgru7m99k7mqmgrhudo0k8_8c6m';
+  var gFpc = 'WT_FPC';
+
+
+
+  if (document.cookie.indexOf(gFpc + "=") == -1) {
+    var wtidJs = document.createElement("script");
+    wtidJs.src = "//" + gDomain + "/" + gDcsId + "/wtid.js";
+    document.getElementsByTagName("head")[0].appendChild(wtidJs);
+  }
+
+
+
+  var detectedLocale = 'en-us';
+  var wtsp = 'msdnlib_devtools_lang';
+  var gTrackEvents = '0';
+/**/
+} finally { MTPS._injectNextScript_2 && MTPS._injectNextScript_2(); }</script><script class="mtps-injected">try {
+/**/
+  var omni_guid = "b69f4152-3e09-4506-8e81-67a028fc7260";
+/**/
+} finally { MTPS._injectNextScript_3 && MTPS._injectNextScript_3(); }</script><script class="mtps-injected" src="./strspn, wcsspn, _mbsspn (CRT)_files/Combined.js"></script><script class="mtps-injected" src="./strspn, wcsspn, _mbsspn (CRT)_files/SearchBox.jss"></script><script class="mtps-injected" src="./strspn, wcsspn, _mbsspn (CRT)_files/Combined(1).js"></script><script src="./strspn, wcsspn, _mbsspn (CRT)_files/broker.js"></script><script class="mtps-injected">try {
+$(document).ready(function() {
+        try {
+            var token = $("#globalRequestVerification input[name='__RequestVerificationToken']").clone();
+            $("#siteFeedbackForm").append(token);
+        } catch(err) {
+            
+        }
+    });
+} finally { MTPS._injectNextScript_7 && MTPS._injectNextScript_7(); }</script><link type="text/css" rel="stylesheet" href="./strspn, wcsspn, _mbsspn (CRT)_files/PrintView.css" media="print"></head>
+    <body class="library">
+        <div id="page">
+            
+            
+  
+            
+  
+
+
+
+    
+    <div id="ux-header" class=" ltr">
+        <div class="BrandLogo">
+            <a href="http://msdn.microsoft.com/en-us">
+                <span class="BrandLogoImage msdn" title="MSDN"></span>
+            </a>
+        </div>
+        <div class="GlobalBar">
+            <div id="LocaleSelector">
+                
+<a title="Change your language" id="SelectLocale" href="http://msdn.microsoft.com/en-us/SelectLocale?fromPage=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2flibrary%2fkthzzay9(v%3dvs.71).aspx">United States (English)</a>
+        
+            
+            
+            </div>
+
+            
+
+    <div class="signIn"><a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1365216153&rver=6.0.5276.0&wp=MCLBI&wlcxt=MSDN%24MSDN%24MSDN&wreply=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2flibrary%2fkthzzay9%2528v%3dvs.71%2529.aspx&lc=1033&id=254354&mkt=en-US" title="Sign in">Sign in</a></div>
+
+                
+                <div class="Icons">
+                    <a href="http://msdn.microsoft.com/en-us/library/kthzzay9(d=printer,v=vs.71).aspx" title="Print/Export" rel="nofollow">
+                        <div class="clip26x23">
+                            <img class="isd_print" src="./strspn, wcsspn, _mbsspn (CRT)_files/ImageSprite.png" alt="">
+                        </div>
+                    </a>
+                </div>
+        </div>
+        <div class="ux-mtps-internav">
+            
+
+    
+
+<div class="SearchBox">
+              <form id="HeaderSearchForm" name="HeaderSearchForm" method="get" action="http://social.technet.microsoft.com/Search" onsubmit="return Epx.Controls.SearchBox.searchBoxOnSubmit(this, this.title);">
+            <input id="HeaderSearchTextBox" name="query" type="text" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(this, this.title, &#39;TextBoxSearch&#39;)" onblur="Epx.Controls.SearchBox.watermarkBlur(this, this.title, &#39;TextBoxSearch&#39;)" autocomplete="off" title="Search MSDN with Bing" style="color: rgb(170, 170, 170); font-style: italic;">
+            <input id="RefinementId" name="refinement" type="hidden" value="">
+            <button id="HeaderSearchButton" value="" type="submit" class="header-search-button" title="Search MSDN with Bing"></button>
+        <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(161, 161, 161); font-family: &#39;Segoe UI&#39;, &#39;Lucida Grande&#39;, Verdana, Arial, Helvetica, sans-serif; font-size: 13px;"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></form>
+        
+    
+</div>
+
+            <div class="TocNavigation">
+   
+   <div class="toclevel1">
+          <a class="normal" href="http://msdn.microsoft.com/" title="Home">Home</a>
+          <a class="active" href="http://msdn.microsoft.com/library/default.aspx" title="Library">Library</a>
+          <a class="normal" href="http://msdn.microsoft.com/bb188199" title="Learn">Learn</a>
+          <a class="normal" href="http://code.msdn.microsoft.com/" title="Samples">Samples</a>
+          <a class="normal" href="http://msdn.microsoft.com/aa570309" title="Downloads">Downloads</a>
+          <a class="normal" href="http://msdn.microsoft.com/hh361695" title="Support">Support</a>
+          <a class="normal" href="http://msdn.microsoft.com/aa497440" title="Community">Community</a>
+          <a class="normal" href="http://social.msdn.microsoft.com/Forums/en-US/categories" title="Forums">Forums</a>
+
+    </div>
+  
+</div>
+        </div>
+    </div>
+
+
+        
+            <div id="body">
+                
+
+
+
+
+
+
+
+<div id="leftNav" class="leftNavResize1">
+
+
+
+<div id="tocnav">
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ms123401.aspx" id="ms310241_MSDN.10_en-us" title="MSDN Library">MSDN Library</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa187916.aspx" id="aa187916_MSDN.10_en-us" title="Development Tools and Languages">Development Tools and Languages</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa973739(v=vs.71).aspx" id="aa973739_VS.71_en-us" title="Visual Studio .NET">Visual Studio .NET</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa983532(v=vs.71).aspx" id="aa973740_VS.71_en-us" title="Visual C++">Visual C++</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa983533(v=vs.71).aspx" id="ms393148_VS.71_en-us" title="Reference">Reference</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/52cs05fz(v=vs.71).aspx" id="ms393150_VS.71_en-us" title="Visual C++ Libraries">Visual C++ Libraries</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/59ey50w6(v=vs.71).aspx" id="ms395619_VS.71_en-us" title="Run-Time Library Reference">Run-Time Library Reference</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/634ca0c2(v=vs.71).aspx" id="ms395631_VS.71_en-us" title="Alphabetical Function Reference">Alphabetical Function Reference</a>            </div>
+            <div class="toclevel1" data-toclevel="1" style="padding-left: 17px;" data-childrenloaded="true">
+<a class="toc_expanded" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ms395730(v=vs.71).aspx" id="ms395635_VS.71_en-us" title="S Through Z">S Through Z</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/esw6b4yx(v=vs.71).aspx" title="_scalb">_scalb</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/9y6s16x1(v=vs.71).aspx" title="scanf, wscanf">scanf, wscanf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/kwwtf9ch(v=vs.71).aspx" title="Format Specification Fields: scanf and wscanf Functions">Format Specification Fields: scanf and wscanf Functions</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/xdb9w69d(v=vs.71).aspx" title="scanf Width Specification">scanf Width Specification</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/6ttkkkhh(v=vs.71).aspx" title="scanf Type Field Characters">scanf Type Field Characters</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/t32cf9tb(v=vs.71).aspx" title="_scprintf, _scwprintf">_scprintf, _scwprintf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/w9a6wh7y(v=vs.71).aspx" title="_searchenv, _wsearchenv">_searchenv, _wsearchenv</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/0fbt032s(v=vs.71).aspx" title="setbuf">setbuf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/sas1dkb2(v=vs.71).aspx" title="_set_error_mode">_set_error_mode</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/xe7acxfb(v=vs.71).aspx" title="setjmp">setjmp</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/x99tb11d(v=vs.71).aspx" title="setlocale, _wsetlocale">setlocale, _wsetlocale</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/6e3b887c(v=vs.71).aspx" title="_setmaxstdio">_setmaxstdio</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/883tf19a(v=vs.71).aspx" title="_setmbcp">_setmbcp</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/tw4k6df8(v=vs.71).aspx" title="_setmode">_setmode</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/a45x8asx(v=vs.71).aspx" title="_set_new_handler">_set_new_handler</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/7s2s5yt0(v=vs.71).aspx" title="_set_new_mode">_set_new_mode</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/t296ys27(v=vs.71).aspx" title="_set_purecall_handler">_set_purecall_handler</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/a6x53890(v=vs.71).aspx" title="_set_sbh_threshold">_set_sbh_threshold</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms395801(v=vs.71).aspx" title="_set_security_error_handler">_set_security_error_handler</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/5z4bw5h5(v=vs.71).aspx" title="_set_se_translator">_set_se_translator</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/bthd138d(v=vs.71).aspx" title="_set_SSE2_enable">_set_SSE2_enable</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/t6fk7h29(v=vs.71).aspx" title="set_terminate">set_terminate</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/h46t5b69(v=vs.71).aspx" title="set_unexpected">set_unexpected</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/86cebhfs(v=vs.71).aspx" title="setvbuf">setvbuf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/xdkz3x12(v=vs.71).aspx" title="signal">signal</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/wkbss70y(v=vs.71).aspx" title="sin, sinf, sinh, sinhf">sin, sinf, sinh, sinhf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/2ts7cx93(v=vs.71).aspx" title="_snprintf, _snwprintf">_snprintf, _snwprintf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/wez13747(v=vs.71).aspx" title="_snscanf, _snwscanf">_snscanf, _snwscanf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/w7sa2b22(v=vs.71).aspx" title="_sopen, _wsopen">_sopen, _wsopen</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/20y988d2(v=vs.71).aspx" title="_spawn, _wspawn Functions">_spawn, _wspawn Functions</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/wweek9sc(v=vs.71).aspx" title="_spawnl, _wspawnl">_spawnl, _wspawnl</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/88eybzw0(v=vs.71).aspx" title="_spawnle, _wspawnle">_spawnle, _wspawnle</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/t7y6z6fd(v=vs.71).aspx" title="_spawnlp, _wspawnlp">_spawnlp, _wspawnlp</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/wa3wt0fa(v=vs.71).aspx" title="_spawnlpe, _wspawnlpe">_spawnlpe, _wspawnlpe</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/7zt1y878(v=vs.71).aspx" title="_spawnv, _wspawnv">_spawnv, _wspawnv</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/1kkbefb8(v=vs.71).aspx" title="_spawnve, _wspawnve">_spawnve, _wspawnve</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/275khfab(v=vs.71).aspx" title="_spawnvp, _wspawnvp">_spawnvp, _wspawnvp</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/h565xwht(v=vs.71).aspx" title="_spawnvpe, _wspawnvpe">_spawnvpe, _wspawnvpe</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/e737s6tf(v=vs.71).aspx" title="_splitpath, _wsplitpath">_splitpath, _wsplitpath</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ybk95axf(v=vs.71).aspx" title="sprintf, swprintf">sprintf, swprintf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/f1xa99e6(v=vs.71).aspx" title="sqrt, sqrtf">sqrt, sqrtf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/f0d4wb4t(v=vs.71).aspx" title="srand">srand</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/zkx076cy(v=vs.71).aspx" title="sscanf, swscanf">sscanf, swscanf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/14h5k7ff(v=vs.71).aspx" title="_stat, _stat64, _stati64, _wstat, _wstat64, _wstati64">_stat, _stat64, _stati64, _wstat, _wstat64, _wstati64</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/9st43tcf(v=vs.71).aspx" title="_status87, _statusfp">_status87, _statusfp</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/h1x0y282(v=vs.71).aspx" title="strcat, wcscat, _mbscat">strcat, wcscat, _mbscat</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/b34ccac3(v=vs.71).aspx" title="strchr, wcschr, _mbschr">strchr, wcschr, _mbschr</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/e0z9k731(v=vs.71).aspx" title="strcmp, wcscmp, _mbscmp">strcmp, wcscmp, _mbscmp</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/d86zahxz(v=vs.71).aspx" title="strcoll Functions">strcoll Functions</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/a7cwbx4t(v=vs.71).aspx" title="strcoll, wcscoll, _mbscoll">strcoll, wcscoll, _mbscoll</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/kk6xf663(v=vs.71).aspx" title="strcpy, wcscpy, _mbscpy">strcpy, wcscpy, _mbscpy</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/xe8sk0x7(v=vs.71).aspx" title="strcspn, wcscspn, _mbscspn">strcspn, wcscspn, _mbscspn</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/5x4fwzb4(v=vs.71).aspx" title="_strdate, _wstrdate">_strdate, _wstrdate</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/y471khhc(v=vs.71).aspx" title="_strdup, _wcsdup, _mbsdup">_strdup, _wcsdup, _mbsdup</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/zc53h9bh(v=vs.71).aspx" title="strerror, _strerror, _wcserror, __wcserror">strerror, _strerror, _wcserror, __wcserror</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/fe06s4ak(v=vs.71).aspx" title="strftime, wcsftime">strftime, wcsftime</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/2w46a1da(v=vs.71).aspx" title="_stricoll, _wcsicoll, _mbsicoll">_stricoll, _wcsicoll, _mbsicoll</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/k59z8dwe(v=vs.71).aspx" title="_stricmp, _wcsicmp, _mbsicmp">_stricmp, _wcsicmp, _mbsicmp</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/78zh94ax(v=vs.71).aspx" title="strlen, wcslen, _mbslen, _mbstrlen">strlen, wcslen, _mbslen, _mbstrlen</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/hkxwh33z(v=vs.71).aspx" title="_strlwr, _wcslwr, _mbslwr">_strlwr, _wcslwr, _mbslwr</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/72c43s4t(v=vs.71).aspx" title="_strncoll, _wcsncoll, _mbsncoll">_strncoll, _wcsncoll, _mbsncoll</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/a697c234(v=vs.71).aspx" title="_strnicoll, _wcsnicoll, _mbsnicoll">_strnicoll, _wcsnicoll, _mbsnicoll</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/tbyd7s1y(v=vs.71).aspx" title="strncat, wcsncat, _mbsncat">strncat, wcsncat, _mbsncat</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/eywx8zcx(v=vs.71).aspx" title="strncmp, wcsncmp, _mbsncmp">strncmp, wcsncmp, _mbsncmp</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/xdsywd25(v=vs.71).aspx" title="strncpy, wcsncpy, _mbsncpy">strncpy, wcsncpy, _mbsncpy</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/chd90w8e(v=vs.71).aspx" title="_strnicmp, _wcsnicmp, _mbsnicmp">_strnicmp, _wcsnicmp, _mbsnicmp</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/xddwe375(v=vs.71).aspx" title="_strnset, _wcsnset, _mbsnset">_strnset, _wcsnset, _mbsnset</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/217yyhy9(v=vs.71).aspx" title="strpbrk, wcspbrk, _mbspbrk">strpbrk, wcspbrk, _mbspbrk</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ftw0heb9(v=vs.71).aspx" title="strrchr, wcsrchr, _mbsrchr">strrchr, wcsrchr, _mbsrchr</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/9hby7w40(v=vs.71).aspx" title="_strrev, _wcsrev, _mbsrev">_strrev, _wcsrev, _mbsrev</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/373xd2sx(v=vs.71).aspx" title="_strset, _wcsset, _mbsset">_strset, _wcsset, _mbsset</a>            </div>
+            <div class="toclevel2 current" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="./strspn, wcsspn, _mbsspn (CRT)_files/strspn, wcsspn, _mbsspn (CRT).htm" title="strspn, wcsspn, _mbsspn">strspn, wcsspn, _mbsspn</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/z9da80kz(v=vs.71).aspx" title="strstr, wcsstr, _mbsstr">strstr, wcsstr, _mbsstr</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/k2besbye(v=vs.71).aspx" title="_strtime, _wstrtime">_strtime, _wstrtime</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/53b7b72e(v=vs.71).aspx" title="String to Numeric Value Functions">String to Numeric Value Functions</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/kxsfc1ab(v=vs.71).aspx" title="strtod, wcstod">strtod, wcstod</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/h80404d3(v=vs.71).aspx" title="_strtoi64, _wcstoi64">_strtoi64, _wcstoi64</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/2c8d19sb(v=vs.71).aspx" title="strtok, wcstok, _mbstok">strtok, wcstok, _mbstok</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/85zk715d(v=vs.71).aspx" title="_strtoui64, _wcstoui64">_strtoui64, _wcstoui64</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/w4z2wdyc(v=vs.71).aspx" title="strtol, wcstol">strtol, wcstol</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/5k9xb7x1(v=vs.71).aspx" title="strtoul, wcstoul">strtoul, wcstoul</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/sch3dy08(v=vs.71).aspx" title="_strupr, _wcsupr, _mbsupr">_strupr, _wcsupr, _mbsupr</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/b33a6766(v=vs.71).aspx" title="strxfrm, wcsxfrm">strxfrm, wcsxfrm</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/e8cxb8tk(v=vs.71).aspx" title="_swab">_swab</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/277bwbdz(v=vs.71).aspx" title="system, _wsystem">system, _wsystem</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/twws9xxw(v=vs.71).aspx" title="tan, tanf, tanh, tanhf">tan, tanf, tanh, tanhf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/c3kc5e7a(v=vs.71).aspx" title="_tell, _telli64">_tell, _telli64</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/hs3e7355(v=vs.71).aspx" title="_tempnam, _wtempnam, tmpnam, _wtmpnam">_tempnam, _wtempnam, tmpnam, _wtmpnam</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/k0k9c522(v=vs.71).aspx" title="terminate">terminate</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/1f4c8f33(v=vs.71).aspx" title="time, _time64">time, _time64</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/x8x7sakw(v=vs.71).aspx" title="tmpfile">tmpfile</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/1t27bw1z(v=vs.71).aspx" title="to Functions">to Functions</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/sf55c429(v=vs.71).aspx" title="__toascii">__toascii</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/8h19t214(v=vs.71).aspx" title="tolower, _tolower, towlower">tolower, _tolower, towlower</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/45119yx3(v=vs.71).aspx" title="toupper _toupper, towupper">toupper _toupper, towupper</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/8cc78xc6(v=vs.71).aspx" title="towctrans">towctrans</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/90s5c885(v=vs.71).aspx" title="_tzset">_tzset</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/d5t0h1wd(v=vs.71).aspx" title="_ultoa, _ultow">_ultoa, _ultow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/5axxx3be(v=vs.71).aspx" title="_umask">_umask</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/c9z12734(v=vs.71).aspx" title="unexpected">unexpected</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/29hykw2y(v=vs.71).aspx" title="ungetc, ungetwc">ungetc, ungetwc</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/yezzac74(v=vs.71).aspx" title="_ungetch">_ungetch</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/1c3tczd6(v=vs.71).aspx" title="_unlink, _wunlink">_unlink, _wunlink</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/4wacf567(v=vs.71).aspx" title="_utime, _utime64, _wutime, _wutime64">_utime, _utime64, _wutime, _wutime64</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/kb57fad8(v=vs.71).aspx" title="va_arg, va_end, va_start">va_arg, va_end, va_start</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/0zf95wk0(v=vs.71).aspx" title="vprintf Functions">vprintf Functions</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/we9107a3(v=vs.71).aspx" title="vfprintf, vfwprintf">vfprintf, vfwprintf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/fzs40tkz(v=vs.71).aspx" title="vprintf, vwprintf">vprintf, vwprintf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/w05tbk72(v=vs.71).aspx" title="_vscprintf, _vscwprintf">_vscprintf, _vscwprintf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/1kt27hek(v=vs.71).aspx" title="_vsnprintf, _vsnwprintf">_vsnprintf, _vsnwprintf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/28d5ce15(v=vs.71).aspx" title="vsprintf, vswprintf">vsprintf, vswprintf</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/5d7tc9zw(v=vs.71).aspx" title="wcstombs">wcstombs</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/8tdk45ff(v=vs.71).aspx" title="wctomb">wctomb</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/h12ce2f2(v=vs.71).aspx" title="wctrans">wctrans</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/d30dx8kc(v=vs.71).aspx" title="wctype">wctype</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/1570wh78(v=vs.71).aspx" title="_write">_write</a>            </div>
+</div>    
+    
+    
+    
+    
+    
+    
+    
+
+<a id="NavigationResize" href="javascript:void(0)" style="left: 280px; display: inline-block;">
+    <img class="cl_nav_resize_open" src="./strspn, wcsspn, _mbsspn (CRT)_files/ImageSprite.png" title="Expand" alt="Expand" style="">
+    <img class="cl_nav_resize_close" src="./strspn, wcsspn, _mbsspn (CRT)_files/ImageSprite.png" title="Minimize" alt="Minimize" style="display: none;">
+</a>
+
+
+
+</div>
+<div id="content" class="content" style="margin-left: 280px; width: auto;">
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+
+    
+
+        
+<div class="topic" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title">strspn, wcsspn, _mbsspn</h1>
+  
+  <div class="lw_vs">
+    <div id="curversion">
+      <strong>
+            Visual Studio .NET 2003
+        </strong>
+    </div>
+    <div id="versionclick">
+      <div id="vsseperator" class="cl_lw_vs_seperator"></div>
+      <div>
+        <div>
+          <a id="vsLink" href="javascript:;">
+                        Other Versions
+                    </a>
+        </div>
+        <div class="cl_vs_arrow clip10x10">
+          <img class="cl_lw_vs_arrow" id="vsArrow" alt="" src="./strspn, wcsspn, _mbsspn (CRT)_files/ImageSprite.png">
+        </div>
+      </div>
+      <ul id="vsPanel" style="display: none;">
+        <li>
+          <a href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.110).aspx" title="">Visual Studio 2012</a>
+        </li>
+        <li>
+          <a href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.100).aspx" title="">Visual Studio 2010</a>
+        </li>
+        <li>
+          <a href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.90).aspx" title="">Visual Studio 2008</a>
+        </li>
+        <li>
+          <a href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.80).aspx" title="">Visual Studio 2005</a>
+        </li>
+      </ul>
+    </div>
+  <div id="ratingCounterSeperator" class="cl_lw_vs_seperator" style="display: block;"></div><div id="ratingCounter" style="margin: 0px 0px 0px 13px; display: block;">
+        <span id="rcA" class="ratingText">
+            0 out of 2 rated this helpful <span id="rateThisPrefix">- </span><a id="rateThisTopic" href="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx#feedback" title="Rate this topic">Rate this topic</a>
+            
+        </span>
+    </div></div>
+  <div style="clear:both;"></div>
+  
+  <a name="_crt_strspn.2c_.wcsspn.2c_._mbsspn">
+    
+  </a>  <div id="nstext" valign="bottom">  <p>Returns the index of the first character in a string that does not belong to a set of characters.</p> 
+<div id="code-snippet-1" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_e3e56f1c-2187-4bfe-9613-e52a77283fe5');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_e3e56f1c-2187-4bfe-9613-e52a77283fe5" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>size_t strspn(
+   const char *string,
+   const char *strCharSet 
+);
+size_t wcsspn(
+   const wchar_t *string,
+   const wchar_t *strCharSet 
+);
+size_t _mbsspn(
+   const unsigned char *string,
+   const unsigned char *strCharSet 
+);
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+ <h4 class="dtH4">Parameters</h4> <dl> <dt><i>string</i></dt> <dd>Null-terminated string to search.</dd> <dt><i>strCharSet</i></dt> <dd>Null-terminated character set.</dd> </dl> <h4 class="dtH4">Return Value</h4> <p>Returns an integer value specifying the length of the substring in <i>string</i> that consists entirely of characters in <i>strCharSet.</i> If <i>string</i> begins with a character not in <i>strCharSet,</i> the function returns 0. No return value is reserved to indicate an error.</p> <h4 class="dtH4">Remarks</h4> <p>The <b>strspn</b> function returns the index of the first character in <i>string</i> that does not belong to the set of characters in <i>strCharSet</i>. The search does not include terminating null characters.</p> <p><b>wcsspn</b> and <b>_mbsspn</b> are wide-character and multibyte-character versions of <b>strspn.</b> The arguments of <b>wcsspn</b> are wide-character strings; those of <b>_mbsspn</b> are multibyte-character strings. These three functions behave identically otherwise.</p> <p class="label"><b>Generic-Text Routine Mappings</b></p> <div class="tablediv"><table class="dtTABLE"> <tbody><tr valign="top"> <th width="17%">TCHAR.H routine </th> <th width="29%">_UNICODE &amp; _MBCS not defined</th> <th width="26%">_MBCS defined</th> <th width="28%">_UNICODE defined</th> </tr> <tr valign="top"> <td width="17%"><b>_tcsspn</b></td> <td width="29%"><b>strspn</b></td> <td width="26%"><b>_mbsspn </b></td> <td width="28%"><b>wcsspn </b></td> </tr> </tbody></table></div> <h4 class="dtH4">Requirements</h4> <div class="tablediv"><table class="dtTABLE"> <tbody><tr valign="top"> <th width="17%">Routine</th> <th width="35%">Required header</th> <th width="48%">Compatibility</th> </tr> <tr valign="top"> <td width="17%"><b>strspn</b></td> <td width="35%">&lt;string.h&gt;</td> <td width="48%">ANSI, Win 98, Win Me, Win NT, Win 2000, Win XP</td> </tr> <tr valign="top"> <td width="17%"><b>wcsspn</b></td> <td width="35%">&lt;string.h&gt; or &lt;wchar.h&gt;</td> <td width="48%">ANSI, Win 98, Win Me, Win NT, Win 2000, Win XP</td> </tr> <tr valign="top"> <td width="17%"><b>_mbsspn</b></td> <td width="35%">&lt;mbstring.h&gt;</td> <td width="48%">Win 98, Win Me, Win NT, Win 2000, Win XP</td> </tr> </tbody></table></div> <p>For additional compatibility information, see <a href="http://msdn.microsoft.com/en-us/library/sk54f3f5(v=vs.71).aspx">Compatibility</a> in the Introduction.</p> <p class="label"><b>Libraries</b></p> <p>All versions of the <a href="http://msdn.microsoft.com/en-us/library/abx4dbyh(v=vs.71).aspx">C run-time libraries</a>.</p> <h4 class="dtH4">Example</h4> 
+<div id="code-snippet-2" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_038c83f3-a790-45c6-886f-150194bc4a23');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_038c83f3-a790-45c6-886f-150194bc4a23" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>// crt_strspn.c
+/* This program uses strspn to determine
+ * the length of the segment in the string "cabbage"
+ * consisting of a's, b's, and c's. In other words,
+ * it finds the first non-abc letter.
+ */
+
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+
+int main( void )
+{
+   char string[] = "cabbage";
+   int  result;
+   result = strspn( string, "abc" );
+   printf( "The portion of '%s' containing only a, b, or c "
+           "is %d bytes long\n", string, result );
+}
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+ <h4 class="dtH4">Output</h4> 
+<div id="code-snippet-3" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_02f32918-56a1-44f3-b205-542dcc992c06');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_02f32918-56a1-44f3-b205-542dcc992c06" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>The portion of 'cabbage' containing only a, b, or c is 5 bytes long
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+ <h4 class="dtH4">See Also</h4> <p><a href="http://msdn.microsoft.com/en-us/library/f0151s4x(v=vs.71).aspx">String Manipulation Routines</a> | <a href="http://msdn.microsoft.com/en-us/library/k254awe8(v=vs.71).aspx">_mbsspnp</a> | <a href="http://msdn.microsoft.com/en-us/library/xe8sk0x7(v=vs.71).aspx">strcspn</a> | <a href="http://msdn.microsoft.com/en-us/library/tbyd7s1y(v=vs.71).aspx">strncat</a> | <a href="http://msdn.microsoft.com/en-us/library/eywx8zcx(v=vs.71).aspx">strncmp</a> | <a href="http://msdn.microsoft.com/en-us/library/xdsywd25(v=vs.71).aspx">strncpy</a> | <a href="http://msdn.microsoft.com/en-us/library/chd90w8e(v=vs.71).aspx">_strnicmp</a> | <a href="http://msdn.microsoft.com/en-us/library/ftw0heb9(v=vs.71).aspx">strrchr</a> | <a href="http://msdn.microsoft.com/en-us/library/ms395663(v=vs.71).aspx">Run-Time Routines and .NET Framework Equivalents</a></p>  </div> </div>
+
+
+
+
+
+<div id="contentFeedback">
+    <form method="post" action="http://msdn.microsoft.com/en-us/library/feedback/add/kthzzay9(v=vs.71).aspx">
+        <input name="__RequestVerificationToken" type="hidden" value="-ImAKEO6kCABxNZZb4m_PzWynlVg9GS7RznlNBLwIcB9NwOMiA_zrTaGjSgxua2GnmC9ZzYM0QxrUqTMyoKq6vdnXviOkeS-FDXgvtKVK-AFV2vk6a5yiSv2YtjY-blqh7gpLg2">
+    <div id="contentFeedbackContainer">
+        <div class="FeedbackTitleContainer">
+            <a name="feedback"></a>
+        Did you find this helpful?
+            <input id="rdIsUsefulYes" name="rdIsUseful" type="radio" value="1" onclick="toggleContentFeedback(&#39;Yes&#39;);"><label for="rdIsUsefulYes">Yes</label>
+            <input id="rdIsUsefulNo" name="rdIsUseful" type="radio" value="0" onclick="toggleContentFeedback(&#39;No&#39;);"><label for="rdIsUsefulNo">No</label>
+        
+        </div>
+        
+            <div id="contentFeedbackQAContainer">
+                
+                    <div id="feedbackListNoContainer" class="FeedbackListContainer">
+                        
+                            <div>
+                                <input id="chkbxNo201" name="chkbxNo" type="checkbox" value="201">
+                                <label for="chkbxNo201">Not accurate</label>
+                            </div>
+                        
+                            <div>
+                                <input id="chkbxNo202" name="chkbxNo" type="checkbox" value="202">
+                                <label for="chkbxNo202">Not enough depth</label>
+                            </div>
+                        
+                            <div>
+                                <input id="chkbxNo203" name="chkbxNo" type="checkbox" value="203">
+                                <label for="chkbxNo203">Need more code examples</label>
+                            </div>
+                        
+                    </div>
+                
+                <div class="FeedbackTellUsMoreContainer">
+                    <textarea id="feedbackText" name="feedbackText" class="TellUsMoreTextBoxSearchLoaded" onfocus="WatermarkFocus(this, &#39;Tell us more...&#39;, &#39;TellUsMoreTextBoxSearch&#39;)" onblur="WatermarkBlur(this, &#39;Tell us more...&#39;, &#39;TellUsMoreTextBoxSearchLoaded&#39;)" onmouseover="TextBoxCharactersCounter(this, document.getElementById(&#39;feedbackTextCounter&#39;), 1500)" onkeydown="TextBoxCharactersCounter(this, document.getElementById(&#39;feedbackTextCounter&#39;), 1500)" onkeyup="TextBoxCharactersCounter(this, document.getElementById(&#39;feedbackTextCounter&#39;), 1500)">Tell us more...</textarea>
+                </div>
+                <span class="counter">(<span id="feedbackTextCounter">1500</span> characters remaining)</span>
+                <input type="hidden" id="returnUrl" name="returnUrl" value="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx">
+                <input type="submit" id="submit" value="Submit" title="Click to Submit Feedback" onclick="WatermarkOnSubmit(document.getElementById(&#39;feedbackText&#39;), &#39;Tell us more...&#39;, &#39;TellUsMoreTextBoxSearch&#39;)">
+                <div style="clear: both;"></div>
+            </div>  
+        
+    </div>
+    </form>
+</div>
+    
+
+
+
+</div>
+
+
+            </div>
+            <div class="clear"></div>
+        
+            
+    
+   <div id="ux-footer" class=" ltr">
+    <div id="ux-footer-cols">
+        
+
+        <div class="TocNavigation">
+            <div class="linksContainer">
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/vstudio/default.aspx" title="Tools">Tools</a></li>
+                                <li><a href="http://msdn.microsoft.com/vstudio/default.aspx" title="Visual Studio">Visual Studio</a></li>
+                                <li><a href="http://expression.microsoft.com/default.aspx" title="Expression">Expression</a></li>
+                                <li><a href="http://www.asp.net/" title="ASP.NET">ASP.NET</a></li>
+                                <li><a href="http://msdn.microsoft.com/silverlight/" title="Silverlight">Silverlight</a></li>
+                    </ul>
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/vstudio/default.aspx" title="Platforms">Platforms</a></li>
+                                <li><a href="http://msdn.microsoft.com/vstudio/default.aspx" title="Visual Studio">Visual Studio</a></li>
+                                <li><a href="http://msdn.microsoft.com/windows/apps/default.aspx" title="Windows">Windows</a></li>
+                                <li><a href="https://dev.windowsphone.com/" title="Windows Phone">Windows Phone</a></li>
+                                <li><a href="http://www.windowsazure.com/en-us/develop/overview/" title="Windows Azure">Windows Azure</a></li>
+                                <li><a href="http://msdn.microsoft.com/office/default.aspx" title="Office">Office</a></li>
+                    </ul>
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/windowsserver/default.aspx" title="Servers">Servers</a></li>
+                                <li><a href="http://msdn.microsoft.com/windowsserver/default.aspx" title="Windows Server">Windows Server</a></li>
+                                <li><a href="http://msdn.microsoft.com/exchange/default.aspx" title="Exchange Server">Exchange Server</a></li>
+                                <li><a href="http://msdn.microsoft.com/sqlserver/default.aspx" title="SQL Server">SQL Server</a></li>
+                                <li><a href="http://msdn.microsoft.com/biztalk/default.aspx" title="Biz Talk Server">Biz Talk Server</a></li>
+                                <li><a href="http://msdn.microsoft.com/data/default.aspx" title="Data">Data</a></li>
+                    </ul>
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/subscriptions/default.aspx" title="Developer resources">Developer resources</a></li>
+                                <li><a href="http://msdn.microsoft.com/subscriptions/default.aspx" title="MSDN Subscriptions">MSDN Subscriptions</a></li>
+                                <li><a href="http://msdn.microsoft.com/magazine/default.aspx" title="MSDN Magazine">MSDN Magazine</a></li>
+                                <li><a href="http://msdn.microsoft.com/aa570311" title="MSDN Flash Newsletter">MSDN Flash Newsletter</a></li>
+                                <li><a href="http://code.msdn.microsoft.com/" title="Code Samples">Code Samples</a></li>
+                                <li><a href="http://social.msdn.microsoft.com/Forums/en-US/categories" title="MSDN Forums">MSDN Forums</a></li>
+                    </ul>
+                    <ul class="links" style="width: 19.99%;">
+                        <li class="linksTitle"><a href="http://msdn.microsoft.com/evalcenter/default.aspx" title="Get started for free">Get started for free</a></li>
+                                <li><a href="http://msdn.microsoft.com/evalcenter/default.aspx" title="MSDN evaluation center">MSDN evaluation center</a></li>
+                                <li><a href="http://www.microsoft.com/bizspark/" title="BizSpark (for startups)">BizSpark (for startups)</a></li>
+                                <li><a href="https://www.dreamspark.com/" title="DreamSpark (for students)">DreamSpark (for students)</a></li>
+                                <li><a href="https://www.microsoft.com/faculty" title="School faculty">School faculty</a></li>
+                    </ul>
+            </div>
+        </div>        
+
+    </div>
+
+    <div class="ux-footer-clear"></div>
+    <div id="footerRight">
+        <div id="FooterLogoContainer"><div id="FooterLogo"></div></div>
+        <div id="FooterCopyright">© 2013 Microsoft. All rights reserved.</div> 
+    </div>
+    <div id="footerLeft">
+        <div id="footerGroup">
+            <div id="LinkGroup">
+                <div id="Links1"><div data-fragmentname="FooterLinks" id="Fragment_FooterLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div class="Links">
+      <ul class="LinkColumn horizontal">
+        <li>
+          <a href="http://msdn.microsoft.com/en-us/newsletter.aspx" xmlns="http://www.w3.org/1999/xhtml">Newsletter</a>
+        </li>
+        <li>
+          <div class="LinksDivider">|</div>
+          <a href="http://msdn.microsoft.com/en-us/subscriptions/aa948875.aspx" xmlns="http://www.w3.org/1999/xhtml">Contact Us</a>
+        </li>
+        <li>
+          <div class="LinksDivider">|</div>
+          <a href="http://privacy.microsoft.com/en-us/default.mspx" xmlns="http://www.w3.org/1999/xhtml">Privacy Statement</a>
+        </li>
+        <li>
+          <div class="LinksDivider">|</div>
+          <a href="http://msdn.microsoft.com/en-US/cc300389.aspx" xmlns="http://www.w3.org/1999/xhtml">Terms of Use</a>
+        </li>
+        <li>
+          <div class="LinksDivider">|</div>
+          <a href="http://www.microsoft.com/About/Legal/EN/US/IntellectualProperty/Trademarks/EN-US.aspx" xmlns="http://www.w3.org/1999/xhtml">Trademarks</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+            </div>
+            <div id="Feedback">
+                <div class="feedbackListItem">
+                    <div class="LinksDivider">|</div>
+                    <div class="LinkColumn">
+                        
+
+
+
+
+
+<div class="FooterSiteFeedBack">
+    <a id="SiteFeedbackLinkOpener" href="javascript:void(0)">
+        <span class="FeedbackButton clip20x21" id="FeedbackButton">
+            <img id="feedBackImg" class="cl_footer_feedback_icon" src="./strspn, wcsspn, _mbsspn (CRT)_files/ImageSprite.png" alt="Site Feedback">
+        </span>
+        Site Feedback
+    </a>
+    
+    <div id="SiteFeedbackLinkContainer" class="SiteFeedbackLinkContainer" style="display: none;">
+    <form id="siteFeedbackForm" method="post" action="http://msdn.microsoft.com/en-us/library/feedback/add/kthzzay9(v=vs.71).aspx">
+        <div class="SiteFeedbackLinkTitleContainer">
+            <div class="SiteFeedbackLinkTitle">
+                Site Feedback
+            </div>
+            <div class="SiteFeedbackLinkCancel">
+                <a id="SiteFeedbackLinkCloser" href="javascript:void(0)">x</a>
+            </div>
+        </div>
+        <div class="SiteFeedbackLinkData">
+            <div class="SiteFeedbackLinkInfoText">
+                Tell us about your experience...
+            </div>
+            <div class="QuestionText">
+                Did the page load quickly?
+            </div>
+            <div class="AnswerText">
+                
+                <span>
+                    Yes<span>
+                        <input id="searchBox" name="searchBox" type="radio" value="1"></span></span>
+                
+                <span>
+                    No<span>
+                        <input id="searchBox" name="searchBox" type="radio" value="0"></span></span>
+                
+            </div>
+            <div class="QuestionText">
+                Do you like the page design?
+            </div>
+            <div class="AnswerText">
+                
+                <span>
+                    Yes<span>
+                        <input id="tabbedCode" name="tabbedCode" type="radio" value="1"></span></span>
+                
+                <span>
+                    No<span>
+                        <input id="tabbedCode" name="tabbedCode" type="radio" value="0"></span></span>
+                
+            </div>
+            <div class="QuestionText">
+                Tell us more
+            </div>
+            <div class="SiteFeedbackLinkTextAreaContainer">
+                <textarea id="feedbackText" data-maxlength="4000" name="feedbackText" cols="25" rows="5" class="SiteFeedbackLinkTextArea"></textarea>
+                
+                <textarea id="feedbackDescription" name="feedbackDescription" cols="25" rows="10" style="display: none;">Enter description here.</textarea>
+                <input type="hidden" id="feedbackPriority" name="feedbackPriority" value="">
+                <input type="hidden" id="feedbackSourceUrl" name="feedbackSourceUrl" value="">
+                <input type="hidden" id="ClientIP" name="ClientIP" value="">
+                <input type="hidden" id="ClientOS" name="ClientOS" value="">
+                <input type="hidden" id="ClientBrowser" name="ClientBrowser" value="">
+                <input type="hidden" id="ClientTime" name="ClientTime" value="">
+                <input type="hidden" id="ClientTimeZone" name="ClientTimeZone" value="">
+                
+            </div>
+            <div>
+                <input id="siteFeedbackSubmit" type="submit" value="Send" class="SiteFeedbackLinkSubmit">
+            </div>
+        </div>
+        <input type="hidden" id="returnUrl" name="returnUrl" value="http://msdn.microsoft.com/en-us/library/kthzzay9(v=vs.71).aspx">
+    <input name="__RequestVerificationToken" type="hidden" value="M2s3qZ22V7kxI65KNxQT-2vBKk_7JFbWMH5aSheunhcUN_9ZoEyOrv1TUq_FPPzde4UHCVcOrOXg4tfSRY2fDTXV8dSZ7ZVMFRTGDnm9jcVM7iOOD_1VCnRmUQS4cGSersNQzQ2"></form>
+</div>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="Links2"></div>
+    </div>
+</div> 
+
+
+            <div class="footerPrintView">
+                <div class="footerCopyrightPrintView">© 2013 Microsoft. All rights reserved.</div>
+            </div>
+
+            
+            
+    
+    <input id="tocPaddingPerLevel" type="hidden" value="17">
+
+
+        
+            <input id="MtpsDevice" type="hidden" value="Default">
+
+
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+        
+            
+            
+            
+            
+            
+        
+
+
+
+
+
+<noscript>&lt;div&gt;&lt;img alt="DCSIMG" id="Img1" width="1" height="1" src="http://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No" /&gt;&lt;/div&gt;</noscript>
+
+
+
+
+
+
+
+
+
+<noscript>
+  &lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+    &lt;img src="//msstonojsmsdn.112.2o7.net/b/ss/msstonojsmsdn/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" /&gt;
+  &lt;/a&gt;
+</noscript>
+
+
+
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" type="hidden" value="M2s3qZ22V7kxI65KNxQT-2vBKk_7JFbWMH5aSheunhcUN_9ZoEyOrv1TUq_FPPzde4UHCVcOrOXg4tfSRY2fDTXV8dSZ7ZVMFRTGDnm9jcVM7iOOD_1VCnRmUQS4cGSersNQzQ2">
+</div>
+
+
+        </div>
+    <script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index],elem=document.createElement("script"),elem.className="mtps-injected",elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext,script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }"),parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"http://i.msdn.microsoft.com\", \r\n\t\"js\": \"http://i2.msdn.microsoft.com\", \r\n\t\"css\": \"http://i3.msdn.microsoft.com\"\r\n});\r\n/**/" },
+	{ url: "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js" },
+	{ txt: "//\n  var literalNormalizedUrl = \u0027/en-us/library/kthzzay9(d=default,l=en-us,v=vs.71).aspx\u0027;\n  var wt_nvr_ru = \u0027WT_NVR_RU\u0027;\n  var wt_fpcdom = \u0027.microsoft.com\u0027;\n  var wt_domlist = \u0027msdn.microsoft.com\u0027;\n  var wt_pathlist = \u0027\u0027;\n  var wt_paramlist = \u0027DCSext.mtps_devcenter\u0027;\n  var wt_siteid = \u0027MSDN\u0027;\n  var gDomain = \u0027m.webtrends.com\u0027;\n  var gDcsId = \u0027dcsmgru7m99k7mqmgrhudo0k8_8c6m\u0027;\n  var gFpc = \u0027WT_FPC\u0027;\n\n\n\n  if (document.cookie.indexOf(gFpc + \"=\") == -1) {\n    var wtidJs = document.createElement(\"script\");\n    wtidJs.src = \"//\" + gDomain + \"/\" + gDcsId + \"/wtid.js\";\n    document.getElementsByTagName(\"head\")[0].appendChild(wtidJs);\n  }\n\n\n\n  var detectedLocale = \u0027en-us\u0027;\n  var wtsp = \u0027msdnlib_devtools_lang\u0027;\n  var gTrackEvents = \u00270\u0027;\n/**/" },
+	{ txt: "/**/\n  var omni_guid = \"b69f4152-3e09-4506-8e81-67a028fc7260\";\n/**/" },
+	{ url: "http://i2.msdn.microsoft.com/Combined.js?resources=0:Utilities,0:Topic,1:webtrendsscript,2:omni_rsid_MSDN,3:SearchBox;/Areas/Epx/Content/Scripts:0,/Areas/Global/Content/Webtrends/resources:1,/Areas/Global/Content/Omniture/resources/MSDN:2,/Areas/Epx/Themes/Base/Content:3\u0026amp;hashKey=5982499A7F75BAC5491807268AEC2A90" },
+	{ url: "http://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026brand=MSDN\u0026loc=en-us\u0026watermark=MSDN" },
+	{ url: "http://i2.msdn.microsoft.com/Combined.js?resources=0:Toc,0:NavigationResize,1:FeedbackCounter,1:Feedback,2:SiteFeedbackLink,2:CodeSnippet,2:TopicNotInScope,2:CollapsibleArea,2:VersionSelector,2:SurveyBroker;/Areas/Epx/Library/Content:0,/Areas/Epx/Shared/Content:1,/Areas/Epx/Content/Scripts:2\u0026amp;hashKey=6B10E01F08DC4A7E1B4656BABFC552AA" },
+	{ txt: "$(document).ready(function() {\n        try {\n            var token = $(\"#globalRequestVerification input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n            $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n            \n        }\n    });" }
+]);
+
+/*]]>*/
+</script>
+<script src="./strspn, wcsspn, _mbsspn (CRT)_files/broker-config.js"></script><div style="display: none;" id="_WEDCSInsertedData"><iframe id="_msnFrame" src="./strspn, wcsspn, _mbsspn (CRT)_files/c.gif" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe></div></body></html>

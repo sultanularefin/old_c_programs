@@ -1,0 +1,14 @@
+﻿Build started 9/8/2015 10:23:37 AM.
+     1>Project "D:\visual studio2013 works\Herbert Schildt C #\part 1\chapter 1\graphics program in c++\graphics program in c++\graphics program in c++.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt graphics_first.cpp
+         graphics_first.cpp
+     1>d:\visual studio2013 works\herbert schildt c #\part 1\chapter 1\graphics program in c++\graphics program in c++\graphics_first.cpp(20): error C2065: 'DETECT' : undeclared identifier
+     1>d:\visual studio2013 works\herbert schildt c #\part 1\chapter 1\graphics program in c++\graphics program in c++\graphics_first.cpp(23): error C3861: 'initgraph': identifier not found
+     1>d:\visual studio2013 works\herbert schildt c #\part 1\chapter 1\graphics program in c++\graphics program in c++\graphics_first.cpp(26): error C3861: 'circle': identifier not found
+     1>d:\visual studio2013 works\herbert schildt c #\part 1\chapter 1\graphics program in c++\graphics program in c++\graphics_first.cpp(29): error C3861: 'closegraph': identifier not found
+     1>Done Building Project "D:\visual studio2013 works\Herbert Schildt C #\part 1\chapter 1\graphics program in c++\graphics program in c++\graphics program in c++.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.20

@@ -1,0 +1,202 @@
+
+//Enter an expression in infix form: ((X+Y)/C)+(A+B)*D
+//Stack is empty
+//The Prefix expression is:    + / + X Y C * + A B D
+
+//#include "stdafx.h"
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <conio.h>
+
+#define MAX 50
+
+struct infix
+{
+	char target[MAX];
+	char stack[MAX];
+	char *s, *t;
+	int top, l;
+};
+
+void initinfix(struct infix *);
+void setexpr(struct infix *, char *);
+void push(struct infix *, char);
+char pop(struct infix *);
+void convert(struct infix *);
+int priority(char c);
+void show(struct infix);
+
+int main()
+{
+	struct infix q;
+	char expr[MAX];
+
+	//clrscr();
+
+	initinfix(&q);
+
+	printf("\nEnter an expression in infix form: ");
+	gets(expr);
+
+	setexpr(&q, expr);
+	convert(&q);
+
+	printf("The Prefix expression is: ");
+	show(q);
+
+	getch();
+	return 0;
+}
+
+/* initializes elements of structure variable */
+void initinfix(struct infix *pq)
+{
+	pq->top = -1;
+	strcpy(pq->target, "");
+	strcpy(pq->stack, "");
+	pq->l = 0;
+}
+
+/* reverses the given expression */
+void setexpr(struct infix *pq, char *str)
+{
+	pq->s = str;
+	_strrev(pq->s);	/*	strrev( ) function reverses a given string in C language.	*/
+
+	pq->l = strlen(pq->s);	// save the length of expression in pq->l variable
+	*(pq->target + pq->l) = '\0';	
+
+	 
+	pq->t = pq->target + (pq->l - 1);	//see stringbasic.cpp file accompanied with..
+	
+		/* HERE pq->t  is pointing to a pointer whose size is about the size of "right hand
+		side" of '=' operator. 
+		later pq->t decremented not incremented like a infix to postfix operation.
+*/
+}
+
+/* adds operator to the stack */
+void push(struct infix *pq, char c)
+{
+	if (pq->top == MAX - 1)		//"0 -> max -1"  == full
+		printf("\nStack is full.\n");
+	else
+	{
+		pq->top++;
+		pq->stack[pq->top] = c;
+	}
+}
+
+/* pops an operator from the stack */
+char pop(struct infix *pq)
+{
+	if (pq->top == -1)
+	{
+		printf("Stack is empty\n");
+		return -1;
+	}
+	else
+	{
+		char item = pq->stack[pq->top];
+		pq->top--;
+		return item;
+	}
+}
+
+/* converts the infix expr. to prefix form */
+void convert(struct infix *pq)
+{
+	char opr;
+
+	while (*(pq->s))
+	{
+		if (*(pq->s) == ' ' || *(pq->s) == '\t')
+		{
+			pq->s++;
+			continue;
+		}
+
+		if (isdigit(*(pq->s)) || isalpha(*(pq->s)))
+		{
+			while (isdigit(*(pq->s)) || isalpha(*(pq->s)))
+			{
+				*(pq->t) = *(pq->s);
+				pq->s++;
+				pq->t--;
+			}
+		}
+
+		if (*(pq->s) == ')')
+		{
+			push(pq, *(pq->s));
+			pq->s++;
+		}
+
+		if (*(pq->s) == '*' || *(pq->s) == '+' || *(pq->s) == '/' ||
+			*(pq->s) == '%' || *(pq->s) == '-' || *(pq->s) == '$')
+		{
+			if (pq->top != -1)
+			{
+				opr = pop(pq);
+
+				while (priority(opr) > priority(*(pq->s)))
+				{
+					*(pq->t) = opr;
+					pq->t--;					// intrechange characters or values
+					opr = pop(pq);
+				}
+				push(pq, opr);
+				push(pq, *(pq->s));
+			}
+			else
+				push(pq, *(pq->s));
+			pq->s++;
+		}
+
+		if (*(pq->s) == '(')
+		{
+			opr = pop(pq);
+			while (opr != ')')
+			{
+				*(pq->t) = opr;
+				pq->t--;
+				opr = pop(pq);
+			}
+			pq->s++;
+		}
+	}
+
+	while (pq->top != -1)
+	{
+		opr = pop(pq);
+		*(pq->t) = opr;
+		pq->t--;
+	}
+	pq->t++;
+}
+
+/* returns the priotity of the operator */
+int priority(char c)
+{
+	if (c == '$')
+		return 3;
+	if (c == '*' || c == '/' || c == '%')
+		return 2;
+	else
+	{
+		if (c == '+' || c == '-')
+			return 1;
+		else return 0;
+	}
+}
+
+/* displays the prefix form of given expr. */
+void show(struct infix pq)
+{
+	while (*(pq.t))
+	{
+		printf(" %c", *(pq.t));
+		pq.t++;
+	}
+}

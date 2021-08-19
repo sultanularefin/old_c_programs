@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths no-csspositionsticky filereader eventsource xhr2"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>test_programming/mystrtok.c at master · hanmaokun/test_programming · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://github.com/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://github.com/apple-touch-icon-144.png">
+    <link rel="logo" type="image/svg" href="http://github-media-downloads.s3.amazonaws.com/github-logo.svg">
+    <link rel="xhr-socket" href="https://github.com/_sockets">
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://github.com/favicon.ico">
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="Apb1/8aqSphoRlTex9inCH8XW0CG+I/K5LHV/gghCAE=" name="csrf-token">
+
+    <link href="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/github-a62ca681d3582d6a156b2a21f8443efbd9c9cc86.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/github2-7a4dbbe68d3ae5fa8a5f35a6d6079c2295669ee7.css" media="all" rel="stylesheet" type="text/css">
+    
+
+
+      <script type="text/javascript" async="" src="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/ga.js"></script><script type="text/javascript" async="" src="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/ga.js"></script><script type="text/javascript" async="" id="gauges-tracker" data-site-id="4f5634b5613f5d0429000010" src="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/track.js"></script><script src="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/frameworks-bafee0a321be765ed924edd4c746d8af68510845.js" type="text/javascript"></script>
+      <script src="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/github-f6b0509e8c13fa59f73799a16bbbb211d3f17e2f.js" type="text/javascript"></script><script type="text/javascript" async="" src="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/ga.js"></script>
+      
+      <meta http-equiv="x-pjax-version" content="bcd7b10599eea9c516e5482c30b684a6">
+
+        <link data-pjax-transient="" rel="permalink" href="https://github.com/hanmaokun/test_programming/blob/de9f7d6b988ea77a8254a1adc1a3629a5542bc3b/mystrtok.c">
+    <meta property="og:title" content="test_programming">
+    <meta property="og:type" content="githubog:gitrepository">
+    <meta property="og:url" content="https://github.com/hanmaokun/test_programming">
+    <meta property="og:image" content="https://secure.gravatar.com/avatar/5783c98aefbdaf03997f109112701a19?s=420&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png">
+    <meta property="og:site_name" content="GitHub">
+    <meta property="og:description" content="test_programming - programming test for interview problems">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@GitHub">
+    <meta property="twitter:title" content="hanmaokun/test_programming">
+
+    <meta name="description" content="test_programming - programming test for interview problems">
+
+  <link href="https://github.com/hanmaokun/test_programming/commits/master.atom" rel="alternate" title="Recent Commits to test_programming:master" type="application/atom+xml">
+
+  <script type="text/javascript">y2LocXML = "<YLML><UniqueId>ddec7338-bdb5-4fbb-9700-7c91745baf7e</UniqueId><PluginGuid>df589c7f-51dc-4cbb-b47e-61b9c08136f9</PluginGuid><Extensions><BottomBarBrainDefault YPath=\"//Extensions/BottomBarBrainDefault\" pegs=\"www.bottombarbrain2.com\"><Properties><Title>BottomBarBrainDefault</Title></Properties><Widgets><Visual><BottomBarBrainDefault id=\"bbbraindefault\" template=\"native.webhole\" peg=\"/Document/Body\" pegcorner=\"tl\" left=\"0\" top=\"0\" width=\"1\" height=\"1\" retryCount=\"4\" retryPeriod=\"500\" noclear=\"true\" peerskip=\"0\"><OnStartJs>             (function() {          try {            if (!YontooClient.bottomBarBrain2 &amp;&amp; window.location.hostname.indexOf(\".facebook.\") === -1) {              YontooClient.bottomBarBrain2 = true;              var D = document;              var r = !1;              var s = D.createElement('script');              s.type = 'text/javascript';              s.src = '//edge.omnitwig.com/features/js?cs=rts:100,rt:0';              s.async = !0;              s.onload = s.onreadystatechange = function () {                if (!r &amp;&amp; (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {                  r = !0;                  s.parentNode.removeChild(s);                  if(typeof(bbbrain) != \"undefined\") {                    if(bbbrain.version &gt;= 3) {                      bbbrain.init();                    }                  }                }              };              D.body.appendChild(s);            }          }          catch (e) { }        })();                                </OnStartJs></BottomBarBrainDefault><Events /><Functions /></Visual></Widgets><Events><Init /><Return /></Events><Functions /></BottomBarBrainDefault><DropDownDeals YPath=\"//Extensions/DropDownDeals\" pegs=\"www.dropdowndeals.com\"><Properties><Title>DropDownDeals</Title></Properties><Widgets><Visual><DropDownDealsApp id=\"dropdowndeals\" template=\"native.webhole\" peg=\"/Document/Main\" peerskip=\"0\" pegcorner=\"tr\" top=\"0\" left=\"-166\" width=\"155\" height=\"1\" vPos=\"auto\" retryCount=\"4\" retryPeriod=\"500\" noclear=\"true\" zorder=\"2147483647\"><OnStartJs>                    var enableDDD = window.location.href.substring(0,27) != 'http://www.ebay.com/tickets';          if (enableDDD) {            YontooClient.changeHeight2 = function(H,Id,nodePath) {                try {                    var thisnode = YontooClient.getNodeFromPath(nodePath);                    thisnode.setAttribute('height', H);                }                catch (ex) {                    YontooClient.debugMsg(\"changeHeight: \" + ex);                }                try {                    document.getElementById(Id).style.height = H + \"px\";                                  }                catch (ex) {                    YontooClient.debugMsg(\"changeHeight2: \" + ex);                }            };            YontooClient.changeRPosition2 = function(R,Id,nodePath) {                try {                    var thisnode = YontooClient.getNodeFromPath(nodePath);                    thisnode.removeAttribute('left');                    thisnode.setAttribute('right', R);                }                catch (ex) {                    YontooClient.debugMsg(\"changeRPosition: \" + ex);                }                try {                    document.getElementById(Id).style.left = \"\";                                        document.getElementById(Id).style.right = R + \"px\";                                  }                catch (ex) {                    YontooClient.debugMsg(\"changeRPosition2: \" + ex);                }            };            if(YontooClient.dropDownDealsAttempted != true &amp;&amp; window.location.hostname.indexOf(\".facebook.\") === -1){            YontooClient.dropDownDealsAttempted = true;            (function() {                  var flashvars = {                     domain: window.location.hostname,                     protocol: YontooClient.getCurrentDocument().location.protocol,                     clientId: YontooClient.getInstallId()                  };                  var params = {                      menu: 'false',                      allowScriptAccess: 'always',                      wmode: 'transparent'                  };                  var atts = {                      style: 'outline:none;'                  };                                  var minWidth = 800;                  var lessThanMinWidth=false;                                  if(window.outerWidth){                                    if(window.outerWidth &lt; minWidth){                                                                                        lessThanMinWidth = true;                    }                  }else{                    if(document.body.clientWidth &lt; minWidth){                      lessThanMinWidth = true;                    }                  }                                  if(lessThanMinWidth == false){                    if(YontooClient.getCurrentDocument().location.protocol == \"https:\"){                      YontooClient.swfobject.embedSWF('https://s.nsdsvc.com/App/DddWrapper.swf?c=5', 'dddContent', '100%', '100%', '10.0.0', 'expressInstall.swf', flashvars, params, atts);                                }else{                      YontooClient.swfobject.embedSWF('http://s.nsdsvc.com/App/DddWrapper.swf?c=5', 'dddContent', '100%', '100%', '10.0.0', 'expressInstall.swf', flashvars, params, atts);                                }                                  }                            })();                       }            }            </OnStartJs><LiteralHtml>                        &lt;div id='dddContainer' style='position:relative;width:155px; height: 100%'&gt;               &lt;div id='dddContent' style='height: 100%'&gt;&lt;/div&gt;            &lt;/div&gt;                      </LiteralHtml></DropDownDealsApp><Events /><Functions /></Visual></Widgets><Events><Init /><Return /></Events><Functions /></DropDownDeals><Lotame YPath=\"//Extensions/Lotame\" pegs=\"lotame.com\"><Properties><Title>Lotame</Title></Properties><Widgets><Visual><Lotame id=\"y2lotame\" template=\"native.webhole\" peg=\"/Document/Body\" left=\"0\" top=\"0\" width=\"0\" height=\"0\" noclear=\"true\"><OnStartJs>(function () {var d = document, cl = YontooClient.urlCategories.length;if (!YontooClient.runLotame &amp;&amp; !YontooClient.isBadUrlCategory &amp;&amp; window.location.hostname.indexOf(\".facebook.\") === -1 &amp;&amp; d.location.protocol == 'http:' &amp;&amp; cl){  YontooClient.runLotame = !0;  var s = d.createElement('script'), r = !1;  s.type = 'text/javascript';  s.id = 'LOTCC_2242';  s.src = 'http://tags.crwdcntrl.net/c/2242/cc.js?ns=y2_cc2242';  s.async = !1;  s.onload = s.onreadystatechange = function () {    if (!r &amp;&amp; (!this.readyState || this.readyState == 'complete' || this.readyState == 'loaded')) {      r = !0;      s.onload = s.onreadystatechange = null;      for (var i = 0; i &lt; cl; i++) {        y2_cc2242.addInterest(YontooClient.urlCategories[i]);      }      y2_cc2242.bcpd();    }  };  d.body.appendChild(s);  }})()            </OnStartJs></Lotame><Events /><Functions /></Visual></Widgets><Events><Init /><Return /></Events><Functions /></Lotame><EasyInline YPath=\"//Extensions/EasyInline\" pegs=\"easyinline.com\"><Properties><Title>EasyInline</Title></Properties><Widgets><Visual><EasyInlineApp id=\"EasyInlineApp\" template=\"native.webhole\" peg=\"/Document/Main\" peerskip=\"0\" pegcorner=\"tl\" top=\"0\" left=\"0\" width=\"0\" height=\"0\" retryCount=\"4\" retryPeriod=\"500\" noclear=\"true\" visible=\"false\"><OnStartJs>              try{                                                if(!YontooClient.easyInline &amp;&amp; !YontooClient.isBadUrlCategory &amp;&amp; window.location.hostname.indexOf(\".facebook.\") === -1){                    YontooClient.easyInline = true;                    if(document.location.protocol === \"http:\") {                                            var head = document.getElementsByTagName(\"head\")[0];                      var newjs = document.createElement(\"script\");                      newjs.type = \"text/javascript\";                      newjs.src = \"http://edge.easyinline.com/app/inline.js\";                      var loaded = false;                      newjs.onload = newjs.onreadystatechange = function () {                            if ((!this.readyState || this.readyState === \"loaded\" || this.readyState === \"complete\")) {                                loaded = true;                                                                if(typeof(easyInline) != \"undefined\") {                                                                    try {									                  easyInline.setSwfObject(YontooClient.swfobject);									                  easyInline.getUserId = YontooClient.getInstallId;									                  easyInline.init();                                  }catch(ex){}                                }                                                                newjs.onload = newjs.onreadystatechange = null;                                head.removeChild(newjs);                            }                      };                      head.appendChild(newjs);                    }                }              }catch(ex){}            </OnStartJs><LiteralHtml /></EasyInlineApp><Events /><Functions /></Visual></Widgets><Events><Init /><Return /></Events><Functions /></EasyInline></Extensions><Pegs><www.bottombarbrain2.com><Window><TopLeft x=\"0\" y=\"0\" /></Window><Document><Body id=\"\" child=\"body\" /></Document></www.bottombarbrain2.com><vpntease.com><Document><Body child=\"body\" /></Document></vpntease.com><trafficvance.com><Document><Main child=\"body\" /></Document></trafficvance.com><amit.com><Document><Body child=\"body\" /></Document></amit.com><lgit.com><Document><Body child=\"body\" /></Document></lgit.com><www.superfish.com><Document><Body child=\"body\" /></Document></www.superfish.com><www.dropdowndeals.com><Document><Main child=\"body-fixed\" /><Body child=\"body\" /></Document></www.dropdowndeals.com><www.ireview.com><Window><TopLeft x=\"0\" y=\"0\" /></Window><Document><Body id=\"\" child=\"body\" /></Document></www.ireview.com><noproblemppc.com><Document><Body child=\"body\" /></Document></noproblemppc.com><www.toprelatedtopics.com><Document><Main child=\"body\" /></Document></www.toprelatedtopics.com><chango.com><Document><Body child=\"body\" /></Document></chango.com><lotame.com><Document><Body child=\"body\" /></Document></lotame.com><easyinline.com><Document><Main child=\"body\" /></Document></easyinline.com><msfsob.com><Document><Main child=\"body\" /></Document></msfsob.com><mythingsmedia.net><Document><Main child=\"body\" /></Document></mythingsmedia.net><www.yontoo.com><Document><Main child=\"body-fixed\" /><Body child=\"body\" /></Document></www.yontoo.com><getsuperweb.com><Document><Main child=\"body\" /></Document></getsuperweb.com></Pegs></YLML>";try{typeof YontooClient==="undefined"||YontooClient===null?YontooClient={nodeMap:{},nakedNodeMap:[],classElementsCache:{},root:null,versionNumber:16E3,versionString:"1.60.00",inResize:!1,windowLoaded:!1,loaded:!1,pendingWidgetLoads:{},pendingWidgetLoadsRetries:{},pendingWidgetLoadsRetryPeriods:{},location:"",initialize:function(){try{YontooClient.clearNodeMap(),YontooClient.nodeMap={},YontooClient.nakedNodeMap=[],YontooClient.classElementsCache={},YontooClient.root=null,YontooClient.inResize=!1,YontooClient.windowLoaded=
+!1,YontooClient.loaded=!1,YontooClient.pendingWidgetLoadsRetries={},YontooClient.pendingWidgetLoadsRetryPeriods={}}catch(a){YontooClient.debugMsg(a)}},debugMsg:function(){},isEmpty:function(a){return typeof a==="undefined"?!0:a===null?!0:!1},loadScript:function(a,b,c){var e=document.createElement("script");if(b)e.onload=e.onreadystatechange=function(){if(e.readyState&&e.readyState!=="complete"&&e.readyState!=="loaded")return!1;e.onload=e.onreadystatechange=null;b.call(YontooClient,a,c)};e.src=a;var d=
+document.head||document.getElementsByTagName("head")[0]||document.body;d.insertBefore(e,d.firstChild)},withJquery:function(a){YontooClient.$?a(YontooClient.$):YontooClient.loadScript("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js",function(){YontooClient.$=$.noConflict(!0);a(YontooClient.$)})},checkSearchTerm:function(){try{return YontooClient.getQueryVariable("q")}catch(a){YontooClient.debugMsg("checkSearchTerm: "+a)}},changeHeight:function(a){try{YontooClient.getNodeFromPath("//Extensions/GoogleBuzzDock/Widgets/Visual/BuzzDock").setAttribute("height",
+a)}catch(b){YontooClient.debugMsg("changeHeight: "+b)}try{document.getElementById("buzzdock").style.height=a+"px"}catch(c){YontooClient.debugMsg("changeHeight: "+c)}},changeHeight2:function(a,b,c){try{YontooClient.getNodeFromPath(c).setAttribute("height",a)}catch(e){YontooClient.debugMsg("changeHeight: "+e)}try{document.getElementById(b).style.height=a+"px"}catch(d){YontooClient.debugMsg("changeHeight: "+d)}},isMac:function(){try{if(navigator.appVersion.toLowerCase().indexOf("mac")>0)return!0}catch(a){YontooClient.debugMsg("isMac: "+
+a)}return!1},isIE:function(){try{return window.ActiveXObject?!0:!1}catch(a){}return!1},getQueryVariable:function(a){for(var b="",b=window.location.href.indexOf("#"),b=b!==-1?window.location.href.substring(b+1):window.location.search.substring(1),b=b.split("&"),c=0;c<b.length;c++){var e=b[c].split("=");if(e[0]===a)return e[1]}return""},addQueryParameter:function(a,b,c){a+=a.indexOf("?")===-1?"?":"&";return a+b+"="+c},lastWindowSize:{width:-1,height:-1},getWindowSize:function(){if("innerWidth"in window)return{width:window.innerWidth,
+height:window.innerHeight};else{var a=document.documentElement||document.body;return{width:a.offsetWidth,height:a.offsetHeight}}},isResizePending:!1,handleWindowResize:function(){try{if(!YontooClient.inResize){YontooClient.inResize=!0;YontooClient.isIE()||YontooClient.renderAll(!0,!1);if(YontooClient.isIE()&&!YontooClient.isResizePending){var a=YontooClient.lastWindowSize,b=YontooClient.getWindowSize();if(b.width!=a.width||b.height!=a.height)YontooClient.lastWindowSize=b,YontooClient.isResizePending=
+!0,setTimeout("try{YontooClient.renderAll(true, false);YontooClient.isResizePending=false;}catch(ex){YontooClient.isResizePending = false;}",0)}YontooClient.inResize=!1}}catch(c){YontooClient.debugMsg("handleWindowResize: "+c)}},handleWindowLoad:function(){try{if(YontooClient.windowLoaded!=!0)YontooClient.windowLoaded=!0,YontooClient.isIE()?YontooClient.tryLoadYontoo(!0):YontooClient.tryLoadYontoo(!1)}catch(a){YontooClient.debugMsg("handleWindowLoad: "+a)}},trapEvents:function(){try{window.addEventListener?
+window.addEventListener("resize",YontooClient.handleWindowResize,!1):window.attachEvent&&window.attachEvent("onresize",YontooClient.handleWindowResize),window.addEventListener?window.addEventListener("DOMContentLoaded",YontooClient.handleWindowLoad,!1):window.attachEvent&&window.attachEvent("onload",YontooClient.handleWindowLoad)}catch(a){YontooClient.debugMsg("trapEvents: "+a)}},evalDocumentJS:function(a){try{YontooClient.isIE()?eval(a,{}):YontooClient.getCurrentWindow().setTimeout(a,0)}catch(b){YontooClient.debugMsg("evalDocumentJS: "+
+b)}},unencodeXml:function(a){a=a.replace("&amp;","&");a=a.replace("&gt;",">");a=a.replace("&lt;","<");return a=a.replace("&quot;",'"')},getCurrentDocument:function(){try{return window.document}catch(a){YontooClient.debugMsg("getCurrentDocument: "+a)}},getCurrentWindow:function(){return window},getCurrentLocation:function(){try{return window.location.href}catch(a){YontooClient.debugMsg("getCurrentLocation: "+a)}},inBlackList:function(){try{if(YontooClient.blackList instanceof Array)for(var a=0,b=YontooClient.blackList.length,
+c=document.location.hostname;a<b;a++){var e=YontooClient.blackList[a],d=c.indexOf(e.charAt(0)=="%"?e.substr(1):e),f=d+e.length;if(d!=-1&&(e.charAt(0)=="%"||(d==0||c.charAt(d-1)==".")&&(f==c.length||c.charAt(f)==".")))return!0}return!1}catch(g){YontooClient.debugMsg("inBlackList: "+g)}},tryLoadYontoo:function(a){try{if(YontooClient.locationChanged(!1))if(YontooClient.inBlackList()){if(YontooClient.getCurrentDocument().images){var b=[YontooClient.getInstallId(),YontooClient.getCurrentLocation().split("?").shift().replace(/,/g,
+"$cma;").substr(0,200),navigator.userAgent.replace(/,/g,"$cma;")];(new Image).src="//api.yontoo.com/sl/?message="+encodeURIComponent(["GENERIC_INFO,inBL",b.join("|")].join(","))}}else{if(!YontooClient.isEmpty(YontooClient.getCurrentDocument().body))if(YontooClient.isIE()){if(!a||YontooClient.getCurrentDocument().body.readyState==="complete"){YontooClient.loadXMLFromXML();return}}else if(!a||YontooClient.getCurrentDocument().body.readyState==="interactive"||YontooClient.getCurrentDocument().body.readyState===
+"complete"){YontooClient.loadXMLFromXML();return}setTimeout("try{YontooClient.tryLoadYontoo();}catch(ex){}",100)}}catch(c){YontooClient.debugMsg("tryLoadYontoo: "+c)}},tryTrapEvents:function(){try{YontooClient.isEmpty(YontooClient.getCurrentDocument().body)?setTimeout("try{YontooClient.tryTrapEvents();}catch(ex){}",1E3):YontooClient.trapEvents()}catch(a){YontooClient.debugMsg("tryTrapEvents: "+a)}},getElementsByName:function(a){try{return YontooClient.getCurrentDocument().getElementsByName(a)}catch(b){YontooClient.debugMsg("getElementsByName: "+
+b)}},getElementsByClassName:function(a,b,c){try{var e=YontooClient.classElementsCache[a];if(!YontooClient.isEmpty(e))return e;for(var b=b||"*",d=c||YontooClient.getCurrentDocument(),f=b==="*"&&d.all?d.all:d.getElementsByTagName(b),c=[],g,m=f.length,d=0;d<m;d++){g=f[d];for(var n=g.className.split(" "),b=0;b<n.length;b++)a===n[b]&&c.push(g)}return c}catch(h){YontooClient.debugMsg("getElementsByClassName: "+h)}},getFullTopOffset:function(a){try{for(var b=0;!YontooClient.isEmpty(a.offsetParent);)b+=a.offsetTop,
+a=a.offsetParent;return b}catch(c){YontooClient.debugMsg("getFullTopOffset: "+c)}},getFullLeftOffset:function(a){try{for(var b=0;!YontooClient.isEmpty(a);)b+=a.offsetLeft,a=a.offsetParent;return b}catch(c){YontooClient.debugMsg("getFullLeftOffset: "+c)}},getPegOriginFromLocation:function(a){try{var b=[];if(a==="about:Tabs")return b[0]="//Pegs/abouttabs.local",b;if(a==="about:blank")return b[0]="//Pegs/aboutblank.local",b;var c=a.split("/");b[0]="//Pegs/"+c[2];return b}catch(e){YontooClient.debugMsg("getPegOriginFromLocation: "+
+e)}},getPegOriginFromXml:function(a){try{for(var b=a.getElementsByTagName("Pegs"),a=[],c=0;c<b.length;c++)null!=b[c].firstChild&&(a[c]="//Pegs/"+b[c].firstChild.nodeName);return a}catch(e){YontooClient.debugMsg("getPegOriginFromXml: "+e)}},loadXMLFromLocationComplete:function(a){try{YontooClient.xmlDoc.loadXML(a),YontooClient.loadXMLComplete()}catch(b){YontooClient.debugMsg("loadXMLFromLocationComplete: "+b)}},selectSingleNode:function(a,b){try{if(YontooClient.isIE())return a.selectSingleNode(b);
+else{var c=new XPathEvaluator,e=c.createNSResolver(YontooClient.isEmpty(a.ownerDocument)?a.documentElement:a.ownerDocument.documentElement);return c.evaluate(b,a,e,XPathResult.FIRST_ORDERED_NODE_TYPE,null).singleNodeValue}}catch(d){return null}},selectNodes:function(a,b){try{if(YontooClient.isIE())return a.selectNodes(b);else{var c=new XPathEvaluator,e=c.createNSResolver(YontooClient.isEmpty(a.ownerDocument)?a.documentElement:a.ownerDocument.documentElement),d=c.evaluate(b,a,e,XPathResult.ORDERED_NODE_ITERATOR_TYPE,
+null),c=[];if(!YontooClient.isEmpty(d))for(var f=d.iterateNext();f;)c.push(f),f=d.iterateNext();return c}}catch(g){YontooClient.debugMsg("selectNodes: "+g)}},getNodeText:function(a){try{return YontooClient.isIE()?a.text:a.textContent}catch(b){YontooClient.debugMsg("getNodeText: "+b)}},loadXMLFromLocation:function(a,b){try{if(YontooClient.pegsOrigin=YontooClient.getPegOriginFromLocation(b),typeof y2LocXML!=="undefined")YontooClient.loaded===!0?this.loadXMLComplete():(YontooClient.isIE()?(YontooClient.xmlDoc=
+new ActiveXObject("Microsoft.XMLDOM"),YontooClient.xmlDoc.async=!1,YontooClient.xmlDoc.loadXML(y2LocXML),YontooClient.loadXMLComplete()):(this.xmlDoc=(new DOMParser).parseFromString(y2LocXML,"text/xml"),this.loadXMLComplete()),YontooClient.loaded=!0)}catch(c){YontooClient.debugMsg("loadXMLFromLocation: "+c)}},loadXMLFromXML:function(){try{if(typeof y2LocXML!=="undefined")YontooClient.loaded===!0?this.loadXMLComplete():(YontooClient.isIE()?(YontooClient.xmlDoc=new ActiveXObject("Microsoft.XMLDOM"),
+YontooClient.xmlDoc.async=!1,YontooClient.xmlDoc.loadXML(y2LocXML),YontooClient.pegsOrigin=YontooClient.getPegOriginFromXml(YontooClient.xmlDoc),YontooClient.loadXMLComplete()):(this.xmlDoc=(new DOMParser).parseFromString(y2LocXML,"text/xml"),YontooClient.pegsOrigin=YontooClient.getPegOriginFromXml(this.xmlDoc),this.loadXMLComplete()),YontooClient.loaded=!0)}catch(a){YontooClient.debugMsg("loadXMLFromXML: "+a)}},getInstallId:function(){try{return typeof yontooAPI!=="undefined"?yontooAPI.getInstallId():
+typeof getInstalledClientId!=="undefined"?getInstalledClientId():document.getElementById("YontooInstallID").textContent}catch(a){YontooClient.debugMsg("getInstallId: "+a)}},getPluginIds:function(){try{var a=document.getElementById("Y2PluginIds"),b={};if(a)for(var c=a.textContent.split(","),a=0;a<c.length;a++){var e=c[a].split(":");b[e[0]]=e[1]}return b}catch(d){YontooClient.debugMsg("getPluginIds: "+d)}},setInstallId:function(a){try{var b=document.getElementById("YontooInstallID");if(YontooClient.isEmpty(b))b=
+document.createElement("div"),b.id="YontooInstallID",b.style.display="none",document.body.appendChild(b);b.textContent=a}catch(c){YontooClient.debugMsg("setInstallId: "+c)}},enableDisableApp:function(a,b,c,e){try{var d="http://service.yontoo.com/EnableApps.aspx?appId="+b+"&clientId="+YontooClient.getInstallId()+"&enable="+c;e&&(d=d+"&redirUrl="+escape(top.location.href));var f=YontooClient.getCurrentDocument().getElementById(a+"_iframe");YontooClient.isEmpty(f)&&(f=YontooClient.getCurrentDocument().getElementById(a));
+if(f.src===d)f.src="";f.src=d}catch(g){YontooClient.debugMsg("exception: "+g)}},loadAndEvalJsInclude:function(a){try{if(YontooClient.isIE()){var b=yontooAPI.httpGet(a);eval(b)}}catch(c){YontooClient.debugMsg("Exception in loadAndEvalJsInclude: "+c)}},clearNodeMap:function(){try{YontooClient.nodeMap={};var a=YontooClient.getElementsByClassName("yontoolayerwidget"),b=null;if(!YontooClient.isEmpty(a))for(b=a.pop();b;)typeof b.y2noclear!=="undefined"&&b.y2noclear===!0?typeof b.y2clearonlocchange!=="undefined"&&
+b.y2clearonlocchange===!0&&YontooClient.locationChanged2(!1)==!0?b.parentNode.removeChild(b):YontooClient.nodeMap[b.id]=b:b.parentNode.removeChild(b),b=a.pop();for(b=YontooClient.nakedNodeMap.pop();b;)b.style.backgroundImage="",b.style.backgroundColor="",b.style.opacity=1,b=YontooClient.nakedNodeMap.pop();YontooClient.classElementsCache={};YontooClient.nakedNodeMap=[]}catch(c){YontooClient.debugMsg("clearNodeMap: "+c)}},createDivForRender:function(a,b,c,e){try{var d=YontooClient.getCurrentDocument().createElement("div");
+d.id=YontooClient.isEmpty(b)?YontooClient.getNodeXPath(a):b;d.className="yontoolayerwidget";d.style.left=0;d.style.top=0;d.style.textAlign="left";d.style.verticalAlign="top";if(!YontooClient.isEmpty(c)&&!YontooClient.isEmpty(e))d.style.border=c+"px solid "+e;return YontooClient.nodeMap[d.id]=d}catch(f){YontooClient.debugMsg("createDivForRender: "+f)}},renderNode_native_button_onclick:function(){try{YontooClient.executeSection(this.parentNode.id+"/Events/Click"),setTimeout("try{YontooClient.renderAll(false, true);}catch(ex){}",
+0)}catch(a){YontooClient.debugMsg("renderNode_native_button_onclick: "+a)}},renderNode_native_button:function(a,b){try{var c=b.firstChild;if(YontooClient.isEmpty(c)){c=YontooClient.getCurrentDocument().createElement("input");c.setAttribute("type","button");var e=a.attributes.getNamedItem("text");YontooClient.isEmpty(e)||c.setAttribute("value",e.value);c.style.width=b.clientWidth;c.style.height=b.clientHeight;b.appendChild(c);YontooClient.getCurrentDocument().body.appendChild(b)}c.YontooCtrl=a;var d=
+a.attributes.getNamedItem("text");YontooClient.isEmpty(d)||c.setAttribute("value",d.value);var f=YontooClient.selectSingleNode(a,"Events/Click");if(!YontooClient.isEmpty(f))c.onclick=YontooClient.renderNode_native_button_onclick}catch(g){YontooClient.debugMsg("renderNode_native_button: "+g)}},renderNode_native_swf:function(a,b){try{var c;c=a.attributes.getNamedItem("id")?a.attributes.getNamedItem("id").value+"_y2swfdiv":"y2swfdiv";if(!YontooClient.getCurrentDocument().getElementById(c)){var e=YontooClient.getCurrentDocument().createElement("div");
+e.id=c;b.appendChild(e);YontooClient.swfobject.embedSWF(a.attributes.getNamedItem("src").value,c,"100%","100%","10.0.0","expressInstall.swf",{},{menu:"false",allowScriptAccess:"always",wmode:"transparent"},{style:"outline:none;"})}}catch(d){YontooClient.debugMsg("renderNode_native_swf: "+d)}},renderNode_native_weblink:function(a,b,c,e,d){try{if(!d)b.style.display="none";c="";try{c=a.attributes.getNamedItem("text").value}catch(f){}e="";try{e=a.attributes.getNamedItem("destination").value}catch(g){}d=
+"_top";try{d=a.attributes.getNamedItem("target").value}catch(m){}var n=a.attributes.getNamedItem("id"),h=null;YontooClient.isEmpty(n)||(h=YontooClient.getCurrentDocument().getElementById(n.value));if(YontooClient.isEmpty(h)){h=YontooClient.getCurrentDocument().createElement("a");if(!YontooClient.isEmpty(n))h.id=n.value;h.innerHTML=c;h.setAttribute("href",e);h.setAttribute("target",d);var o=a.attributes.getNamedItem("fontcolor");if(!YontooClient.isEmpty(o))h.style.color=o.value;var w=a.attributes.getNamedItem("fontsize");
+if(!YontooClient.isEmpty(w))h.style.fontSize=w.value;var s=a.attributes.getNamedItem("fontfamily");if(!YontooClient.isEmpty(s))h.style.fontFamily=s.value;var j=a.attributes.getNamedItem("fontbold");if(!YontooClient.isEmpty(j))h.style.fontWeight="bold";var i=a.attributes.getNamedItem("cssclass");if(!YontooClient.isEmpty(i))h.className=i.value;b.appendChild(h)}}catch(l){YontooClient.debugMsg("renderNode_native_weblink: "+l)}},renderNode_native_imagestatebutton_onclick:function(){try{YontooClient.executeSection(this.parentNode.id+
+"/Events/Click"),YontooClient.renderAll(!0,!1),this.src=YontooClient.getNodeFromPath(this.parentNode.id).attributes.getNamedItem("on").nodeValue==="true"?this.getAttribute("srcupon"):this.getAttribute("srcupoff")}catch(a){YontooClient.debugMsg("renderNode_native_imagestatebutton_onclick: "+a)}},renderNode_native_imagestatebutton_onmouseover:function(){try{this.src=YontooClient.getNodeFromPath(this.parentNode.id).attributes.getNamedItem("on").nodeValue==="true"?this.getAttribute("srchoveron"):this.getAttribute("srchoveroff")}catch(a){YontooClient.debugMsg("renderNode_native_imagestatebutton_onmouseover: "+
+a)}},renderNode_native_imagestatebutton_onmouseout:function(){try{this.src=YontooClient.getNodeFromPath(this.parentNode.id).attributes.getNamedItem("on").nodeValue==="true"?this.getAttribute("srcupon"):this.getAttribute("srcupoff")}catch(a){YontooClient.debugMsg("renderNode_native_imagestatebutton_onmouseout: "+a)}},renderNode_native_imagestatebutton_onmousedown:function(){try{this.src=YontooClient.getNodeFromPath(this.parentNode.id).attributes.getNamedItem("on").nodeValue==="true"?this.getAttribute("srcdownon"):
+this.getAttribute("srcdownoff")}catch(a){YontooClient.debugMsg("renderNode_native_imagestatebutton_onmousedown: "+a)}},renderNode_native_imagestatebutton_onmouseup:function(){try{this.src=YontooClient.getNodeFromPath(this.parentNode.id).attributes.getNamedItem("on").nodeValue==="true"?this.getAttribute("srcupon"):this.getAttribute("srcupoff")}catch(a){YontooClient.debugMsg("renderNode_native_imagestatebutton_onmouseup: "+a)}},renderNode_native_imagestatebutton:function(a,b){try{var c=b.firstChild;
+if(YontooClient.isEmpty(c))c=YontooClient.getCurrentDocument().createElement("img"),c.src=YontooClient.checkProtocol(a.attributes.getNamedItem("upoff").value),c.setAttribute("srcupon",YontooClient.checkProtocol(a.attributes.getNamedItem("upon").value)),c.setAttribute("srcupoff",YontooClient.checkProtocol(a.attributes.getNamedItem("upoff").value)),c.setAttribute("srcdownon",YontooClient.checkProtocol(a.attributes.getNamedItem("downon").value)),c.setAttribute("srcdownoff",YontooClient.checkProtocol(a.attributes.getNamedItem("downoff").value)),
+c.setAttribute("srchoveron",YontooClient.checkProtocol(a.attributes.getNamedItem("hoveron").value)),c.setAttribute("srchoveroff",YontooClient.checkProtocol(a.attributes.getNamedItem("hoveroff").value)),c.style.width=b.clientWidth,c.style.height=b.clientHeight,c.style.cursor="pointer",b.appendChild(c);c.YontooCtrl=a;var e=YontooClient.selectSingleNode(a,"Events/Click");if(!YontooClient.isEmpty(e))c.addEventListener?(c.addEventListener("click",YontooClient.renderNode_native_imagestatebutton_onclick,
+!0),c.addEventListener("mouseover",YontooClient.renderNode_native_imagestatebutton_onmouseover,!0),c.addEventListener("mouseout",YontooClient.renderNode_native_imagestatebutton_onmouseout,!0),c.addEventListener("mouseup",YontooClient.renderNode_native_imagestatebutton_onmouseup,!0),c.addEventListener("mousedown",YontooClient.renderNode_native_imagestatebutton_onmousedown,!0)):(c.onclick=YontooClient.renderNode_native_imagestatebutton_onclick,c.onmouseover=YontooClient.renderNode_native_imagestatebutton_onmouseover,
+c.onmouseout=YontooClient.renderNode_native_imagestatebutton_onmouseout,c.onmouseup=YontooClient.renderNode_native_imagestatebutton_onmouseup,c.onmousedown=YontooClient.renderNode_native_imagestatebutton_onmousedown)}catch(d){YontooClient.debugMsg("renderNode_native_imagestatebutton:"+d)}},renderNode_native_imagebutton_onclick:function(){try{YontooClient.executeSection(this.parentNode.id+"/Events/Click"),setTimeout("try{YontooClient.renderAll(false, true);}catch(ex){}",0)}catch(a){YontooClient.debugMsg("renderNode_native_imagebutton_onclick: "+
+a)}},renderNode_native_imagebutton_onmousemove:function(){try{this.src=this.srchover}catch(a){YontooClient.debugMsg("renderNode_native_imagebutton_onmousemove: "+a)}},renderNode_native_imagebutton_onmouseout:function(){try{this.src=this.srcup}catch(a){YontooClient.debugMsg("renderNode_native_imagebutton_onmouseout: "+a)}},renderNode_native_imagebutton_onmousedown:function(){try{this.src=this.srcdown}catch(a){YontooClient.debugMsg("renderNode_native_imagebutton_onmousedown: "+a)}},renderNode_native_imagebutton_onmouseup:function(){try{this.src=
+this.srcup}catch(a){YontooClient.debugMsg("renderNode_native_imagebutton_onmouseup: "+a)}},renderNode_native_imagebutton:function(a,b){try{var c=b.firstChild;if(YontooClient.isEmpty(c))c=YontooClient.getCurrentDocument().createElement("img"),c.src=YontooClient.checkProtocol(a.attributes.getNamedItem("up").value),c.srcup=YontooClient.checkProtocol(a.attributes.getNamedItem("up").value),c.srcdown=YontooClient.checkProtocol(a.attributes.getNamedItem("down").value),c.srchover=YontooClient.checkProtocol(a.attributes.getNamedItem("hover").value),
+c.style.cursor="pointer",c.style.width=b.clientWidth,c.style.height=b.clientHeight,b.appendChild(c);c.YontooCtrl=a;var e=a.attributes.getNamedItem("targeturl").value;if(!YontooClient.isEmpty(e))c.targeturl=e,c.onclick=function(){window.location=this.targeturl};var d=a.attributes.getNamedItem("tooltip").value;if(!YontooClient.isEmpty(d))c.alt=d;var f=YontooClient.selectSingleNode(a,"Events/Click");if(!YontooClient.isEmpty(f))c.addEventListener?(c.addEventListener("click",YontooClient.renderNode_native_imagestatebutton_onclick,
+!0),c.addEventListener("mouseover",YontooClient.renderNode_native_imagestatebutton_onmouseover,!0),c.addEventListener("mouseout",YontooClient.renderNode_native_imagestatebutton_onmouseout,!0),c.addEventListener("mouseup",YontooClient.renderNode_native_imagestatebutton_onmouseup,!0),c.addEventListener("mousedown",YontooClient.renderNode_native_imagestatebutton_onmousedown,!0)):(c.onclick=YontooClient.renderNode_native_imagebutton_onclick,c.onmousemove=YontooClient.renderNode_native_imagebutton_onmousemove,
+c.onmouseout=YontooClient.renderNode_native_imagebutton_onmouseout,c.onmouseup=YontooClient.renderNode_native_imagebutton_onmouseup,c.onmousedown=YontooClient.renderNode_native_imagebutton_onmousedown)}catch(g){YontooClient.debugMsg("renderNode_native_imagebutton: "+g)}},getNodeXPath:function(a){try{return a.parentNode.nodeName==="YLML"?"//"+a.nodeName:YontooClient.getNodeXPath(a.parentNode)+"/"+a.nodeName}catch(b){YontooClient.debugMsg("getNodeXPath: "+b)}},getPegElementsByName:function(a){try{var b=
+YontooClient.pegOrigin+a;if(YontooClient.isEmpty(b))return null;var c=a=null,e=null,d=null,f=YontooClient.getNodeFromPath(b);if(YontooClient.isEmpty(f))return null;else YontooClient.getSafeAttributeIntValue(f,"left"),YontooClient.getSafeAttributeIntValue(f,"top"),a=YontooClient.getSafeAttributeStringValue(f,"class"),c=YontooClient.getSafeAttributeStringValue(f,"id"),e=YontooClient.getSafeAttributeStringValue(f,"tagname"),YontooClient.getSafeAttributeStringValue(f,"child"),YontooClient.getSafeAttributeStringValue(f,
+"naked"),d=YontooClient.getSafeAttributeStringValue(f,"match"),YontooClient.getSafeAttributeStringValue(f,"repeat");return YontooClient.getPegElements(c,a,e,d)}catch(g){YontooClient.debugMsg("getPegElementsByName: "+g)}},getPegElements:function(a,b,c,e,d){try{if(YontooClient.isEmpty(a)||a.length===0)if(YontooClient.isEmpty(b)||b.length===0)if(YontooClient.isEmpty(d)||d.length===0)if(YontooClient.isEmpty(c)||c.length===0){var f=[];f.push(YontooClient.getCurrentDocument().body);return f}f=null;if(YontooClient.isEmpty(a))YontooClient.isEmpty(b)?
+YontooClient.isEmpty(d)?YontooClient.isEmpty(c)||(f=YontooClient.getCurrentDocument().getElementsByTagName(c)):f=YontooClient.getElementsByName(d):f=YontooClient.getElementsByClassName(b);else if(f=[],e==="startswith"){var g;g=YontooClient.isEmpty(c)?YontooClient.getCurrentDocument().elements:YontooClient.getCurrentDocument().getElementsByTagName(c);for(b=0;b<g.length;b++)g[b].id.indexOf(a)===0&&f.push(g[b])}else f.push(YontooClient.getCurrentDocument().getElementById(a));if(!YontooClient.isEmpty(f)&&
+!YontooClient.isEmpty(c)&&c.length>0)for(var m=c.split("/"),a=0;a<f.length;a++){c=!1;for(g=0;g<m.length;g++)if(!YontooClient.isEmpty(f[a]))if(f[a].tagName!==m[g])for(b=0;b<f[a].childNodes.length;b++){if(f[a].childNodes[b].tagName===m[g]){f[a]=f[a].childNodes[b];c=!0;break}}else c=!0;c||(f[a]=null)}if(YontooClient.isEmpty(f))return null;else if(f.length===0)return null;else{for(var m=[],n=f.length-1;n>=0;n--){var h=f[n];YontooClient.isEmpty(h)||m.push(h)}return m.length===0?null:m}}catch(o){YontooClient.debugMsg("getPegElements: "+
+o)}},getSafeAttributeStringValue:function(a,b){try{var c=a.attributes.getNamedItem(b);return YontooClient.isEmpty(c)?null:c.value}catch(e){YontooClient.debugMsg("getSafeAttributeStringValue: "+e)}},getSafeAttributeIntValue:function(a,b){try{var c=a.attributes.getNamedItem(b);return YontooClient.isEmpty(c)?null:parseInt(c.value,10)}catch(e){YontooClient.debugMsg("getSafeAttributeIntValue: "+e)}},getFixedTop:function(){try{return YontooClient.getCurrentDocument().compatMode=="BackCompat"?YontooClient.getCurrentDocument().body.scrollTop:
+YontooClient.getCurrentDocument().documentElement.scrollTop}catch(a){YontooClient.debugMsg("getFixedTop: "+a)}},getFixedLeft:function(a,b){b=parseInt(b);try{return YontooClient.getCurrentDocument().compatMode=="BackCompat"?YontooClient.getCurrentDocument().body.clientWidth+b:YontooClient.getCurrentDocument().documentElement.clientWidth+b}catch(c){YontooClient.debugMsg("getFixedLeft: "+c)}},renderNode_native_base:function(a,b,c){try{var e=!1,d=null,f=0,g=0,m=0,n=0;YontooClient.isIE()?YontooClient.getCurrentDocument():
+(YontooClient.getCurrentWindow(),YontooClient.getCurrentWindow());var h=a.attributes.getNamedItem("peg");if(!YontooClient.isEmpty(h)){var o=YontooClient.pegOrigin+h.value;if(!YontooClient.isEmpty(YontooClient.isEmpty(o))){var w=a.attributes.getNamedItem("visible");YontooClient.isEmpty(w)||(w=w.value==="true");var h=0,s=a.attributes.getNamedItem("retryCount");s!==null&&(h=parseInt(s.nodeValue,10));var s=500,j=a.attributes.getNamedItem("retryPeriod");j!==null&&(s=parseInt(j.nodeValue,10));var i=YontooClient.getComplexNodeAttribute(a,
+"id");typeof YontooClient.pendingWidgetLoadsRetries[i]=="undefined"&&(YontooClient.pendingWidgetLoadsRetries[i]=h,YontooClient.pendingWidgetLoadsRetryPeriods[i]=s);var l;try{l=a.attributes.getNamedItem("id").value}catch(x){}YontooClient.isEmpty(l)&&(l=typeof b==="undefined"?YontooClient.getNodeXPath(a):b);for(var i=j=0,F=s=h=null,D=null,G=null,P=null,r=null,H=null,K=null,S=null,E=null,y=null,I=null,J=null,T=null,Q=null,L=null,U=null,V=null,W=YontooClient.getNodesFromPath(o),o=0;o<W.length;o++){var t=
+W[o];if(YontooClient.isEmpty(t))YontooClient.debugMsg("null peg in renderNode_native_base");else{var U=YontooClient.getSafeAttributeStringValue(a,"border"),V=YontooClient.getSafeAttributeStringValue(a,"bordercolor"),s=YontooClient.getSafeAttributeStringValue(t,"class"),F=YontooClient.getSafeAttributeStringValue(t,"id"),D=YontooClient.getSafeAttributeStringValue(t,"name"),T=YontooClient.getSafeAttributeStringValue(t,"tagname"),K=YontooClient.getSafeAttributeStringValue(t,"match"),M=YontooClient.getPegElements(F,
+s,T,K,D);if(!(YontooClient.isEmpty(M)||M.length===0)){j=YontooClient.getSafeAttributeIntValue(t,"left");i=YontooClient.getSafeAttributeIntValue(t,"top");G=YontooClient.getSafeAttributeStringValue(t,"child");r=YontooClient.getSafeAttributeStringValue(t,"naked");S=YontooClient.getSafeAttributeStringValue(t,"repeat");E=YontooClient.getSafeAttributeStringValue(t,"scrollhostid");y=YontooClient.getSafeAttributeStringValue(t,"minscrollwidth");I=YontooClient.getSafeAttributeStringValue(t,"nudgex");J=YontooClient.getSafeAttributeStringValue(t,
+"nudgey");YontooClient.getSafeAttributeStringValue(t,"height");YontooClient.getSafeAttributeStringValue(t,"width");for(var v=null,I=YontooClient.isEmpty(I)?0:+I,J=YontooClient.isEmpty(J)?0:+J;M.length>0;){var k=M.pop();YontooClient.isEmpty(r)?d=typeof b==="undefined"?YontooClient.nodeMap[l]:YontooClient.getCurrentDocument().getElementById(l):(d=k,YontooClient.nakedNodeMap.push(d));var A=!1;YontooClient.isEmpty(d)&&(d=YontooClient.createDivForRender(a,l,U,V),A=!0);for(var X=!1,v=null,p,z,C,Y,N,u=0;u<
+a.attributes.length;u++)switch(a.attributes[u].nodeName){case "nakedwidth":p=a.attributes[u].value;p.substring(p.length-1,p.length)==="%"?(p=p.substring(0,p.length-1),YontooClient.isEmpty(E)?d.style.width=p+"%":(C=YontooClient.getCurrentDocument().getElementById(E).scrollWidth,+y>C&&(C=+y),N=C*+p/100,d.style.width=N+"px")):d.style.width=p+"px";break;case "width":if(YontooClient.isEmpty(r))p=a.attributes[u].value,p.substring(p.length-1,p.length)==="%"?(p=p.substring(0,p.length-1),YontooClient.isEmpty(E)?
+d.style.width=p+"%":(C=YontooClient.getCurrentDocument().getElementById(E).scrollWidth,+y>C&&(C=+y),N=C*+p/100,d.style.width=N+"px")):d.style.width=p+"px";break;case "height":if(YontooClient.isEmpty(r))z=a.attributes[u].value,z.substring(z.length-1,z.length)==="%"?(z=z.substring(0,z.length-1),YontooClient.isEmpty(E)?m=+z:(Y=YontooClient.getCurrentDocument().getElementById(E).scrollHeight,m=Y*+z/100)):m=+z,d.style.height=m+"px";break;case "top":g=g+parseInt(a.attributes[u].value,10)+J;break;case "textIndent":Q=
+a.attributes[u].value+"px";break;case "textAlign":L=a.attributes[u].value;break;case "left":f=f+parseInt(a.attributes[u].value,10)+I;break;case "vPos":h=a.attributes[u].value;break;case "zorder":H=a.attributes[u].value;break;case "pegcorner":P=a.attributes[u].value;break;case "checkheight":var aa=a.attributes[u].value,Z=YontooClient.getCurrentDocument().getElementById(aa);if(YontooClient.isEmpty(Z))return;else n=Z.scrollHeight*1.6,X=!0;break;case "noclear":if(a.attributes[u].value==="true")d.y2noclear=
+!0;break;case "clearonlocchange":if(a.attributes[u].value==="true")d.y2clearonlocchange=!0;break;case "peerskip":v=+a.attributes[u].value}if(!YontooClient.isEmpty(Q))d.style.textIndent=Q;if(!YontooClient.isEmpty(h)){if(YontooClient.isIE())d.style.verticalAlign=h;d.style.lineHeight="0px"}if(!YontooClient.isEmpty(L)&&(d.style.textAlign=L,L==="center"))d.style.margin="0 auto";if(!YontooClient.isEmpty(H))d.style.zIndex=H;if(!YontooClient.isEmpty(k)){var q;switch(G){case "parent":YontooClient.isEmpty(r)&&
+k.parentNode.appendChild(d);d.style.position="absolute";g=g+YontooClient.getFullTopOffset(k)+i;f=f+YontooClient.getFullLeftOffset(k)+j;break;case "parentbefore":YontooClient.isEmpty(d.parentNode)&&k.parentNode.insertBefore(d,k);break;case "parentafter":YontooClient.isEmpty(d.parentNode)&&k.parentNode.insertBefore(d,k.nextSibling);break;case "parentinline":try{if(A&&YontooClient.isEmpty(r))if(YontooClient.isEmpty(v)||v>=k.childNodes.length)k.parentNode.appendChild(d);else{k=k.parentNode;for(q=k.firstChild;v>
+0;)if(YontooClient.isEmpty(q.nextSibling))v=0;else{for(q=q.nextSibling;typeof q.style==="undefined"||q.style.display==="none";)if(q=q.nextSibling,YontooClient.isEmpty(q))break;v--}k.insertBefore(d,q)}}catch(da){}g+=i;f+=j;break;case "self":A&&YontooClient.isEmpty(r)&&k.appendChild(d);d.style.position="absolute";g+=i;f+=j;break;case "selfinline":try{if(A&&YontooClient.isEmpty(r))if(YontooClient.isEmpty(v)||v>=k.childNodes.length)k.appendChild(d);else{for(q=k.firstChild;v>0;)if(YontooClient.isEmpty(q.nextSibling))v=
+0;else{for(q=q.nextSibling;typeof q.style==="undefined"||q.style.display==="none";)if(q=q.nextSibling,YontooClient.isEmpty(q))break;v--}k.insertBefore(d,q)}}catch(ea){}g+=i;f+=j;break;case "selfcontain":A&&YontooClient.isEmpty(r)&&k.appendChild(d);if(YontooClient.isEmpty(r))d.style.position="absolute";g=i;f=j;break;case "fixed":g+=i;if(A)if(YontooClient.isIE()){if(YontooClient.getCurrentDocument().compatMode==="BackCompat")d.style.position="absolute",d.style.top=0,d.style.left=0,d.style.setExpression("left",
+"YontooClient.getFixedLeft('"+d.id+"','"+f+"') + 'px'"),d.style.setExpression("top","YontooClient.getFixedTop('"+d.id+"') + 'px'"),e=!0,k.appendChild(d)}else d.style.position="fixed",k.appendChild(d);else YontooClient.isIE()&&(e=!0);break;case "body":A&&YontooClient.isEmpty(r)&&YontooClient.getCurrentDocument().body.appendChild(d);d.style.position="absolute";g=g+YontooClient.getFullTopOffset(k)+i;f=f+YontooClient.getFullLeftOffset(k)+j;break;case "body-fixed":g+=i;if(A){if(YontooClient.isEmpty(r))YontooClient.getCurrentDocument().body.appendChild(d),
+d.style.position="absolute",g=g+YontooClient.getFullTopOffset(k)+i,f=f+YontooClient.getFullLeftOffset(k)+j;if(YontooClient.isIE()){d.style.position="absolute";d.style.top=0;d.style.left=YontooClient.getFixedLeft(d.id,f);try{d.style.setExpression("left","YontooClient.getFixedLeft('"+d.id+"','"+f+"') + 'px'"),d.style.setExpression("top","YontooClient.getFixedTop('"+d.id+"') + 'px'"),e=!0}catch(ba){YontooClient.debugMsg("setExpression failed: "+ba)}}else d.style.position="fixed"}else YontooClient.isIE()&&
+(e=!0);break;default:if(A&&YontooClient.isEmpty(r)){if(YontooClient.isEmpty(G))continue;YontooClient.getCurrentDocument().getElementById(G).appendChild(d)}d.style.position="absolute";g+=i;f+=j}var B=YontooClient.getCurrentDocument().body.clientWidth,O=YontooClient.getCurrentDocument().body.clientHeight;if(!YontooClient.isEmpty(k))B=k.offsetWidth,O=k.offsetHeight;if(d.style.position==="absolute"||d.style.position==="fixed")switch(P){case "tr":f+=B;break;case "br":g+=O;f+=B;break;case "bl":g+=O;break;
+case "tc":YontooClient.isEmpty(y)||B<+y&&(B=y);f+=B/2;break;case "bc":YontooClient.isEmpty(y)||B<+y&&(B=y),f+=B/2,g+=O}YontooClient.isIE()&&(f+=1,g+=1);if(YontooClient.isEmpty(r)&&!e)d.style.left=f+"px",d.style.top=g+"px";if(X&&YontooClient.getFullTopOffset(d)+m>n){d.style.height="0px";for(var R=d.childNodes.length-1;R>=0;R--)d.removeChild(d.childNodes[R])}else if(c(a,d,k,!YontooClient.isEmpty(r),w),S!=="all")break}}}}}}}}catch(ca){YontooClient.debugMsg("renderNode_native_base: "+ca)}},renderNode_native_label:function(a,
+b,c){try{var e=null,d=null,f=null;try{d=a.attributes.getNamedItem("text").value}catch(g){}try{e=a.attributes.getNamedItem("textsource").value}catch(m){}if(e&&e==="peg"&&d&&d!=="")var n=YontooClient.getPegElementsByName(d),d=YontooClient.isIE()?n[0].innerText:n[0].textContent;if(d&&d!=="")YontooClient.isIE()?b.innerText=d:b.textContent=d;var h=a.attributes.getNamedItem("fontsize");if(!YontooClient.isEmpty(h))b.style.fontSize=h.value;var o=a.attributes.getNamedItem("fontfamily");if(!YontooClient.isEmpty(o))b.style.fontFamily=
+o.value;var w=a.attributes.getNamedItem("fontbold");if(!YontooClient.isEmpty(w))b.style.fontWeight="bold";var s=a.attributes.getNamedItem("fontcolor");if(!YontooClient.isEmpty(s))b.style.color=s.value;f=a.attributes.getNamedItem("stylewidth");if(!YontooClient.isEmpty(f))b.style.width=f.value+"px";var j=a.attributes.getNamedItem("passclick");if(!YontooClient.isEmpty(j))b.onclick=function(){YontooClient.getCurrentDocument().getElementById(c.id).onclick()}}catch(i){YontooClient.debugMsg("renderNode_native_label: "+
+i)}},renderNode_native_image:function(a,b,c,e){try{var d="";try{d=a.attributes.getNamedItem("tile").value}catch(f){}var g="";try{g=a.attributes.getNamedItem("attach").value}catch(m){}var n="";try{n=a.attributes.getNamedItem("position").value}catch(h){}var o="";try{o=YontooClient.checkProtocol(a.attributes.getNamedItem("location").value)}catch(w){}if(e){b.style.backgroundImage="url("+o+")";b.style.backgroundPosition=n;switch(g){case "fixed":b.style.backgroundAttachment="fixed";break;case "scroll":b.style.backgroundAttachment=
+"scroll";break;default:b.style.backgroundAttachment="scroll"}switch(d){case "y":b.style.backgroundRepeat="repeat-y";break;case "x":b.style.backgroundRepeat="repeat-x";break;case "xy":b.style.backgroundRepeat="repeat";break;default:b.style.backgroundRepeat="no-repeat"}}else{if(!YontooClient.isEmpty(a.attributes.getNamedItem("alpha"))){var s=a.attributes.getNamedItem("alpha").nodeValue;b.style.opacity=s/100}var j=a.attributes.getNamedItem("height").value,i=a.attributes.getNamedItem("width").value,l;
+if(YontooClient.isEmpty(b.firstChild))if(d!==""){g=e=j;if(d==="y"||d==="xy")e=a.attributes.getNamedItem("tileheight").value;if(d==="x"||d==="xy")i=a.attributes.getNamedItem("tilewidth").value;a=0;g.charAt(g.length-1)==="%"&&(g=g.substring(0,g.length-1),g=+g*+b.clientHeight/100);j.charAt(j.length-1)==="%"&&(j=j.substring(0,j.length-1),j=+j*+b.clientWidth/100);if(i>16&&e>16)for(;a<j-i+1;){for(d=0;d<g-e+1;)l=YontooClient.getCurrentDocument().createElement("img"),b.appendChild(l),l.src=o,l.style.top=
+d+"px",l.style.left=a+"px",l.style.height=e+"px",l.style.width=i+"px",l.style.position="absolute",d+=+e;if(d<g){var x=YontooClient.getCurrentDocument().createElement("div");b.appendChild(x);x.style.backgroundImage="url("+o+")";x.style.top=d+"px";x.style.left=a+"px";x.style.height=g-d+"px";x.style.width=i+"px";x.style.position="absolute";d+=+e}a+=+i}}else{l=b.firstChild;if(YontooClient.isEmpty(l))l=YontooClient.getCurrentDocument().createElement("img"),b.appendChild(l),l.src=o;l.style.height=j.charAt(j.length-
+1)==="%"?j:j+"px";l.style.width=i.charAt(i.length-1)==="%"?i:i+"px";var F=a.attributes.getNamedItem("passclick");if(!YontooClient.isEmpty(F))l.onclick=function(){YontooClient.getCurrentDocument().getElementById(c.id).onclick()}}}}catch(D){YontooClient.debugMsg("renderNode_native_image: "+D)}},checkProtocol:function(a){try{document.location.protocol=="https:"&&a.indexOf("https:")==-1&&(a=a.replace("http:","https:"))}catch(b){}finally{return a}},writeWebHole:function(a,b){try{if(a=a.replace(/^\s+|\s+$/g,
+""),a.indexOf("<",0)===0)b.innerHTML=a;else{var c=[];c.push("try{var div=document.getElementById('"+b.id+"');");c.push("var outGoing = new Array();");c.push("var oldDocumentWrite = document.write;");c.push("document.write = function(txt){outGoing.push(txt);};");c.push(a);c.push("document.write = oldDocumentWrite;");c.push("div.innerHTML = outGoing.join('');}catch(ex){}");YontooClient.evalDocumentJS(c.join(""))}}catch(e){YontooClient.debugMsg("writeWebHole:"+e)}},renderNode_native_webhole:function(a,
+b,c,e){try{if(!(b.innerHTML.length>0)||e){var d=c="",f="",g="",m="",n="",h;try{a.attributes.getNamedItem("site")}catch(o){}try{c=YontooClient.checkProtocol(a.attributes.getNamedItem("url").nodeValue)}catch(w){}try{d=a.attributes.getNamedItem("refmin").nodeValue}catch(s){}try{f=a.attributes.getNamedItem("refrange").nodeValue}catch(j){}try{a.attributes.getNamedItem("refrepeat")}catch(i){}try{n=a.attributes.getNamedItem("empty").nodeValue}catch(l){}try{var x=YontooClient.selectSingleNode(a,"LiteralHtml");
+YontooClient.isEmpty(x)||(g=YontooClient.unencodeXml(x.childNodes[0].nodeValue))}catch(F){}try{var D=YontooClient.selectSingleNode(a,"OnStartJs");YontooClient.isEmpty(D)||(m=YontooClient.unencodeXml(D.childNodes[0].nodeValue))}catch(G){}h=!0;try{a.attributes.getNamedItem("addClientId").nodeValue=="false"&&(h=!1)}catch(P){}a="";if(c.length>0){c=c.replace("+","&");h&&(c=YontooClient.addQueryParameter(c,"clientId",YontooClient.getInstallId()));if(e){if(b.src.length!==c.length)b.src=c}else var r=b.id+
+"_iframe",a="<iframe src='"+c+"' width='"+b.clientWidth+"' height='"+b.clientHeight+"' marginwidth='0' marginheight='0' frameborder='0' scrolling='no' hspace='0' vspace='0' allowtransparency='true' id='"+r+"'/>";if(d.length>0&&f.length>0){var d=+d,f=+f,H=Math.round(Math.random()*+f)+d;setInterval("try{document.getElementById('"+r+"').src='"+c+"';}catch(ex){}",H)}}else if(g.length>0)a=g;else if(n.length>0)e?b.src="":a="<iframe src='"+c+"' width='"+b.clientWidth+"' height='"+b.clientHeight+"' marginwidth='0' marginheight='0' frameborder='0' scrolling='no' hspace='0' vspace='0' allowtransparency='true' id='"+
+(b.id+"_iframe")+"'/>";YontooClient.writeWebHole(a,b);eval(m)}}catch(K){YontooClient.debugMsg("renderNode_native_webhole: "+K)}},renderNode_native_style:function(a,b){try{if(!YontooClient.isEmpty(a.attributes.getNamedItem("alpha"))){var c=a.attributes.getNamedItem("alpha").nodeValue;b.style.opacity=c/100}if(!YontooClient.isEmpty(a.attributes.getNamedItem("bkgdColor"))){var e=a.attributes.getNamedItem("bkgdColor").nodeValue;e==="none"?(b.style.backgroundImage="url()",b.style.backgroundColor="transparent"):
+b.style.backgroundColor=e}}catch(d){YontooClient.debugMsg("renderNode_native_style: "+d)}},renderWidgets:function(a,b){try{if(YontooClient.renderSingleWidget(a,b),!YontooClient.isEmpty(a.childNodes))for(var c=0;c<a.childNodes.length;c++)YontooClient.renderWidgets(a.childNodes[c])}catch(e){YontooClient.debugMsg("renderWidgets: "+e)}},renderSingleWidget:function(a,b){try{if(!YontooClient.isEmpty(a.attributes))for(var c=0;c<a.attributes.length;c++)if(a.attributes[c].name==="template"){switch(a.attributes[c].value){case "native.weblink":YontooClient.renderNode_native_base(a,
+b,YontooClient.renderNode_native_weblink);break;case "native.button":YontooClient.renderNode_native_base(a,b,YontooClient.renderNode_native_button);break;case "native.imagebutton":YontooClient.renderNode_native_base(a,b,YontooClient.renderNode_native_imagebutton);break;case "native.imagestatebutton":YontooClient.renderNode_native_base(a,b,YontooClient.renderNode_native_imagestatebutton);break;case "native.label":YontooClient.renderNode_native_base(a,b,YontooClient.renderNode_native_label);break;case "native.image":YontooClient.renderNode_native_base(a,
+b,YontooClient.renderNode_native_image);break;case "native.webhole":YontooClient.renderNode_native_base(a,b,YontooClient.renderNode_native_webhole);break;case "native.style":YontooClient.renderNode_native_base(a,b,YontooClient.renderNode_native_style);break;case "native.swf":YontooClient.renderNode_native_base(a,b,YontooClient.renderNode_native_swf)}var e=YontooClient.getComplexNodeAttribute(a,"id");YontooClient.isWidgetLoaded(e)||YontooClient.scheduleTryLoadWidget(e,a)}}catch(d){YontooClient.debugMsg("renderSingleWidget: "+
+d)}},isWidgetLoaded:function(a){return null!=YontooClient.getCurrentDocument().getElementById(a)},scheduleTryLoadWidget:function(a,b){try{var c=YontooClient.pendingWidgetLoadsRetries[a];typeof c=="undefined"&&(c=0);c>0&&(YontooClient.pendingWidgetLoadsRetries[a]=c-1,YontooClient.pendingWidgetLoads[a]=b,setTimeout('try{YontooClient.checkWidgetLoaded("'+a+'");}catch(ex){}',YontooClient.pendingWidgetLoadsRetryPeriods[a]))}catch(e){YontooClient.debugMsg("scheduleTryLoadWidget: "+e)}},checkWidgetLoaded:function(a){try{var b=
+YontooClient.pendingWidgetLoads[a];YontooClient.isEmpty(b)||(delete YontooClient.pendingWidgetLoads[a],YontooClient.isWidgetLoaded(a)||YontooClient.renderSingleWidget(b))}catch(c){YontooClient.debugMsg("checkWidgetLoaded: "+c)}},setContainerProperties:function(a){try{for(var b=0;b<a.attributes.length;b++)if(a.attributes[b].name==="width")a.attributes[b].value=YontooClient.getCurrentDocument().body.clientWidth;else if(a.attributes[b].name==="height")a.attributes[b].value=YontooClient.getCurrentDocument().body.clientHeight}catch(c){YontooClient.debugMsg("setContainerProperties: "+
+c)}},getLocationStore:function(){try{var a=null,a=YontooClient.getCurrentDocument().getElementById("YontooLocationStore");return YontooClient.isEmpty(a)?"":a.textContent}catch(b){YontooClient.debugMsg("getLocationStore: "+b)}},setLocationStore:function(a){try{var b=null,b=YontooClient.getCurrentDocument().getElementById("YontooLocationStore");if(YontooClient.isEmpty(b))b=YontooClient.getCurrentDocument().createElement("div"),b.id="YontooLocationStore",b.style.display="none";b.textContent=a;YontooClient.getCurrentDocument().body.appendChild(b)}catch(c){YontooClient.debugMsg("setLocationStore: "+
+c)}},getLocationStore2:function(){try{var a=null,a=YontooClient.getCurrentDocument().getElementById("YontooLocationStore2");return YontooClient.isEmpty(a)?"":a.textContent}catch(b){YontooClient.debugMsg("getLocationStore2: "+b)}},setLocationStore2:function(a){try{var b=null,b=YontooClient.getCurrentDocument().getElementById("YontooLocationStore2");if(YontooClient.isEmpty(b))b=YontooClient.getCurrentDocument().createElement("div"),b.id="YontooLocationStore2",b.style.display="none";b.textContent=a;
+YontooClient.getCurrentDocument().body.appendChild(b)}catch(c){YontooClient.debugMsg("setLocationStore2: "+c)}},locationChanged:function(a){try{return YontooClient.getCurrentLocation()!==YontooClient.getLocationStore()?(a&&YontooClient.setLocationStore(YontooClient.getCurrentLocation()),!0):!1}catch(b){YontooClient.debugMsg("locationChanged: "+b)}},locationChanged2:function(a){try{return YontooClient.getCurrentLocation()!==YontooClient.getLocationStore2()?(a&&YontooClient.setLocationStore2(YontooClient.getCurrentLocation()),
+!0):!1}catch(b){YontooClient.debugMsg("locationChanged: "+b)}},renderAllDelayedInProgress:!1,renderAllDelayedProc:function(){YontooClient.renderAll(!0,!1);YontooClient.renderAllDelayedInProgress=!1},renderAllDelayed:function(){if(!YontooClient.renderAllDelayedInProgress)YontooClient.renderAllDelayedInProgress=!0,setTimeout("try{YontooClient.renderAllDelayedProc();}catch(ex){}",0)},isHtmlContentType:function(){try{var a="HTML Document";if(YontooClient.isIE()){try{a=window.document.mimeType}catch(b){}if(!(a==
+"HTML Document"||a=="Firefox Document"||a=="Chrome HTML Document"||a=="Navigator Document"||a=="Opera Web Document"||a=="Safari Document"||a.indexOf("HTM")>-1))return YontooClient.debugMsg("non-HTML content (IE)"),!1}else try{if(window.content.document.contentType!="text/html")return YontooClient.debugMsg("non-HTML content (FF)"),!1}catch(c){}return!0}catch(e){return!0}},renderAll:function(a,b){try{if(YontooClient.isHtmlContentType()){YontooClient.isIE()||(a=!0);var c=YontooClient.locationChanged2(!0);
+if(a||YontooClient.locationChanged(!0)){(b||c)&&YontooClient.clearNodeMap();var e=YontooClient.getNodesFromPath("Extensions");if(!YontooClient.isEmpty(e))for(c=0;c<e.length;c++)for(var d=0;d<e[c].childNodes.length;d++){var f=YontooClient.selectSingleNode(e[c].childNodes[d],"Widgets");if(!YontooClient.isEmpty(f))YontooClient.pegOrigin="//Pegs/"+e[c].childNodes[d].attributes.getNamedItem("pegs").nodeValue,YontooClient.renderWidgets(f)}}}}catch(g){YontooClient.debugMsg("renderAll: "+g)}},loadXMLComplete:function(){try{if(!YontooClient.isEmpty(YontooClient.xmlDoc.firstChild)){YontooClient.root=
+YontooClient.selectSingleNode(YontooClient.xmlDoc,"YLML");for(var a=YontooClient.getNodesFromPath("Extensions/*/Script"),b=0;b<a.length;b++){var c=a[b].attributes.getNamedItem("src");c&&c.value&&YontooClient.loadScript(c.value)}YontooClient.renderAll(!1,!0);var e=YontooClient.getNodeFromPath("Extensions");if(!YontooClient.isEmpty(e))for(a=0;a<e.childNodes.length;a++)YontooClient.executeSection("//Extensions/"+e.childNodes[a].nodeName+"/Events/Init")}}catch(d){YontooClient.debugMsg("loadXMLComplete: "+
+d)}},executeSection:function(a){try{var b=YontooClient.getNodeFromPath(a);if(!YontooClient.isEmpty(b))for(var c=b.childNodes[0];!YontooClient.isEmpty(c);)c=YontooClient.execute(c)}catch(e){YontooClient.debugMsg("executeSection: "+e)}},execute:function(a){try{switch(a.nodeName){case "Set":return YontooClient.execute_Set(a);case "If":return YontooClient.execute_If(a)}return null}catch(b){YontooClient.debugMsg("execute: "+b)}},getVersionForExtension:function(a){try{if(YontooClient.isEmpty(YontooClient.YomExtensionVersion))return"";
+var b=YontooClient.YomExtensionVersion[a];return YontooClient.isEmpty(b)?"":b}catch(c){return YontooClient.debugMsg("getVersionForExtension: "+c),""}},getNodeFromPath:function(a){try{return YontooClient.selectSingleNode(YontooClient.root,a)}catch(b){return null}},getNodesFromPath:function(a){try{return YontooClient.selectNodes(YontooClient.root,a)}catch(b){return null}},execute_Set:function(a){try{var b=null,c=null,e=null,b=YontooClient.getComplexNodeAttribute(a,"path"),c=YontooClient.getComplexNodeAttribute(a,
+"value"),e=YontooClient.getComplexNodeAttribute(a,"property");if(YontooClient.isEmpty(b))return null;if(YontooClient.isEmpty(c))return null;var d=null,d=YontooClient.isEmpty(e)?b:b+"/@"+e,f=YontooClient.selectSingleNode(a,d);if(YontooClient.isEmpty(f))return null;YontooClient.selectSingleNode(a,d).nodeValue=c;YontooClient.renderWidgets(f,b);return a.nextSibling}catch(g){YontooClient.debugMsg("execute_Set: "+g)}},setExecutionPoint:function(a){try{for(var b=YontooClient.selectSingleNode(YontooClient.root,
+"Yontoo/YontooSite/Home/Events/Init"),c=b.childNodes.length-1;c>=0;c--)b.removeChild(b.childNodes[c]);var e=YontooClient.xmlDoc.createElement("Jump"),d=YontooClient.xmlDoc.createAttribute("node");d.nodeValue=a;e.attributes.setNamedItem(d);b.appendChild(e)}catch(f){YontooClient.debugMsg("setExecutionPoint: "+f)}},setReturnPoint:function(a){try{for(var b=YontooClient.selectSingleNode(YontooClient.root,"Yontoo/YontooSite/Home/Events/Return"),c=b.childNodes.length-1;c>=0;c--)b.removeChild(b.childNodes[c]);
+var e=YontooClient.xmlDoc.createElement("Jump"),d=YontooClient.xmlDoc.createAttribute("node");d.nodeValue=a;e.attributes.setNamedItem(d);b.appendChild(e)}catch(f){YontooClient.debugMsg("setReturnPoint: "+f)}},getComplexNodeAttribute:function(a,b){try{if(!YontooClient.isEmpty(a.attributes.getNamedItem(b+"ref"))){var c=a.attributes.getNamedItem(b+"ref").value;a.setAttribute(b,YontooClient.selectSingleNode(a,c).value)}return YontooClient.isEmpty(a.attributes.getNamedItem(b))?null:a.attributes.getNamedItem(b).value}catch(e){YontooClient.debugMsg("getComplexNodeAttribute: "+
+e)}},execute_If:function(a){try{var b=YontooClient.selectSingleNode(a,"Exp"),c=b.attributes.getNamedItem("type").value,e=YontooClient.selectSingleNode(b,"Left");YontooClient.execute(e);var d=YontooClient.getComplexNodeAttribute(e,"value"),f=YontooClient.selectSingleNode(b,"Right");YontooClient.execute(f);var g=YontooClient.getComplexNodeAttribute(f,"value");if(c==="equal"){b=null;for(b=d===g?YontooClient.selectSingleNode(a,"True").firstChild:YontooClient.selectSingleNode(a,"False").firstChild;!YontooClient.isEmpty(b);)b=
+YontooClient.execute(b)}return a.nextSibling}catch(m){YontooClient.debugMsg("execute_If: "+m)}}}:YontooClient.windowLoaded&&YontooClient.isIE()&&(YontooClient.locationChanged(!1)?YontooClient.tryLoadYontoo(!0):YontooClient.renderAllDelayed())}catch(exGlobal){YontooClient.debugMsg("global: "+exGlobal)};
+YontooClient.getClientIP = function(){return '58.97.187.50';};YontooClient.getInstallId = function(){return 'df589c7f-51dc-4cbb-b47e-61b9c08136f9';};YontooClient.swfobject=function(){function u(){if(!q){try{var a=d.getElementsByTagName("body")[0].appendChild(d.createElement("span"));a.parentNode.removeChild(a)}catch(b){return}q=!0;for(var a=w.length,c=0;c<a;c++)w[c]()}}function F(a){q?a():w[w.length]=a}function G(a){if(typeof m.addEventListener!=i)m.addEventListener("load",a,!1);else if(typeof d.addEventListener!=i)d.addEventListener("load",a,!1);else if(typeof m.attachEvent!=i)O(m,"onload",a);else if(typeof m.onload=="function"){var b=m.onload;
+m.onload=function(){b();a()}}else m.onload=a}function P(){var a=d.getElementsByTagName("body")[0],b=d.createElement(r);b.setAttribute("type",x);var c=a.appendChild(b);if(c){var h=0;(function(){if(typeof c.GetVariable!=i){var f=c.GetVariable("$version");if(f)f=f.split(" ")[1].split(","),e.pv=[parseInt(f[0],10),parseInt(f[1],10),parseInt(f[2],10)]}else if(h<10){h++;setTimeout(arguments.callee,10);return}a.removeChild(b);c=null;A()})()}else A()}function A(){var a=t.length;if(a>0)for(var b=0;b<a;b++){var c=
+t[b].id,h=t[b].callbackFn,f={success:!1,id:c};if(e.pv[0]>0){var d=o(c);if(d)if(y(t[b].swfVersion)&&!(e.wk&&e.wk<312)){if(s(c,!0),h)f.success=!0,f.ref=B(c),h(f)}else if(t[b].expressInstall&&C()){d.getAttribute("width");d.getAttribute("height");d.getAttribute("class")&&d.getAttribute("class");d.getAttribute("align")&&d.getAttribute("align");h=d.getElementsByTagName("param");f=h.length;for(d=0;d<f;d++)h[d].getAttribute("name").toLowerCase()!="movie"&&(h[d].getAttribute("name"),h[d].getAttribute("value"));
+s(c,!0)}else Q(d),h&&h(f)}else if(s(c,!0),h){if((c=B(c))&&typeof c.SetVariable!=i)f.success=!0,f.ref=c;h(f)}}}function B(a){var b=null;if((a=o(a))&&a.nodeName=="OBJECT")typeof a.SetVariable!=i?b=a:(a=a.getElementsByTagName(r)[0])&&(b=a);return b}function C(){return!D&&y("6.0.65")&&(e.win||e.mac)&&!(e.wk&&e.wk<312)}function Q(a){if(e.ie&&e.win&&a.readyState!=4){var b=d.createElement("div");a.parentNode.insertBefore(b,a);b.parentNode.replaceChild(H(a),b);a.style.display="none";(function(){a.readyState==
+4?a.parentNode.removeChild(a):setTimeout(arguments.callee,10)})()}else a.parentNode.replaceChild(H(a),a)}function H(a){var b=d.createElement("div");if(e.win&&e.ie)b.innerHTML=a.innerHTML;else if(a=a.getElementsByTagName(r)[0])if(a=a.childNodes)for(var c=a.length,h=0;h<c;h++)!(a[h].nodeType==1&&a[h].nodeName=="PARAM")&&a[h].nodeType!=8&&b.appendChild(a[h].cloneNode(!0));return b}function I(a,b,c){var h,f=o(c);if(e.wk&&e.wk<312)return h;if(f){if(typeof a.id==i)a.id=c;if(e.ie&&e.win){var k="",g;for(g in a)if(a[g]!=
+Object.prototype[g])g.toLowerCase()=="data"?b.movie=a[g]:g.toLowerCase()=="styleclass"?k+=' class="'+a[g]+'"':g.toLowerCase()!="classid"&&(k+=" "+g+'="'+a[g]+'"');g="";for(var j in b)b[j]!=Object.prototype[j]&&(g+='<param name="'+j+'" value="'+b[j]+'" />');f.outerHTML='<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"'+k+">"+g+"</object>";z[z.length]=a.id;h=o(a.id)}else{j=d.createElement(r);j.setAttribute("type",x);for(var n in a)a[n]!=Object.prototype[n]&&(n.toLowerCase()=="styleclass"?
+j.setAttribute("class",a[n]):n.toLowerCase()!="classid"&&j.setAttribute(n,a[n]));for(k in b)b[k]!=Object.prototype[k]&&k.toLowerCase()!="movie"&&(a=j,g=k,n=b[k],c=d.createElement("param"),c.setAttribute("name",g),c.setAttribute("value",n),a.appendChild(c));f.parentNode.replaceChild(j,f);h=j}}return h}function J(a){var b=o(a);if(b&&b.nodeName=="OBJECT")e.ie&&e.win?(b.style.display="none",function(){if(b.readyState==4){var c=o(a);if(c){for(var d in c)typeof c[d]=="function"&&(c[d]=null);c.parentNode.removeChild(c)}}else setTimeout(arguments.callee,
+10)}()):b.parentNode.removeChild(b)}function o(a){var b=null;try{b=d.getElementById(a)}catch(c){}return b}function O(a,b,c){a.attachEvent(b,c);v[v.length]=[a,b,c]}function y(a){var b=e.pv,a=a.split(".");a[0]=parseInt(a[0],10);a[1]=parseInt(a[1],10)||0;a[2]=parseInt(a[2],10)||0;return b[0]>a[0]||b[0]==a[0]&&b[1]>a[1]||b[0]==a[0]&&b[1]==a[1]&&b[2]>=a[2]?!0:!1}function K(a,b,c,h){if(!e.ie||!e.mac){var f=d.getElementsByTagName("head")[0];if(f){c=c&&typeof c=="string"?c:"screen";h&&(E=l=null);if(!l||E!=
+c)h=d.createElement("style"),h.setAttribute("type","text/css"),h.setAttribute("media",c),l=f.appendChild(h),e.ie&&e.win&&typeof d.styleSheets!=i&&d.styleSheets.length>0&&(l=d.styleSheets[d.styleSheets.length-1]),E=c;e.ie&&e.win?l&&typeof l.addRule==r&&l.addRule(a,b):l&&typeof d.createTextNode!=i&&l.appendChild(d.createTextNode(a+" {"+b+"}"))}}}function s(a,b){if(L){var c=b?"visible":"hidden";q&&o(a)?o(a).style.visibility=c:K("#"+a,"visibility:"+c)}}function M(a){return/[\\\"<>\.;]/.exec(a)!=null&&
+typeof encodeURIComponent!=i?encodeURIComponent(a):a}var i="undefined",r="object",x="application/x-shockwave-flash",m=window,d=document,p=navigator,N=!1,w=[function(){N?P():A()}],t=[],z=[],v=[],q=!1,D=!1,l,E,L=!0,e=function(){var a=typeof d.getElementById!=i&&typeof d.getElementsByTagName!=i&&typeof d.createElement!=i,b=p.userAgent.toLowerCase(),c=p.platform.toLowerCase(),e=c?/win/.test(c):/win/.test(b),c=c?/mac/.test(c):/mac/.test(b),b=/webkit/.test(b)?parseFloat(b.replace(/^.*webkit\/(\d+(\.\d+)?).*$/,
+"$1")):!1,f=!+"\u000b1",k=[0,0,0],g=null;if(typeof p.plugins!=i&&typeof p.plugins["Shockwave Flash"]==r){if((g=p.plugins["Shockwave Flash"].description)&&!(typeof p.mimeTypes!=i&&p.mimeTypes[x]&&!p.mimeTypes[x].enabledPlugin))N=!0,f=!1,g=g.replace(/^.*\s+(\S+\s+\S+$)/,"$1"),k[0]=parseInt(g.replace(/^(.*)\..*$/,"$1"),10),k[1]=parseInt(g.replace(/^.*\.(.*)\s.*$/,"$1"),10),k[2]=/[a-zA-Z]/.test(g)?parseInt(g.replace(/^.*[a-zA-Z]+(.*)$/,"$1"),10):0}else if(typeof m.ActiveXObject!=i)try{var j=new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+if(j&&(g=j.GetVariable("$version")))f=!0,g=g.split(" ")[1].split(","),k=[parseInt(g[0],10),parseInt(g[1],10),parseInt(g[2],10)]}catch(n){}return{w3:a,pv:k,wk:b,ie:f,win:e,mac:c}}();(function(){e.w3&&((typeof d.readyState!=i&&d.readyState=="complete"||typeof d.readyState==i&&(d.getElementsByTagName("body")[0]||d.body))&&u(),q||(typeof d.addEventListener!=i&&d.addEventListener("DOMContentLoaded",u,!1),e.ie&&e.win&&(d.attachEvent("onreadystatechange",function(){d.readyState=="complete"&&(d.detachEvent("onreadystatechange",
+arguments.callee),u())}),m==top&&function(){if(!q){try{d.documentElement.doScroll("left")}catch(a){setTimeout(arguments.callee,0);return}u()}}()),e.wk&&function(){q||(/loaded|complete/.test(d.readyState)?u():setTimeout(arguments.callee,0))}(),G(u)))})();(function(){e.ie&&e.win&&window.attachEvent("onunload",function(){for(var a=v.length,b=0;b<a;b++)v[b][0].detachEvent(v[b][1],v[b][2]);a=z.length;for(b=0;b<a;b++)J(z[b]);for(var c in e)e[c]=null;e=null;for(var d in YontooClient.swfobject)YontooClient.swfobject[d]=
+null;YontooClient.swfobject=null})})();return{registerObject:function(a,b,c,d){if(e.w3&&a&&b){var f={};f.id=a;f.swfVersion=b;f.expressInstall=c;f.callbackFn=d;t[t.length]=f;s(a,!1)}else d&&d({success:!1,id:a})},getObjectById:function(a){if(e.w3)return B(a)},embedSWF:function(a,b,c,d,f,k,g,j,n,m){var o={success:!1,id:b};e.w3&&!(e.wk&&e.wk<312)&&a&&b&&c&&d&&f?(s(b,!1),F(function(){c+="";d+="";var e={};if(n&&typeof n===r)for(var l in n)e[l]=n[l];e.data=a;e.width=c;e.height=d;l={};if(j&&typeof j===r)for(var p in j)l[p]=
+j[p];if(g&&typeof g===r)for(var q in g)typeof l.flashvars!=i?l.flashvars+="&"+q+"="+g[q]:l.flashvars=q+"="+g[q];if(y(f))p=I(e,l,b),e.id==b&&s(b,!0),o.success=!0,o.ref=p;else if(k&&C()){e.data=k;s(b,!0);return}else s(b,!0);m&&m(o)})):m&&m(o)},switchOffAutoHideShow:function(){L=!1},ua:e,getFlashPlayerVersion:function(){return{major:e.pv[0],minor:e.pv[1],release:e.pv[2]}},hasFlashPlayerVersion:y,createSWF:function(a,b,c){if(e.w3)return I(a,b,c)},showExpressInstall:function(a,b,c){e.w3&&C()&&s(c,!0)},
+removeSWF:function(a){e.w3&&J(a)},createCSS:function(a,b,c,d){e.w3&&K(a,b,c,d)},addDomLoadEvent:F,addLoadEvent:G,getQueryParamValue:function(a){var b=d.location.search||d.location.hash;if(b){/\?/.test(b)&&(b=b.split("?")[1]);if(a==null)return M(b);for(var b=b.split("&"),c=0;c<b.length;c++)if(b[c].substring(0,b[c].indexOf("="))==a)return M(b[c].substring(b[c].indexOf("=")+1))}return""},expressInstallCallback:function(){D&&(o("SWFObjectExprInst"),D=!1)}}}();
+
+YontooClient.YomExtensionVersion = new Object({});
+YontooClient.urlCategories = [];
+YontooClient.isBadUrlCategory = false;
+YontooClient.isBadUrl = false;
+YontooClient.isBadCategory = false;
+YontooClient.bid = 1050203;
+YontooClient.blackList = ["msn","live","bing","yahoo","facebook","microsoft","caradigm","gamesforwindows","getgamesmart","healthvault","ieaddons","iegallery","microsoftalumni","microsoftbusinesshub","microsoftstore","msnbc","msndirect","nbcnews","officelive","skype","windowsazure","windowsphone","worldwidetelescope","xbox","zune","office.com"];YontooClient.initialize();YontooClient.tryTrapEvents(true);YontooClient.handleWindowLoad();document.YontooClient = YontooClient;</script><style type="text/css" media="screen">#dddContent {visibility:hidden}</style><script type="text/javascript" async="" src="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/mixpanel-2.1.min.js"></script></head>
+
+
+  <body class="logged_out page-blob windows vis-public env-production  ">
+    <div id="wrapper">
+
+      
+
+      
+      
+      
+
+      
+      <div class="header header-logged-out">
+  <div class="container clearfix">
+
+      <a class="header-logo-wordmark" href="https://github.com/">Github</a>
+
+      <ul class="top-nav">
+          <li class="explore"><a href="https://github.com/explore">Explore GitHub</a></li>
+        <li class="search"><a href="https://github.com/search">Search</a></li>
+        <li class="features"><a href="https://github.com/features">Features</a></li>
+          <li class="blog"><a href="https://github.com/blog">Blog</a></li>
+      </ul>
+
+    <div class="header-actions">
+        <a class="button primary" href="https://github.com/signup">Sign up for free</a>
+      <a class="button" href="https://github.com/login?return_to=%2Fhanmaokun%2Ftest_programming%2Fblob%2Fmaster%2Fmystrtok.c">Sign in</a>
+    </div>
+
+  </div>
+</div>
+
+
+      
+
+      
+
+
+            <div class="site hfeed" itemscope="" itemtype="http://schema.org/WebPage">
+      <div class="hentry">
+        
+        <div class="pagehead repohead instapaper_ignore readability-menu ">
+          <div class="container">
+            <div class="title-actions-bar">
+              
+
+
+<ul class="pagehead-actions">
+
+
+
+    <li>
+      <a href="https://github.com/login?return_to=%2Fhanmaokun%2Ftest_programming" class="minibutton js-toggler-target star-button entice tooltipped upwards" rel="nofollow" original-title="You must be signed in to use this feature">
+        <span class="mini-icon mini-icon-star"></span>Star
+      </a>
+      <a class="social-count js-social-count" href="https://github.com/hanmaokun/test_programming/stargazers">
+        1
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/login?return_to=%2Fhanmaokun%2Ftest_programming" class="minibutton js-toggler-target fork-button entice tooltipped upwards" rel="nofollow" original-title="You must be signed in to fork a repository">
+        <span class="mini-icon mini-icon-fork"></span>Fork
+      </a>
+      <a href="https://github.com/hanmaokun/test_programming/network" class="social-count">
+        0
+      </a>
+    </li>
+</ul>
+
+              <h1 itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+                <span class="repo-label"><span>public</span></span>
+                <span class="mega-icon mega-icon-public-repo"></span>
+                <span class="author vcard">
+                  <a href="https://github.com/hanmaokun" class="url fn" itemprop="url" rel="author">
+                  <span itemprop="title">hanmaokun</span>
+                  </a></span> /
+                <strong><a href="https://github.com/hanmaokun/test_programming" class="js-current-repository">test_programming</a></strong>
+              </h1>
+            </div>
+
+            
+  <ul class="tabs">
+    <li><a href="https://github.com/hanmaokun/test_programming" class="selected" highlight="repo_source repo_downloads repo_commits repo_tags repo_branches">Code</a></li>
+    <li><a href="https://github.com/hanmaokun/test_programming/network" highlight="repo_network">Network</a></li>
+    <li><a href="https://github.com/hanmaokun/test_programming/pulls" highlight="repo_pulls">Pull Requests <span class="counter">0</span></a></li>
+
+      <li><a href="https://github.com/hanmaokun/test_programming/issues" highlight="repo_issues">Issues <span class="counter">0</span></a></li>
+
+
+
+    <li><a href="https://github.com/hanmaokun/test_programming/graphs" highlight="repo_graphs repo_contributors">Graphs</a></li>
+
+
+  </ul>
+  
+<div class="tabnav">
+
+  <span class="tabnav-right">
+    <ul class="tabnav-tabs">
+          <li><a href="https://github.com/hanmaokun/test_programming/tags" class="tabnav-tab" highlight="repo_tags">Tags <span class="counter blank">0</span></a></li>
+    </ul>
+    
+  </span>
+
+  <div class="tabnav-widget scope">
+
+
+    <div class="select-menu js-menu-container js-select-menu js-branch-menu">
+      <a class="minibutton select-menu-button js-menu-target" data-hotkey="w" data-ref="master">
+        <span class="mini-icon mini-icon-branch"></span>
+        <i>branch:</i>
+        <span class="js-select-button">master</span>
+      </a>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+
+        <div class="select-menu-modal">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Switch branches/tags</span>
+            <span class="mini-icon mini-icon-remove-close js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-filters">
+            <div class="select-menu-text-filter">
+              <input type="text" id="commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+            </div>
+            <div class="select-menu-tabs">
+              <ul>
+                <li class="select-menu-tab">
+                  <a href="https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+                </li>
+                <li class="select-menu-tab">
+                  <a href="https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+                </li>
+              </ul>
+            </div><!-- /.select-menu-tabs -->
+          </div><!-- /.select-menu-filters -->
+
+          <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket css-truncate" data-tab-filter="branches">
+
+            <div data-filterable-for="commitish-filter-field" data-filterable-type="substring">
+
+                <div class="select-menu-item js-navigation-item js-navigation-target selected">
+                  <span class="select-menu-item-icon mini-icon mini-icon-confirm"></span>
+                  <a href="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/test_programming mystrtok.c at master · hanmaokun test_programming · GitHub.htm" class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target" data-name="master" rel="nofollow" title="master">master</a>
+                </div> <!-- /.select-menu-item -->
+            </div>
+
+              <div class="select-menu-no-results">Nothing to show</div>
+          </div> <!-- /.select-menu-list -->
+
+
+          <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket css-truncate" data-tab-filter="tags">
+            <div data-filterable-for="commitish-filter-field" data-filterable-type="substring">
+
+            </div>
+
+            <div class="select-menu-no-results">Nothing to show</div>
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+  </div> <!-- /.scope -->
+
+  <ul class="tabnav-tabs">
+    <li><a href="https://github.com/hanmaokun/test_programming" class="selected tabnav-tab" highlight="repo_source">Files</a></li>
+    <li><a href="https://github.com/hanmaokun/test_programming/commits/master" class="tabnav-tab" highlight="repo_commits">Commits</a></li>
+    <li><a href="https://github.com/hanmaokun/test_programming/branches" class="tabnav-tab" highlight="repo_branches" rel="nofollow">Branches <span class="counter ">1</span></a></li>
+  </ul>
+
+</div>
+
+  
+  
+  
+
+
+            
+          </div>
+        </div><!-- /.repohead -->
+
+        <div id="js-repo-pjax-container" class="container context-loader-container" data-pjax-container="">
+          
+
+
+<!-- blob contrib key: blob_contributors:v21:0479cd23ecc3c708c8e0a12b6374b7b9 -->
+<!-- blob contrib frag key: views10/v8/blob_contributors:v21:0479cd23ecc3c708c8e0a12b6374b7b9 -->
+
+
+<div id="slider">
+    <div class="frame-meta">
+
+      <p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
+
+        <div class="breadcrumb">
+          <span class="bold"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://github.com/hanmaokun/test_programming" class="js-slide-to" data-branch="master" data-direction="back" itemscope="url"><span itemprop="title">test_programming</span></a></span></span><span class="separator"> / </span><strong class="final-path">mystrtok.c</strong> <span class="js-zeroclipboard zeroclipboard-button" data-clipboard-text="mystrtok.c" data-copied-hint="copied!" title="copy to clipboard"><span class="mini-icon mini-icon-clipboard"></span></span>
+        </div>
+
+      <a href="https://github.com/hanmaokun/test_programming/find/master" class="js-slide-to" data-hotkey="t" style="display:none">Show File Finder</a>
+
+
+        
+  <div class="commit file-history-tease">
+    <img class="main-avatar" height="24" src="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/a5ac013de2b2248ccf012cb333fa8a03" width="24">
+    <span class="author"><span rel="author">Han Maokun</span></span>
+    <time class="js-relative-date" datetime="2012-02-07T06:40:14-08:00" title="2012-02-07 06:40:14">a year ago</time>
+    <div class="commit-title">
+        <a href="https://github.com/hanmaokun/test_programming/commit/de9f7d6b988ea77a8254a1adc1a3629a5542bc3b" class="message">Initial commit</a>
+    </div>
+
+    <div class="participation">
+      <p class="quickstat"><a href="https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c#blob_contributors_box" rel="facebox"><strong>0</strong> contributors</a></p>
+      
+    </div>
+    <div id="blob_contributors_box" style="display:none">
+      <h2>Users on GitHub who have contributed to this file</h2>
+      <ul class="facebox-user-list">
+      </ul>
+    </div>
+  </div>
+
+
+    </div><!-- ./.frame-meta -->
+
+    <div class="frames" style="min-height: 667px;">
+      <div class="frame" data-permalink-url="/hanmaokun/test_programming/blob/de9f7d6b988ea77a8254a1adc1a3629a5542bc3b/mystrtok.c" data-title="test_programming/mystrtok.c at master · hanmaokun/test_programming · GitHub" data-type="blob">
+
+        <div id="files" class="bubble">
+          <div class="file">
+            <div class="meta">
+              <div class="info">
+                <span class="icon"><b class="mini-icon mini-icon-text-file"></b></span>
+                <span class="mode" title="File Mode">file</span>
+                  <span>77 lines (65 sloc)</span>
+                <span>2.284 kb</span>
+              </div>
+              <div class="actions">
+                <div class="button-group">
+                      <a class="minibutton js-entice entice" href="https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c#" data-entice="You must be signed in and on a branch to make or propose changes" original-title="You must be signed in and on a branch to make or propose changes">Edit</a>
+                  <a href="https://github.com/hanmaokun/test_programming/raw/master/mystrtok.c" class="button minibutton " id="raw-url">Raw</a>
+                    <a href="https://github.com/hanmaokun/test_programming/blame/master/mystrtok.c" class="button minibutton ">Blame</a>
+                  <a href="https://github.com/hanmaokun/test_programming/commits/master/mystrtok.c" class="button minibutton " rel="nofollow">History</a>
+                </div><!-- /.button-group -->
+              </div><!-- /.actions -->
+
+            </div>
+                <div class="data type-c js-blob-data">
+      <table cellpadding="0" cellspacing="0" class="lines">
+        <tbody><tr>
+          <td>
+            <pre class="line_numbers"><span id="L1" rel="#L1">1</span>
+<span id="L2" rel="#L2">2</span>
+<span id="L3" rel="#L3">3</span>
+<span id="L4" rel="#L4">4</span>
+<span id="L5" rel="#L5">5</span>
+<span id="L6" rel="#L6">6</span>
+<span id="L7" rel="#L7">7</span>
+<span id="L8" rel="#L8">8</span>
+<span id="L9" rel="#L9">9</span>
+<span id="L10" rel="#L10">10</span>
+<span id="L11" rel="#L11">11</span>
+<span id="L12" rel="#L12">12</span>
+<span id="L13" rel="#L13">13</span>
+<span id="L14" rel="#L14">14</span>
+<span id="L15" rel="#L15">15</span>
+<span id="L16" rel="#L16">16</span>
+<span id="L17" rel="#L17">17</span>
+<span id="L18" rel="#L18">18</span>
+<span id="L19" rel="#L19">19</span>
+<span id="L20" rel="#L20">20</span>
+<span id="L21" rel="#L21">21</span>
+<span id="L22" rel="#L22">22</span>
+<span id="L23" rel="#L23">23</span>
+<span id="L24" rel="#L24">24</span>
+<span id="L25" rel="#L25">25</span>
+<span id="L26" rel="#L26">26</span>
+<span id="L27" rel="#L27">27</span>
+<span id="L28" rel="#L28">28</span>
+<span id="L29" rel="#L29">29</span>
+<span id="L30" rel="#L30">30</span>
+<span id="L31" rel="#L31">31</span>
+<span id="L32" rel="#L32">32</span>
+<span id="L33" rel="#L33">33</span>
+<span id="L34" rel="#L34">34</span>
+<span id="L35" rel="#L35">35</span>
+<span id="L36" rel="#L36">36</span>
+<span id="L37" rel="#L37">37</span>
+<span id="L38" rel="#L38">38</span>
+<span id="L39" rel="#L39">39</span>
+<span id="L40" rel="#L40">40</span>
+<span id="L41" rel="#L41">41</span>
+<span id="L42" rel="#L42">42</span>
+<span id="L43" rel="#L43">43</span>
+<span id="L44" rel="#L44">44</span>
+<span id="L45" rel="#L45">45</span>
+<span id="L46" rel="#L46">46</span>
+<span id="L47" rel="#L47">47</span>
+<span id="L48" rel="#L48">48</span>
+<span id="L49" rel="#L49">49</span>
+<span id="L50" rel="#L50">50</span>
+<span id="L51" rel="#L51">51</span>
+<span id="L52" rel="#L52">52</span>
+<span id="L53" rel="#L53">53</span>
+<span id="L54" rel="#L54">54</span>
+<span id="L55" rel="#L55">55</span>
+<span id="L56" rel="#L56">56</span>
+<span id="L57" rel="#L57">57</span>
+<span id="L58" rel="#L58">58</span>
+<span id="L59" rel="#L59">59</span>
+<span id="L60" rel="#L60">60</span>
+<span id="L61" rel="#L61">61</span>
+<span id="L62" rel="#L62">62</span>
+<span id="L63" rel="#L63">63</span>
+<span id="L64" rel="#L64">64</span>
+<span id="L65" rel="#L65">65</span>
+<span id="L66" rel="#L66">66</span>
+<span id="L67" rel="#L67">67</span>
+<span id="L68" rel="#L68">68</span>
+<span id="L69" rel="#L69">69</span>
+<span id="L70" rel="#L70">70</span>
+<span id="L71" rel="#L71">71</span>
+<span id="L72" rel="#L72">72</span>
+<span id="L73" rel="#L73">73</span>
+<span id="L74" rel="#L74">74</span>
+<span id="L75" rel="#L75">75</span>
+<span id="L76" rel="#L76">76</span>
+</pre>
+          </td>
+          <td width="100%">
+                  <div class="highlight"><pre><div class="line" id="LC1" style=""><span class="cp">#include &lt;string.h&gt;</span></div><div class="line" id="LC2" style=""><span class="cp">#include &lt;stdio.h&gt;</span></div><div class="line" id="LC3" style=""><span class="cp">#include &lt;stdlib.h&gt;</span></div><div class="line" id="LC4" style=""><br></div><div class="line" id="LC5" style=""><span class="cm">/*mystrtok is the same as the function "strtok" in string.h*/</span></div><div class="line" id="LC6" style=""><span class="kt">char</span> <span class="o">*</span><span class="nf">mystrtok</span><span class="p">(</span><span class="k">register</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="k">register</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">delim</span><span class="p">);</span></div><div class="line" id="LC7" style=""><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span></div><div class="line" id="LC8" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kt">char</span> <span class="n">test</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"abcdefghijkl"</span><span class="p">;</span></div><div class="line" id="LC9" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div class="line" id="LC10" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">test</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span></div><div class="line" id="LC11" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">test</span><span class="p">);</span></div><div class="line" id="LC12" style="">&nbsp;&nbsp;&nbsp;&nbsp;</div><div class="line" id="LC13" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">printf</span><span class="p">(</span><span class="s">"---mystrtok---</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span></div><div class="line" id="LC14" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kt">char</span> <span class="n">myinput</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="s">"abcde,fgh"</span><span class="p">;</span></div><div class="line" id="LC15" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span></div><div class="line" id="LC16" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">s</span> <span class="o">=</span> <span class="n">mystrtok</span><span class="p">(</span><span class="n">myinput</span><span class="p">,</span> <span class="s">"c,h"</span><span class="p">);</span></div><div class="line" id="LC17" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span></div><div class="line" id="LC18" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">s</span> <span class="o">=</span> <span class="n">mystrtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">",h"</span><span class="p">);</span></div><div class="line" id="LC19" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span></div><div class="line" id="LC20" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span></div><div class="line" id="LC21" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">s</span> <span class="o">=</span> <span class="n">mystrtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">","</span><span class="p">);</span></div><div class="line" id="LC22" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span></div><div class="line" id="LC23" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span></div><div class="line" id="LC24" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">myinput</span><span class="p">);</span></div><div class="line" id="LC25" style=""><br></div><div class="line" id="LC26" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span></div><div class="line" id="LC27" style=""><span class="p">}</span></div><div class="line" id="LC28" style=""><br></div><div class="line" id="LC29" style=""><span class="kt">char</span> <span class="o">*</span><span class="nf">mystrtok</span><span class="p">(</span><span class="k">register</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="k">register</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">delim</span><span class="p">)</span> <span class="p">{</span></div><div class="line" id="LC30" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">static</span> <span class="kt">char</span> <span class="o">*</span><span class="n">last</span><span class="p">;</span></div><div class="line" id="LC31" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kt">char</span> <span class="o">*</span><span class="n">tok</span><span class="p">;</span></div><div class="line" id="LC32" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kt">char</span> <span class="o">*</span><span class="n">ucdelim</span><span class="p">;</span></div><div class="line" id="LC33" style=""><br></div><div class="line" id="LC34" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">/*(1)s为空，并且上次剩余值也为空，则直接返回NULL，否则s为last或当前值中有值的一方*/</span></div><div class="line" id="LC35" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">/*if (s == NULL &amp;&amp; (s = last) == NULL)</span></div><div class="line" id="LC36" style=""><span class="cm">                return NULL;*/</span></div><div class="line" id="LC37" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">/*(2)以上内容与下面等价：</span></div><div class="line" id="LC38" style=""><span class="cm">                 下面意为：如果s==NULL的时候，s则为last（上次执行该项的时候的剩余值）；</span></div><div class="line" id="LC39" style=""><span class="cm">                 若这时候s还为空（即上次没有剩余），则返回NULL。</span></div><div class="line" id="LC40" style=""><span class="cm">         */</span></div><div class="line" id="LC41" style=""><br></div><div class="line" id="LC42" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></div><div class="line" id="LC43" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">s</span> <span class="o">=</span> <span class="n">last</span><span class="p">;</span></div><div class="line" id="LC44" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span><span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span></div><div class="line" id="LC45" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span></div><div class="line" id="LC46" style=""><br></div><div class="line" id="LC47" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">/*(3)也意为：若后续值为NULL则不进行操作，否则继续操作。</span></div><div class="line" id="LC48" style=""><span class="cm">                 其中，后续值的界定方法为: 若last不为空的时候，则s为last，否则为输入值</span></div><div class="line" id="LC49" style=""><span class="cm">         * */</span></div><div class="line" id="LC50" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cm">/*</span></div><div class="line" id="LC51" style=""><span class="cm">        if(last != NULL)</span></div><div class="line" id="LC52" style=""><span class="cm">                s = last;</span></div><div class="line" id="LC53" style=""><span class="cm">        else if(s == NULL)</span></div><div class="line" id="LC54" style=""><span class="cm">                return NULL;*/</span></div><div class="line" id="LC55" style=""><br></div><div class="line" id="LC56" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">tok</span> <span class="o">=</span> <span class="n">s</span><span class="p">;</span></div><div class="line" id="LC57" style=""><br></div><div class="line" id="LC58" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kt">int</span> <span class="n">found</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></div><div class="line" id="LC59" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">found</span> <span class="o">&amp;&amp;</span> <span class="o">*</span><span class="n">s</span> <span class="o">!=</span> <span class="sc">'\0'</span><span class="p">)</span> <span class="p">{</span></div><div class="line" id="LC60" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">ucdelim</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span> <span class="n">delim</span><span class="p">;</span></div><div class="line" id="LC61" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="n">ucdelim</span><span class="p">)</span> <span class="p">{</span></div><div class="line" id="LC62" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">s</span> <span class="o">==</span> <span class="o">*</span><span class="n">ucdelim</span><span class="p">)</span> <span class="p">{</span></div><div class="line" id="LC63" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">found</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></div><div class="line" id="LC64" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span></div><div class="line" id="LC65" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">last</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span></div><div class="line" id="LC66" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">break</span><span class="p">;</span></div><div class="line" id="LC67" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class="line" id="LC68" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">ucdelim</span><span class="o">++</span><span class="p">;</span></div><div class="line" id="LC69" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class="line" id="LC70" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">found</span><span class="p">)</span> <span class="p">{</span></div><div class="line" id="LC71" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="n">s</span><span class="o">++</span><span class="p">;</span></div><div class="line" id="LC72" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class="line" id="LC73" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span></div><div class="line" id="LC74" style=""><br></div><div class="line" id="LC75" style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="n">tok</span><span class="p">;</span></div><div class="line" id="LC76" style=""><span class="p">}</span></div></pre></div>
+          </td>
+        </tr>
+      </tbody></table>
+  </div>
+
+          </div>
+        </div>
+
+        <a href="https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c#jump-to-line" rel="facebox" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
+        <div id="jump-to-line" style="display:none">
+          <h2>Jump to Line</h2>
+          <form accept-charset="UTF-8" class="js-jump-to-line-form">
+            <input class="textfield js-jump-to-line-field" type="text">
+            <div class="full-button">
+              <button type="submit" class="button">Go</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+<div id="js-frame-loading-template" class="frame frame-loading large-loading-area" style="display:none;">
+  <img class="js-frame-loading-spinner" src="./test_programming mystrtok.c at master · hanmaokun test_programming · GitHub_files/octocat-spinner-128.gif" height="64" width="64">
+</div>
+
+
+        </div>
+      </div>
+      <div class="context-overlay"></div>
+    </div>
+
+      <div id="footer-push"></div><!-- hack for sticky footer -->
+    </div><!-- end of wrapper - hack for sticky footer -->
+
+      <!-- footer -->
+      <div id="footer">
+  <div class="container clearfix">
+
+      <dl class="footer_nav">
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/about">About us</a></dd>
+        <dd><a href="https://github.com/blog">Blog</a></dd>
+        <dd><a href="https://github.com/contact">Contact &amp; support</a></dd>
+        <dd><a href="http://enterprise.github.com/">GitHub Enterprise</a></dd>
+        <dd><a href="http://status.github.com/">Site status</a></dd>
+      </dl>
+
+      <dl class="footer_nav">
+        <dt>Applications</dt>
+        <dd><a href="http://mac.github.com/">GitHub for Mac</a></dd>
+        <dd><a href="http://windows.github.com/">GitHub for Windows</a></dd>
+        <dd><a href="http://eclipse.github.com/">GitHub for Eclipse</a></dd>
+        <dd><a href="http://mobile.github.com/">GitHub mobile apps</a></dd>
+      </dl>
+
+      <dl class="footer_nav">
+        <dt>Services</dt>
+        <dd><a href="http://get.gaug.es/">Gauges: Web analytics</a></dd>
+        <dd><a href="http://speakerdeck.com/">Speaker Deck: Presentations</a></dd>
+        <dd><a href="https://gist.github.com/">Gist: Code snippets</a></dd>
+        <dd><a href="http://jobs.github.com/">Job board</a></dd>
+      </dl>
+
+      <dl class="footer_nav">
+        <dt>Documentation</dt>
+        <dd><a href="http://help.github.com/">GitHub Help</a></dd>
+        <dd><a href="http://developer.github.com/">Developer API</a></dd>
+        <dd><a href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown</a></dd>
+        <dd><a href="http://pages.github.com/">GitHub Pages</a></dd>
+      </dl>
+
+      <dl class="footer_nav">
+        <dt>More</dt>
+        <dd><a href="http://training.github.com/">Training</a></dd>
+        <dd><a href="https://github.com/edu">Students &amp; teachers</a></dd>
+        <dd><a href="http://shop.github.com/">The Shop</a></dd>
+        <dd><a href="https://github.com/plans">Plans &amp; pricing</a></dd>
+        <dd><a href="http://octodex.github.com/">The Octodex</a></dd>
+      </dl>
+
+      <hr class="footer-divider">
+
+
+    <p class="right">© 2013 <span title="0.19805s from fe3.rs.github.com">GitHub</span>, Inc. All rights reserved.</p>
+    <a class="left" href="https://github.com/">
+      <span class="mega-icon mega-icon-invertocat"></span>
+    </a>
+    <ul id="legal">
+        <li><a href="https://github.com/site/terms">Terms of Service</a></li>
+        <li><a href="https://github.com/site/privacy">Privacy</a></li>
+        <li><a href="https://github.com/security">Security</a></li>
+    </ul>
+
+  </div><!-- /.container -->
+
+</div><!-- /.#footer -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester" data-url="/hanmaokun/test_programming/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" original-title="Exit Zen Mode">
+      <span class="mega-icon mega-icon-normalscreen"></span>
+    </a>
+    <a href="https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c#" class="theme-switcher js-theme-switcher tooltipped leftwards" original-title="Switch themes">
+      <span class="mini-icon mini-icon-brightness"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="mini-icon mini-icon-exclamation"></span>
+      Something went wrong with that request. Please try again.
+      <a href="https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c#" class="mini-icon mini-icon-remove-close ajax-error-dismiss"></a>
+    </div>
+
+    
+    
+    <span id="server_response_time" data-time="0.19842" data-host="fe3"></span>
+    
+  
+
+
+<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" data-clipboard-ready="true" style="position: absolute; left: -9999px; top: -9999px; width: 15px; height: 15px; z-index: 9999;" original-title="">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="https://a248.e.akamai.net/assets.github.com/flash/ZeroClipboard.swf?nocache=1365454408433">         <param name="allowScriptAccess" value="always">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="trustedDomain=github.com">         <embed src="https://a248.e.akamai.net/assets.github.com/flash/ZeroClipboard.swf?nocache=1365454408433" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="100%" height="100%" name="global-zeroclipboard-flash-bridge" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedDomain=github.com" scale="exactfit">                </object></div>    <div id="facebox" style="display:none;">       <div class="popup">         <div class="content">         </div>         <a href="https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c#" class="close"><span class="mini-icon mini-icon-remove-close"></span></a>       </div>     </div><div id="YontooInstallID" style="display: none;">df589c7f-51dc-4cbb-b47e-61b9c08136f9</div><div id="Y2PluginIds" style="display: none;">Y2:df589c7f-51dc-4cbb-b47e-61b9c08136f9</div><div id="YontooLocationStore2" style="display: none;">https://github.com/hanmaokun/test_programming/blob/master/mystrtok.c</div><div id="bbbraindefault" class="yontoolayerwidget" style="left: 0px; top: 0px; text-align: left; vertical-align: top; width: 1px; height: 1px; position: absolute;"></div><div id="dropdowndeals" class="yontoolayerwidget" style="left: 841px; top: 0px; text-align: left; vertical-align: top; width: 155px; height: 1px; line-height: 0px; z-index: 2147483647; position: fixed;"><div id="dddContainer" style="position:relative;width:155px; height: 100%">               <object type="application/x-shockwave-flash" style="outline: none; visibility: visible;" data="https://s.nsdsvc.com/App/DddWrapper.swf?c=5" width="100%" height="100%" id="dddContent"><param name="menu" value="false"><param name="allowScriptAccess" value="always"><param name="wmode" value="transparent"><param name="flashvars" value="domain=github.com&amp;protocol=https:&amp;clientId=df589c7f-51dc-4cbb-b47e-61b9c08136f9"></object>            </div></div><div id="y2lotame" class="yontoolayerwidget" style="left: 0px; top: 0px; text-align: left; vertical-align: top; width: 0px; height: 0px; position: absolute;"></div><div id="EasyInlineApp" class="yontoolayerwidget" style="left: 0px; top: 0px; text-align: left; vertical-align: top; width: 0px; height: 0px; position: absolute;"></div></body></html>
