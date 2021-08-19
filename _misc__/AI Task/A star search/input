@@ -1,0 +1,46 @@
+20
+arad 366
+bucharest 0
+craiova 160
+dobreta 242
+eforie 161
+fagaras 178
+giurgiu 77
+hirsova 151
+lasi 226
+lugoj 244
+mehadia 241
+neamt 234
+oradea 380
+pitesti 98
+rimnicu_vilcea 193
+sibiu 253
+timisoara 329
+urziceni 80
+vaslui 199
+zerind 374
+23
+oradea zerind 71
+oradea sibiu 151
+zerind arad 75
+sibiu arad 140
+sibiu fagaras 99
+sibiu rimnicu_vilcea 80
+arad timisoara 118
+fagaras bucharest 211
+rimnicu_vilcea craiova 146
+rimnicu_vilcea pitesti 97
+timisoara lugoj 111
+pitesti bucharest 101
+pitesti craiova 138
+craiova dobreta 120
+lugoj mehadia 70
+mehadia dobreta 75
+bucharest urziceni 85
+bucharest giurgiu 90
+urziceni hirsova 98
+urziceni vaslui 142
+hirsova eforie 86
+vaslui lasi 92
+lasi neamt 87
+timisoara bucharest

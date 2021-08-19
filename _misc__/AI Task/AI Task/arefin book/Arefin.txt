@@ -1,0 +1,6 @@
+arefin  sultan  31  0  
+sultan  arefin  31  0  
+zam  farzana  11  0  
+turkey  istanbul  100  4  
+india  delhi  200  5  
+saudi_arabia  zeddah  1112  6  

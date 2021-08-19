@@ -1,0 +1,34 @@
+Arad 366  Arad Timisoara Sibiu
+Bucharest 0  Bucharest Pitesti Fagaras Urziceni Giurgiu
+Craiova 160  Craiova Pitesti Rimnicu_Vilcea Dobreta
+Dobreta 242  Dobreta Craiova Mehadia
+Eforie 161  Eforie Hirsova
+Fagaras 176  Fagaras Sibiu Bucharest
+Giurgiu 77  Giurgiu Bucharest
+Hirsova 151  Hirsova Eforie Urziceni
+Lasi 226  Lasi Neamt Vaslui
+Lugoj 244  Lugoj Timisoara Mehadia
+Mehadia 241  Mehadia Lugoj Dobreta
+Neamt 234  Neamt Lasi
+Oradea 380  Oradea Zerind Sibiu
+Pitesti 10  Pitesti Rimnicu_Vilcea Bucharest Craiova
+Rimnicu_Vilcea 193  Rimnicu_Vilcea Sibiu Pitesti Craiova
+Sibiu 253  Sibiu Oradea Arad Fagaras Rimnicu_Vilcea
+Timisoara 329  Timisoara Lugoj Arad
+Urziceni 80  Urziceni Bucharest Vaslui Hirsova
+Vaslui 199  Vaslui Urziceni Lasi
+Zerind 374  Zerind Oradea Arad
+
+
+
+
+
+
+
+
+
+
+
+
+
+

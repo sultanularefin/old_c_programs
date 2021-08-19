@@ -1,0 +1,19 @@
+1.  Use Borland C++ to run the code.other compilers may not work.
+
+2.  User password character limit  :  4
+     Full Name character limit  :  10
+     User_Name character limit   :  20
+
+
+3.  Two user is already created.
+     User Name  :  deb20
+     Password  :  1234
+
+     User Name  :  else
+     Password  :  qwer
+
+
+4.  If the Book Count is 0(zero),you cannot issue book.
+
+
+5.Admin Password  :  890

@@ -1,0 +1,65 @@
+Arad 	366  	Arad_Sibiu 140
+Bucharest 0   	Bucharest_Pitesti 101
+Craiova	 160 	Craiova_Rimnicu_Vilcea 146
+Dobreta	 242	Dobreta_Craiova 120
+Eforie 	161	Eforie_Hirsova 86	
+Fagaras 176	Fagaras_Bucharest 211
+Giurgiu 77	Giurgiu_Bucharest 90
+Hirsova	 151	Hirsova_Urziceni 98
+Lasi 	226	Lasi_Neamt 87
+Lugoj 	244	Lugoj_Timisoara 111
+Mehadia 241	Mehadia_Lugoj 70 Mehadia_Dobreta 75
+Neamt 	234		
+Oradea 	380	Oradea_Zerind 71
+Pitesti	 10	Pitesti_Craiova 138
+Rimnicu_Vilcea 193 Rimnicu_Vilcea_Sibiu 80 Rimnicu_Vilcea_Pitesti 97
+Sibiu 	253	Sibiu_Fagaras 99 Oradea_Sibiu 151
+Timisoara 329	Timisoara_Arad 118
+Urziceni 80	Urziceni_Bucharest 85 Urziceni_Vaslui 142
+Vaslui 	199	Vaslui_Lasi 92
+Zerind 	374	Zerind_Arad 75
+
+Oradea Zerind Sibiu
+Zerind Oradea Arad
+Arad Timisoara Sibiu
+Sibiu Oradea Arad Fagaras Rimnicu_Vilcea
+Timisoara Lugoj Arad
+Lugoj Timisoara Mehadia
+Mehadia Lugoj Dobreta
+Dobreta Craiova Mehadia
+Craiova Pitesti Rimnicu_Vilcea Dobreta
+Rimnicu_Vilcea Sibiu Pitesti Craiova
+Pitesti Rimnicu_Vilcea Bucharest Craiova
+Fagaras Sibiu Bucharest
+Bucharest Pitesti Fagaras Urziceni Giurgiu
+Giurgiu Bucharest
+Urziceni Bucharest Vaslui Hirsova
+Hirsova Eforie Urziceni
+Eforie Hirsova
+Vaslui Urziceni Lasi
+Lasi Neamt Vaslui
+Neamt Lasi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
